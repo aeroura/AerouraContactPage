@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
-import "./TravelPlans.css";
+import "./SpecializeBoxes.css";
 
-export default class TravelPlans extends Component {
+export default class SpecializeBoxes extends Component {
     render() {
         return (
             <div>
