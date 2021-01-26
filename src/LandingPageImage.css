@@ -1,0 +1,14 @@
+.landingPage {
+    background-image: url('./Images/BrooklynBridge.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 80vh;
+    width: 100%;
+    height: 80vh;
+}
+
+.text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
