@@ -7,7 +7,8 @@ import SpecializeBoxes from "./SpecializeBoxes.js";
 import TravelBanner from "./TravelBanner.js";
 import TravelPlans from "./TravelPlans.js";
 import VirtualHours from "./VirtualHours.js";
-import 'bootstrap/dist/css/bootstrap.min.css';
+import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+
 
 function App() {
   return (

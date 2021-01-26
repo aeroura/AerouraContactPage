@@ -6,11 +6,10 @@ export default class Header extends Component {
         return (
             <div className="header">
             <ul>
-                <li>Home</li>
+                <li>Aeroura Travel</li>
                 <li>About</li>
-                <li>Contact</li>
-                <li>Categories</li>
-                <li>Newsletter</li>
+                <li>Community</li>
+                <li>Languages</li>
             </ul>
 
             {/*<input type="text" placeholder="Search"></input>*/}
