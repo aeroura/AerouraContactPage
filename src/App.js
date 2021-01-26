@@ -13,6 +13,7 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 function App() {
   return (
     <div className="App">
+      <div className="content-wrap">
       <Header/>
       <LandingPageImage/>
       <DescriptionBoxes/>
@@ -20,6 +21,7 @@ function App() {
       <SpecializeBoxes/>
       <VirtualHours/>
       <TravelPlans/>
+      </div>
       <Footer/>
     </div>
   );
