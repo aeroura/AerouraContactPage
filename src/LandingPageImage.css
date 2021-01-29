@@ -1,5 +1,5 @@
 .landingPage {
-    background-image: url('./Images/BrooklynBridge.jpg');
+    background-image: url('./Images/NYCsunrise.jpg');
     background-repeat: no-repeat;
     background-size: 100% 80vh;
     width: 100%;
@@ -9,6 +9,10 @@
 .text {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: bottom;
     flex-direction: column;
+}
+
+h1, h3 {
+    color: #fff;
 }
