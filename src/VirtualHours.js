@@ -20,21 +20,58 @@ export default class VirtualHours extends Component {
 
                                     </div>
                                 </div>
-                                <form id="contact-form" >
-                                    <div className="form-group">
-                                        <label htmlFor="name">Name</label>
-                                        <input type="text" className="form-control" />
+                                <form>
+                                    <div className="form-row">
+                                        <div className="form-group col-md-3">
+                                            <label for="title">Title</label>
+                                            <select id="title" className="form-control">
+                                             <option selected>Choose...</option>
+                                             <option>Mr.</option>
+                                             <option>Mrs.</option>
+                                             <option>Ms.</option>
+                                             <option>Other</option>
+                                            </select>
+                                        </div>
+                                        <div className="form-group col-md-4">
+                                            <label for="firstName">First Name</label>
+                                            <input type="text" className="form-control" id="firstName" placeholder="First Name"/>
+                                        </div>
+                                        <div className="form-group col-md-5">
+                                            <label for="lastName">Last Name</label>
+                                            <input type="text" className="form-control" id="lastName" placeholder="Last Name"/>
+                                        </div>
                                     </div>
-                                    <div className="form-group">
-                                        <label htmlFor="exampleInputEmail1">Email address</label>
-                                        <input type="email" className="form-control" aria-describedby="emailHelp" />
+                                    <div className="form-row">
+                                    <div className="form-group col-md-4">
+                                            <label for="inputEmail4">Email</label>
+                                            <input type="email" className="form-control" id="inputEmail4" placeholder="Email"/>
+                                        </div>
                                     </div>
-                                    <div className="form-group">
-                                        <label htmlFor="message">Message</label>
-                                        <textarea className="form-control" rows="5"></textarea>
+                                    <div className="form-row">
+                                        <div className="form-group col-md-6">
+                                            <label for="phoneNumber">Phone Number</label>
+                                            <input type="tel" className="form-control" id="phoneNumber" placeholder="1-(555)-555-5555"/>
+                                        </div>
+                                        <div className="form-group col-md-3">
+                                            <label for="callTime">Best Time To Call You</label>
+                                            <select id="callTime" className="form-control">
+                                             <option selected>No Preference</option>
+                                             <option>11am</option>
+                                             <option>12pm</option>
+                                             <option>1pm</option>
+                                             <option>2pm</option>
+                                            </select>
+                                        </div>
                                     </div>
                                     <button type="submit" className="btn btn-primary">Submit</button>
                                 </form>
+                                <p>
+                                
+                                </p>
+                                <div className="Disclaimer">
+                                    <i></i>
+                                    <p></p>
+                                </div>
                             </div>
                         </div>
                         <div className="col">
