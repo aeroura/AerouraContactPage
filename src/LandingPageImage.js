@@ -7,10 +7,9 @@ export default class LandingPageImage extends Component {
         return (
             <div className="landingPage">
                 <div className="text">
-                    <h1>Aeroura Travel</h1>
-                    <h3>Experience The World</h3>
+                    <p className="title">AEROURA TRAVEL</p>
+                    <p className="subTitle">EXPERIENCE THE WORLD</p>
                 </div>
-                
             </div>
         )
     }
