@@ -8,8 +8,8 @@
 .travelBannerBackground {
     background-repeat: no-repeat;
     opacity: .5;
-    width: 80%;
-    transform: translate(10%, 5%);
+    width: 98%;
+    transform: translate(1%, 5%);
     height: 50vh;
     overflow: hidden;
     margin-bottom: 3%;
