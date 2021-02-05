@@ -8,7 +8,7 @@ export default class Footer extends Component {
     <div className="main-footer">
         <div className="container-fluid">
           <div className="row">
-            <div className="col-md-5">
+            <div className="col-md-5 sm-7">
               <ul className="footerList">
                 <li>Aeroura Travel</li>
                 <li>Privacy Policy</li>
@@ -16,8 +16,8 @@ export default class Footer extends Component {
               </ul>
                {/*&copy;{new Date().getFullYear()}*/}
             </div>
-            <div className="col-md-5"></div>
-            <div className="col-md-2">
+            <div className="col-md-5 sm-1"></div>
+            <div className="col-md-2 sm-4">
               <div className="icons">
                   <FaFacebookSquare
                     className="footer-icons"

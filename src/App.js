@@ -7,13 +7,14 @@ import SpecializeBoxes from "./SpecializeBoxes.js";
 import TravelBanner from "./TravelBanner.js";
 import VirtualHours from "./VirtualHours.js";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
+import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 
 function App() {
   return (
     <div className="App">
       <div className="content-wrap">
-      <Header/>
+      <Header />
       <LandingPageImage/>
       <DescriptionBoxes/>
       <TravelBanner/>
