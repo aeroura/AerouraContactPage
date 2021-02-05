@@ -1,50 +1,36 @@
 {
-  "homepage": "http://Joabbas26.github.io/AerouraContactPage",
-  "name": "aeroura-contact-page",
-  "version": "0.1.0",
-  "private": true,
+  "name": "aerouracontactpage",
+  "version": "1.0.0",
+  "description": "Aeroura Travel Contact Page",
+  "main": "server.js",
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.34",
-    "@fortawesome/free-solid-svg-icons": "^5.15.2",
-    "@fortawesome/react-fontawesome": "^0.1.14",
-    "@testing-library/jest-dom": "^5.11.9",
-    "@testing-library/react": "^11.2.3",
-    "@testing-library/user-event": "^12.6.0",
-    "bootstrap": "^4.6.0",
-    "react": "^17.0.1",
-    "react-bootstrap": "^0.32.4",
-    "react-dom": "^17.0.1",
-    "react-icons": "^4.1.0",
-    "react-scripts": "4.0.1",
-    "web-vitals": "^0.2.4"
-  },
-  "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+    "bcryptjs": "^2.4.3",
+    "config": "^3.3.3",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.11.15",
+    "request": "^2.88.2"
   },
   "devDependencies": {
-    "gh-pages": "^3.1.0"
-  }
+    "concurrently": "^5.3.0",
+    "nodemon": "^2.0.7"
+  },
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server",
+    "client": "npm start --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Joabbas26/AerouraContactPage.git"
+  },
+  "author": "Alexis Sanchez",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Joabbas26/AerouraContactPage/issues"
+  },
+  "homepage": "https://github.com/Joabbas26/AerouraContactPage#readme"
 }
