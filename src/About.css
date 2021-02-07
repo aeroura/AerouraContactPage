@@ -1,0 +1,34 @@
+.aboutLandingPage {
+    background-image: url('./Images/NYCsunrise.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: center center;
+}
+
+.aboutText {
+    background-color: rgba(109, 138, 109, 0.7);
+    width: 100%;
+    height: 80%;
+    padding: 10%;
+}
+
+.aboutTitle {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+}
+
+#visionRow {
+    background-color: rgb(199, 191, 191);
+}
+
+#visionText {
+    padding: 2% 0 0 5%;
+    font-size: 30px;
+}
+
+#visionImage {
+    padding: 0;
+    margin: 0;
+}

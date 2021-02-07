@@ -4,10 +4,10 @@ import Footer from "./Footer.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-import { Nav, Navbar } from "react-bootstrap";
+/*import { Nav, Navbar } from "react-bootstrap";*/
 import Home from "./Home.js";
 import About from "./About.js";
-import Community from "./Community.js";
+/*import Community from "./Community.js";*/
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
 
@@ -16,7 +16,6 @@ function App() {
   return (
   <BrowserRouter>
     <div className="App">
-      
       <ul className="row" id="header">
         <div className="col-md-2">
             <li><b><Link to="/">AEROURA TRAVEL</Link></b></li>  
@@ -34,8 +33,8 @@ function App() {
           <Switch>
               <Route exact path="/" component={Home}/>
               <Route path="/about" component={About} />
-              <Route path="/community" component={Community} />
-              <Route component={Error} />
+              {/* <Route path="/community" component={Community} /> */}
+             {/* This gives an error  <Route component={Error} /> */}
           </Switch>
         
       </div>
