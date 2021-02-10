@@ -119,3 +119,30 @@
 #teamSectionRow {
     margin-bottom: 1%;
 }
+
+.contactUs {
+    background-color: rgb(226, 218, 218);
+    border-radius: 5px;
+    padding: 2%;
+
+}
+
+#contactUsRow {
+    padding: 1%;
+    margin: 1%;
+}
+
+#virtualHoursSection {
+    padding: 1%;
+    margin: 1%;
+    text-align: center;
+}
+
+.phoneNumber {
+    color: red;
+    margin-top: 3%;
+}
+
+#callSpecialist {
+    padding: 1% 0 1% 0;
+}

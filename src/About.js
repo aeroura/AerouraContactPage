@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCogs, faStar, faCommentDots, faMap, faBell, faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import { faCogs, faStar, faCommentDots, faMap, faBell, faArrowRight, faClock, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
 import './About.css';
 import JehieliGreece from './Images/JehieliGreece.jpg';
@@ -8,6 +8,7 @@ import Oculus from './Images/Oculus.jpg';
 import CityHallPark from './Images/CityHallPark.jpg';
 import BatteryPark from './Images/BatteryPark.jpg';
 import WorldTradeCenter from './Images/WorldTradeCenter.jpg';
+import JehieliMuseum from './Images/JehieliMuseum.jpg';
 
 function About() {
     return (
@@ -145,6 +146,76 @@ function About() {
                         <p className ="imageText">World Trade Center</p>
                     </div>
                 </div>
+            </div>
+            {/* Contact Us Section */}
+            <div classame="contactUsSection">
+                <div className="row" id="contactUsRow">
+                    <div className="col-md-7">
+                        <h2>React out to us</h2>
+                        <h4>We love to hear from travelers and share their stories together. 
+                            We get back to you within 24 hours.
+                        </h4>
+                        <div className="contactUs">
+                            <h4>Contact Us</h4>
+                            <hr></hr>
+                            <p>Fields Marked * are required</p>
+                            <form>
+                                <div className="form-row">
+                                    <div className="form-group col-md-3">
+                                        <label for="firstName">First name</label>
+                                        <input type="text" className="form-control" id="firstName" placeholder="First Name"/>
+                                    </div>
+                                    <div class="form-group col-md-5">
+                                        <label for="LastName">Last name</label>
+                                        <input type="text" className="form-control" id="lastName" placeholder="Last Name"/>
+                                    </div>
+                                </div>
+                                <div className="form-row">
+                                    <div class="form-group col-md-10">
+                                        <label for="QuestionsOrConcerns">Subject</label>
+                                        <textarea class="form-control" id="QuestionsOrConcerns" rows="3">
+                                        </textarea>
+                                    </div>
+                                </div>
+                                <button type="submit" className="btn btn-primary">Submit</button>
+                            </form>
+                        </div>
+                        <div className="row" id="virtualHoursSection">
+                            <div className="col-md-6">
+                                <FontAwesomeIcon icon={faClock} size="3x" style={{ color: 'rgb(19, 143, 137)' }} />
+                                <h3>Virtual Hours (EST)</h3>
+                                <div className="table-responsive">
+                                    <table className="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Monday</td>
+                                                <td>11 am - 2pm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday</td>
+                                                <td>11 am - 2pm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Friday</td>
+                                                <td>11 am - 2pm</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div className="col-md-6" id="callSpecialist">
+                                <FontAwesomeIcon icon={faPhoneAlt} size="3x" style={{ color: 'rgb(19, 143, 137)' }} />
+                                <h3>Call a Specialist</h3>
+                                <p className="phoneNumber">1-800-###-####</p>
+                                <p>Call toll free until 2pm EST</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="col-md-5">
+                        <img src={JehieliMuseum} alt="JehieliMuseum" width={700} height={800} ></img>
+                    </div>
+                </div>
+                
             </div>
         </div>
     )
