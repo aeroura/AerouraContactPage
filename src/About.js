@@ -37,7 +37,7 @@ function About() {
                 </div>
                 <div className="col-md-10" id="missionText">
                     <p>MISSION</p>
-                    <p>To prvide friendly quality service to travelers seeking cultural experiences.</p>
+                    <p>To provide friendly quality service to travelers seeking cultural experiences.</p>
                 </div>
             </div>
             {/* Values Section 1 */}
@@ -151,7 +151,7 @@ function About() {
             <div classame="contactUsSection">
                 <div className="row" id="contactUsRow">
                     <div className="col-md-7">
-                        <h2>React out to us</h2>
+                        <h2>Reach Out To Us</h2>
                         <h4>We love to hear from travelers and share their stories together. 
                             We get back to you within 24 hours.
                         </h4>

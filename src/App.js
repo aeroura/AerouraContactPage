@@ -9,7 +9,7 @@ import Home from "./Home.js";
 import About from "./About.js";
 /*import Community from "./Community.js";*/
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Switch, Link } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link, Redirect } from 'react-router-dom';
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
   <BrowserRouter>
     <div className="App">
       <ul className="row" id="header">
+        {/* Header with links to be replaced with Navbar Bootstrap */}
         <div className="col-md-2">
             <li><b><Link to="/">AEROURA TRAVEL</Link></b></li>  
         </div>
@@ -27,12 +28,14 @@ function App() {
             <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
         </div>
         </ul> 
-
+      {/* Content wrap to keep footer at bottom of page */}
       <div className="content-wrap">
-        
+        {/* Contains website data in multiple routes */}
           <Switch>
-              <Route exact path="/" component={Home}/>
-              <Route path="/about" component={About} />
+              <Route exact path="/" component={Home} render={()=> (
+                <Redirect to="home"/>
+              )} />
+              <Route exact path="/about" component={About} />
               {/* <Route path="/community" component={Community} /> */}
              {/* This gives an error  <Route component={Error} /> */}
           </Switch>

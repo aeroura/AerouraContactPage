@@ -1,3 +1,4 @@
+/* Landing page image for about page */
 .aboutLandingPage {
     background-image: url('./Images/NYCsunrise.jpg');
     background-repeat: no-repeat;
@@ -5,6 +6,7 @@
     background-position: center center;
 }
 
+/* Landing page image background for about page */
 .aboutText {
     background-color: rgba(109, 138, 109, 0.7);
     width: 100%;
@@ -12,6 +14,7 @@
     padding: 10%;
 }
 
+/* Landing page image text for about page */
 .aboutTitle {
     font-size: 50px;
     color: white;
@@ -19,62 +22,75 @@
     text-align: center;
 }
 
+/* Section with company vision statement */
 #visionRow {
     background-color: rgb(199, 191, 191);
 }
 
+/* Text for section with company vision statement */
 #visionText {
     padding: 2% 0 0 5%;
     font-size: 30px;
 }
 
+/* Image in section with company vision statement */
 #visionImage {
     padding: 0;
     margin: 0;
 }
 
+/* Section with company mission statement */
 #missionRow {
     background-color: rgb(0, 95, 105);
 }
 
+/* Text for section with company mission statement */
 #missionText {
     padding: 2% 0 0 5%;
     font-size: 30px;
     color: white;
 }
 
+/* Image in section with company mission statement */
 #missionImage {
     padding: 0;
     margin: 0;
 }
 
+/* Section with company values */
 .ourValues {
     background-color: rgb(219, 205, 205);
     padding: 2% 0px 0px 2%;
 }
 
+/* Top section with company values */
 #values1 {
     padding: 2% 0px 0px 2%;
 }
 
+/* Bottom section with company values */
 #values2 {
     padding: 2% 0px 0px 2%;
 }
 
+/* Image in bottom section with company values */
 #valuesImage {
     float: right;
 }
 
+/* Section with team member info */
 .adventurousTeam {
     background-color: rgb(234, 235, 236);
     padding: 1% 0 3% 3%;
 }
 
+/* Title of section with team member info */
 .adventurousTeamTitle{
     text-align: center;
     padding: 1%;
 }
 
+/* Section with team member description */
 #teamText {
     background-color:rgb(0, 95, 105);
     border-radius: 5px;
@@ -83,10 +99,12 @@
     font-size: 1.1rem;
 }
 
+/* Team member image */
 #imagePortrait {
     position: relative;
 }
 
+/* Team member name on top of image */
 .imagePortaitText {
     position: absolute;
     bottom: 0%;
@@ -94,16 +112,19 @@
     color: white;
 }
 
+/* Arrow on top of team member image */
 .arrowIcon {
     position: absolute;
     top: 40%;
     left: 60%;
 }
 
+/* Positioning of additional image in team member section */
 #imageSection {
     position: relative;
 }
 
+/* Text on top of additional image in team member section */
 .imageText {
     position: absolute;
     bottom: 0%;
@@ -112,14 +133,17 @@
     font-weight: bold;
 }
 
+/* Additional image in team member section */
 .image {
     margin-left: 20%;
 }
 
+/* Section with specific team member info */
 #teamSectionRow {
     margin-bottom: 1%;
 }
 
+/* Contact section */
 .contactUs {
     background-color: rgb(226, 218, 218);
     border-radius: 5px;
@@ -127,22 +151,26 @@
 
 }
 
+/* Contact us form */
 #contactUsRow {
     padding: 1%;
     margin: 1%;
 }
 
+/* Section with virtual hours */
 #virtualHoursSection {
     padding: 1%;
     margin: 1%;
     text-align: center;
 }
 
+/* Section with specialist phone number */
 .phoneNumber {
     color: red;
     margin-top: 3%;
 }
 
+/* Call Specialist section */
 #callSpecialist {
     padding: 1% 0 1% 0;
 }
