@@ -13,6 +13,7 @@ import JehieliMuseum from './Images/JehieliMuseum.jpg';
 function About() {
     return (
         <div className="About">
+            {/* Landing Page Image */}
             <div className="aboutLandingPage">
                 <div className="aboutText">
                     <p className="aboutTitle">
@@ -155,10 +156,12 @@ function About() {
                         <h4>We love to hear from travelers and share their stories together. 
                             We get back to you within 24 hours.
                         </h4>
+                        {/* Contact us form Section */}
                         <div className="contactUs">
                             <h4>Contact Us</h4>
                             <hr></hr>
                             <p>Fields Marked * are required</p>
+                            {/* Form Tag */}
                             <form>
                                 <div className="form-row">
                                     <div className="form-group col-md-3">
@@ -180,6 +183,7 @@ function About() {
                                 <button type="submit" className="btn btn-primary">Submit</button>
                             </form>
                         </div>
+                        {/* Virtual Hours Section */}
                         <div className="row" id="virtualHoursSection">
                             <div className="col-md-6">
                                 <FontAwesomeIcon icon={faClock} size="3x" style={{ color: 'rgb(19, 143, 137)' }} />
@@ -203,6 +207,7 @@ function About() {
                                     </table>
                                 </div>
                             </div>
+                            {/* Call Specialist Section */}
                             <div className="col-md-6" id="callSpecialist">
                                 <FontAwesomeIcon icon={faPhoneAlt} size="3x" style={{ color: 'rgb(19, 143, 137)' }} />
                                 <h3>Call a Specialist</h3>
@@ -211,6 +216,7 @@ function About() {
                             </div>
                         </div>
                     </div>
+                    {/* Pic of Jehieli in museum */}
                     <div className="col-md-5">
                         <img src={JehieliMuseum} alt="JehieliMuseum" width={700} height={800} ></img>
                     </div>
