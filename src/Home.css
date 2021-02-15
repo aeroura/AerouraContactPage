@@ -1,0 +1,174 @@
+/* Landing Page Image section */
+.landingPage {
+    background-image: url('./Images/NYCsunrise.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 80vh;
+    width: 100%;
+    height: 80vh;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 80vh;
+    padding-top: 55vh;
+}
+
+.title {
+    font-size: 50px;
+    color: white;
+    font-weight: bold;
+}
+
+.subTitle {
+    font-size: 30px;
+    color: white;
+}
+
+/* Description Boxes section */
+.PlacesToSee {
+    background-color: rgb(209, 208, 208);
+    padding: 0 0 5px 0;
+}
+
+.TravelCounselor {
+    background-color: rgb(209, 208, 208);
+    margin-top: 6%;
+    width: 90%;
+    position: absolute;
+}
+
+.Name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.ContactInfo {
+    position: relative;
+    top: 30%;
+    left: 30%;
+}
+
+.VirtualHours {
+    background-color: rgb(209, 208, 208);
+    margin-top: 6%;
+    position: absolute;
+}
+
+.Title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.joinButton {
+    position: relative;
+    left: 50%;
+    top: 55%;
+}
+
+/* Travel Banner section */
+.travelBanner {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    
+}
+
+.travelBannerBackground {
+    background-repeat: no-repeat;
+    opacity: .5;
+    width: 98%;
+    transform: translate(1%, 5%);
+    height: 50vh;
+    overflow: hidden;
+    margin-bottom: 3%;
+}
+
+.travelBannerText {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 100px;
+    font-weight: bold;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: rgb(0, 95, 105);
+}
+
+/* Specialize boxes section */
+.SpecializeBoxes {
+    background-color: rgb(0, 95, 105);
+    text-align: center;
+}
+
+.box {
+    background-color: rgb(204, 209, 209);
+    margin: 10px;
+    text-align: start;
+}
+
+.descriptionText {
+    padding: 10px;
+}
+
+.headingText {
+    color: white;
+}
+
+/* Virtual Hours section */
+.virtualHours {
+    padding: 10px;
+    font-size: 1.3em;
+}
+
+#arrangeAppointmentSection {
+    background-color: rgb(218, 214, 214);
+    margin: 5px;
+    border-radius: 10px;
+}
+
+#videoIcon {
+    background-color: rgb(0, 95, 105);
+    padding-top: 20px;
+    border-radius: 10px 0 0 10px;
+}
+
+#firstSection {
+    outline: black solid 1px;
+    border-radius: 10px;
+}
+
+.hours {
+    text-align: center;
+}
+
+.travelPlansForm {
+    outline: black solid 1px;
+    padding: 5px 0 5px 20px;
+    border-radius: 10px;
+}
+
+.sub-text {
+    color: rgb(94, 92, 92);
+    font-size: 2px;
+    padding-top: 0;
+    margin-top: 0;
+}
+
+.horizontalLine {
+    padding: 0;
+    margin: 0;
+}
+
+#Disclaimer {
+    background-color: rgb(233, 230, 230);
+    border-radius: 10px;
+    margin: 5px;
+    font-size: .7em;
+    padding: 10px;
+}

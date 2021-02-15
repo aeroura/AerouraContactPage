@@ -4,7 +4,6 @@ import Footer from "./Footer.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
-/*import { Nav, Navbar } from "react-bootstrap";*/
 import Home from "./Home.js";
 import About from "./About.js";
 /*import Community from "./Community.js";*/
@@ -16,18 +15,23 @@ function App() {
   return (
   <BrowserRouter>
     <div className="App">
-      <ul className="row" id="header">
-        {/* Header with links to be replaced with Navbar Bootstrap */}
-        <div className="col-md-2">
-            <li><b><Link to="/">AEROURA TRAVEL</Link></b></li>  
-        </div>
-        <div className="col-md-8"></div>
-        <div className="col-md-2">
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/community">Community</Link></li>
-            <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
-        </div>
-        </ul> 
+{/* Header with links Navbar Bootstrap */}
+<nav className="navbar navbar-expand-lg navbar-light bg-light">
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+    <span className="navbar-toggler-icon"></span>
+  </button>
+  <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+    <span className="homeLink"><Link to="/">AEROURA TRAVEL</Link></span>
+      <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
+      <li className="nav-item"><Link to="/about">About</Link></li>
+      {/*<li className="nav-item"><Link to="/community">Community</Link></li>*/}
+    </ul>
+    <li className="nav-item" id="globeIcon">
+      <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
+    </li>
+  </div>
+</nav>
+
       {/* Content wrap to keep footer at bottom of page */}
       <div className="content-wrap">
         {/* Contains website data in multiple routes */}
@@ -53,44 +57,5 @@ export default App;
 
 /* 
 
-  <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
-      <Navbar.Brand href="#home"><Link to="/">AEROURA TRAVEL</Link>
-      </Navbar.Brand>
-      <Navbar.Toggle aria-controls="responsive-navbar-nav" />
-      <Navbar.Collapse id="responsive-navbar-nav">
-        <Nav className="mr-auto">
-          <Nav.Link href="#about"><Link to="/about">About</Link></Nav.Link>
-          <Nav.Link href="#community"><Link to="/community">Community</Link></Nav.Link>
-        </Nav>
-        <Nav>
-          <Nav.Link><FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} /></Nav.Link>
-        </Nav>
-      </Navbar.Collapse>
-    </Navbar>
 
-
-    <ul className="row">
-        <div className="col-md-2">
-            <li><b><Link to="/">AEROURA TRAVEL</Link></b></li>  
-        </div>
-        <div className="col-md-8"></div>
-        <div className="col-md-2">
-            <li><Link to="/about">About</Link></li>
-            <li><Link to="/community">Community</Link></li>
-            <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
-        </div>
-        </ul> 
-
-
-        <ul className="nav navbar-nav">
-          <li>
-            <Link to="/">Home</Link>
-          </li>
-          <li>
-            <Link to="/about">About</Link>
-          </li>
-          <li>
-            <Link to="/community">Community</Link>
-          </li>
-        </ul>
 */

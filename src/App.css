@@ -5,16 +5,20 @@
 li {
     padding-right: 20px;
     color:  rgb(0, 95, 105);
-    text-decoration: none;
     font-size: 20px;
     font-family: Arial, sans-serif;
 }
 
-ul li{
-    display: inline;
-    float: left;
+nav {
+    padding: 10px 10px 0 10px;
 }
 
-#header {
-    padding: 10px 10px 0 10px;
+#globeIcon  {
+    list-style-type: none;
+}
+
+.homeLink {
+    font-size: 20px;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
 }
