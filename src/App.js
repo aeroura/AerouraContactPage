@@ -17,10 +17,10 @@ function App() {
     <div className="App">
 {/* Header with links Navbar Bootstrap */}
 <nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
     <span className="navbar-toggler-icon"></span>
   </button>
-  <div className="collapse navbar-collapse" id="navbarTogglerDemo01">
+  <div className="collapse navbar-collapse" id="navbarToggler">
     <span className="homeLink"><Link to="/">AEROURA TRAVEL</Link></span>
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
       <li className="nav-item"><Link to="/about">About</Link></li>

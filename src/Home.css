@@ -7,6 +7,7 @@
     height: 80vh;
 }
 
+/* Text positioning on Landing Page Image */
 .text {
     display: flex;
     flex-direction: column;
@@ -15,12 +16,14 @@
     padding-top: 55vh;
 }
 
+/* Top Text on Landing Page Image */
 .title {
     font-size: 50px;
     color: white;
     font-weight: bold;
 }
 
+/* Bottom Text on Landing Page Image */
 .subTitle {
     font-size: 30px;
     color: white;
@@ -31,6 +34,7 @@
     background-color: rgb(209, 208, 208);
     padding: 0 0 5px 0;
 }
+
 
 .TravelCounselor {
     background-color: rgb(209, 208, 208);
