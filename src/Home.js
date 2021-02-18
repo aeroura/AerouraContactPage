@@ -237,7 +237,7 @@ export default function Home() {
                             <p className="sub-text">Fields marked* are required</p>  
                         <form>
                             <div className="form-row">
-                                <div className="form-group col-md-3">
+                                <div className="form-group col-md-6">
                                     <label>Destination</label>
                                     <select id="title" className="form-control">
                                         <option selected>Choose...</option>
@@ -249,7 +249,7 @@ export default function Home() {
                                 </div>
                             </div>
                             <div className="form-row">
-                                <div class="form-group col-md-6">
+                                <div class="form-group col-md-11">
                                     <label for="QuestionsOrConcerns">TravelPlans</label>
                                     <textarea class="form-control" id="QuestionsOrConcerns" rows="3" 
                                         placeholder= "E.g. Number of travelers, duration, travel dates, level of accommodations">
@@ -259,7 +259,7 @@ export default function Home() {
                             
                         </form>
                     </div>
-                    <button type="submit" className="btn btn-primary">Submit Inquiry</button>
+                    <button type="submit" className="btn btn-primary" id="submitButton">Submit Inquiry</button>
                             </div>
                         </div>
                     </div>

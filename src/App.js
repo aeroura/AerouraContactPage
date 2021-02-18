@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState} from 'react';
 import './App.css';
 import Footer from "./Footer.js";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -12,15 +12,18 @@ import { BrowserRouter, Route, Switch, Link, Redirect } from 'react-router-dom';
 
 
 function App() {
+  const [isNavCollapsed, setIsNavCollapsed] = useState(true);
+
+  const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
   <BrowserRouter>
     <div className="App">
 {/* Header with links Navbar Bootstrap */}
-<nav className="navbar navbar-expand-lg navbar-light bg-light">
-  <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggler" aria-controls="navbarToggler" aria-expanded="false" aria-label="Toggle navigation">
+<nav className="navbar navbar-expand-lg navbar-light">
+<button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
     <span className="navbar-toggler-icon"></span>
   </button>
-  <div className="collapse navbar-collapse" id="navbarToggler">
+  <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarToggle">
     <span className="homeLink"><Link to="/">AEROURA TRAVEL</Link></span>
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
       <li className="nav-item"><Link to="/about">About</Link></li>

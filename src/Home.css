@@ -62,6 +62,7 @@
     position: absolute;
 }
 
+
 .Title {
     display: flex;
     flex-direction: column;
@@ -114,6 +115,7 @@
     background-color: rgb(204, 209, 209);
     margin: 10px;
     text-align: start;
+    height: 90%;
 }
 
 .descriptionText {
@@ -143,8 +145,13 @@
 }
 
 #firstSection {
-    outline: black solid 1px;
+    border: 1px solid black;
     border-radius: 10px;
+}
+
+#submitButton {
+    float: right;
+    margin: 10px;
 }
 
 .hours {
@@ -152,7 +159,7 @@
 }
 
 .travelPlansForm {
-    outline: black solid 1px;
+    border: black solid 1px;
     padding: 5px 0 5px 20px;
     border-radius: 10px;
 }
