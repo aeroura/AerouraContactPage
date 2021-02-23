@@ -22,14 +22,14 @@ export default function Home() {
       </div>
       <div className="container-fluid">
                 <div className="row">
-                    <div className="col">
+                    <div className="col-md-4">
                         <h4>Places to See - NYC</h4>
                         <div className="PlacesToSee">
-                            <img src={BrookfieldPlace} alt="BrookfieldPlace" width={610} height={270} mode='fit'></img>
+                            <img src={BrookfieldPlace} alt="BrookfieldPlace" width={604} height={270} mode='fit'></img>
                             <h6>Brookfield Place - </h6>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col-md-4">
                         <div className="TravelCounselor">
                             <div className="row">
                                 <div className="col-md-3">
@@ -41,7 +41,6 @@ export default function Home() {
                                         <h5>Travel Counselor</h5>
                                     </div>
                                     <div className="ContactInfo">
-                                    
                                         <p><FontAwesomeIcon icon={faPhoneAlt} style={{ color: 'rgb(19, 143, 137)' }} /> (347)-619-2214</p>
                                         <p><FontAwesomeIcon icon={faEnvelope} style={{ color: 'rgb(19, 143, 137)' }} /> Josue@aeroura.com</p>
                                         <button type="submit" className="btn btn-primary">Schedule an Appointment</button>
@@ -50,7 +49,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="col">
+                    <div className="col-md-4">
                         <div className="VirtualHours">
                             <div className="row">
                                 <div className="col-md-7">

@@ -13,14 +13,16 @@ import { BrowserRouter, Route, Switch, Link, Redirect } from 'react-router-dom';
 
 function App() {
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
-
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   return (
+
   <BrowserRouter>
     <div className="App">
 {/* Header with links Navbar Bootstrap */}
-<nav className="navbar navbar-expand-lg navbar-light">
-<button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarsExample09" aria-controls="navbarsExample09" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" onClick={handleNavCollapse}>
+<nav className="navbar navbar-expand-lg navbar-light bg-light" id="navHeader">
+<button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" 
+    aria-controls="navbar" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" 
+    onClick={handleNavCollapse}>
     <span className="navbar-toggler-icon"></span>
   </button>
   <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarToggle">
@@ -29,9 +31,15 @@ function App() {
       <li className="nav-item"><Link to="/about">About</Link></li>
       {/*<li className="nav-item"><Link to="/community">Community</Link></li>*/}
     </ul>
-    <li className="nav-item" id="globeIcon">
-      <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
-    </li>
+      <div className="dropdown">
+      <button className="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
+      </button>
+      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+        <a className="dropdown-item" href="google.com">English</a>
+        <a className="dropdown-item" href="google.com">Spanish</a>
+      </div>
+    </div>
   </div>
 </nav>
 
@@ -60,5 +68,14 @@ export default App;
 
 /* 
 
+<li class="nav-item dropdown">
+        <button className="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
+  </button>
+        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+    <a className="dropdown-item" href="#">English</a>
+    <a className="dropdown-item" href="#">Spanish</a>
+  </div>
+      </li>
 
 */
