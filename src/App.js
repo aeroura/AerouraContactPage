@@ -12,8 +12,12 @@ import { BrowserRouter, Route, Switch, Link, Redirect } from 'react-router-dom';
 
 
 function App() {
+  /* useState for hamburger menu */
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+/* useState for dropdown menu */
+  const [showDropDown, setShowDropDown] = useState(false);
+  const handleShowDropDown = () => setShowDropDown(!showDropDown);
   return (
 
   <BrowserRouter>
@@ -30,15 +34,19 @@ function App() {
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
       <li className="nav-item"><Link to="/about">About</Link></li>
       {/*<li className="nav-item"><Link to="/community">Community</Link></li>*/}
+      
     </ul>
       <div className="dropdown">
-      <button className="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button className="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" 
+       onClick={handleShowDropDown} aria-expanded="false">
         <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
       </button>
-      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
+      {showDropDown ?
+      <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
         <a className="dropdown-item" href="google.com">English</a>
         <a className="dropdown-item" href="google.com">Spanish</a>
-      </div>
+      </div> 
+      : null}
     </div>
   </div>
 </nav>
@@ -68,14 +76,20 @@ export default App;
 
 /* 
 
-<li class="nav-item dropdown">
-        <button className="btn dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
-  </button>
-        <div className="dropdown-menu" aria-labelledby="dropdownMenuButton">
-    <a className="dropdown-item" href="#">English</a>
-    <a className="dropdown-item" href="#">Spanish</a>
-  </div>
-      </li>
+<DropdownButton id="dropdown-item-button" title="Dropdown button">
+<FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
+  <Dropdown.Item as="button">English</Dropdown.Item>
+  <Dropdown.Item as="button">Spanish</Dropdown.Item>
+</DropdownButton>
+
+
+<div className="dropdown">
+      <button className="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+        <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} />
+      </button>
+      <div className="dropdown-menu" aria-labelledby="dropdownMenuButton" id="menu">
+        <a className="dropdown-item" href="google.com">English</a>
+        <a className="dropdown-item" href="google.com">Spanish</a>
+      </div>
 
 */
