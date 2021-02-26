@@ -10,9 +10,8 @@
     margin-top: 3%;
   }
 
-/* Footer Icons */
+  /* Specific icons*/
   .footer-icons {
-    vertical-align: middle;
     margin: 0 7px 0 7px;
     font-size: 3rem;
   }
@@ -25,3 +24,26 @@
     float: left;
     font-size: 1.4em;
   }
+
+  /* Footer Icons Col */
+#footerIcons {
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer Icons Div*/
+.icons {
+  margin-right: 0;
+  padding-right: 0;
+}
+
+/* Icons Links */
+.icons a {
+  color:#eceeef;
+}
+
+/* Blur when hovering on links*/
+.icons a:active,.icons a:focus,.icons a:hover
+{
+ color: #fff;
+}
