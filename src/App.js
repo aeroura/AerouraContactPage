@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState} from 'react';
+import React, { useEffect, useRef, useState, Suspense} from 'react';
 import './App.css';
 import Footer from "./Footer.js";
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -9,8 +9,16 @@ import About from "./About.js";
 /*import Community from "./Community.js";*/
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { useTranslation } from "react-i18next";
+import i18next from "i18next";
 
+/* Languages Library */
+const languageMap = {
+  en: { label: "English", dir: "ltr", active: true },
+  es: { label: "Español", dir: "ltr", active: false }
+};
 
+  
 function App() {
   /* useState for hamburger menu */
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -33,8 +41,17 @@ function App() {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     });
 
-  return (
+  /* Translation code */
+  const selected = localStorage.getItem("i18nextLng") || "en";
+  const { t } = useTranslation();
 
+  const [menuAnchor, setMenuAnchor] = useState(null);
+  useEffect(() => {
+    document.body.dir = languageMap[selected].dir;
+  }, [menuAnchor, selected]);
+
+  return (
+<Suspense fallback="loading">
   <BrowserRouter>
     <div className="App">
 {/* Header with links Navbar Bootstrap */}
@@ -90,8 +107,9 @@ function App() {
       
     </div>
     </BrowserRouter>
+    </Suspense>
   );
-}
+      }
 
 export default App;
 
@@ -107,30 +125,19 @@ export default App;
 </NavLink>
 
 
-
-
-const SampleComponent = () => {
-    const [clickedOutside, setClickedOutside] = useState(false);
-    const myRef = useRef();
-
-    const handleClickOutside = e => {
-        if (!myRef.current.contains(e.target)) {
-            setClickedOutside(true);
-        }
-    };
-
-    const handleClickInside = () => setClickedOutside(false);
-
-    useEffect(() => {
-        document.addEventListener('mousedown', handleClickOutside);
-        return () => document.removeEventListener('mousedown', handleClickOutside);
-    });
-
-    return (
-        <button ref={myRef} onClick={handleClickInside}>
-            {clickedOutside ? 'Bye!' : 'Hello!'}
-        </button>
-    );
-};
-
+-----To Test -----
+    <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
+    {Object.keys(languageMap)?.map(item => (
+      <button
+      className= "btn"
+        key={item}
+        onClick={() => {
+          i18next.changeLanguage(item);
+          setMenuAnchor(null);
+        }}
+      >
+        {languageMap[item].label}
+      </button>
+  ))}
+  </div> 
 */
