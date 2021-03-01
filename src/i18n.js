@@ -4,7 +4,7 @@ import Backend from 'i18next-http-backend';
 import LanguageDetector from 'i18next-browser-languagedetector';
 
 const fallbackLng = ['en'];
-const availableLanguages = ['en', 'ar', 'fr', 'es'];
+const availableLanguages = ['en', 'sp'];
 
 i18n
   .use(Backend) // load translations using http (default                                               public/assets/locals/en/translations)
@@ -13,6 +13,10 @@ i18n
   .init({
     fallbackLng, // fallback language is english.
 
+    react: {
+      useSuspense: false
+    },
+    
     detection: {
       checkWhitelist: true, // options for language detection
     },

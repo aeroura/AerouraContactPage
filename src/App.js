@@ -15,7 +15,7 @@ import i18next from "i18next";
 /* Languages Library */
 const languageMap = {
   en: { label: "English", dir: "ltr", active: true },
-  es: { label: "Español", dir: "ltr", active: false }
+  sp: { label: "Español", dir: "ltr", active: false }
 };
 
   
@@ -79,9 +79,19 @@ function App() {
       </button>
       {showDropDown ?
       <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
-        <a className="dropdown-item" href="google.com">English</a>
-        <a className="dropdown-item" href="google.com">Spanish</a>
-      </div> 
+      {Object.keys(languageMap)?.map(item => (
+        <button
+        className= "btn"
+          key={item}
+          onClick={() => {
+            i18next.changeLanguage(item);
+            setMenuAnchor(null);
+          }}
+        >
+          {languageMap[item].label}
+        </button>
+    ))}
+    </div> 
       : null}
     </div>  
   </div>
@@ -124,20 +134,9 @@ export default App;
   Home
 </NavLink>
 
-
------To Test -----
-    <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
-    {Object.keys(languageMap)?.map(item => (
-      <button
-      className= "btn"
-        key={item}
-        onClick={() => {
-          i18next.changeLanguage(item);
-          setMenuAnchor(null);
-        }}
-      >
-        {languageMap[item].label}
-      </button>
-  ))}
-  </div> 
+  ------Back up in case previous dropdown doesnt work-----
+  <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
+        <a className="dropdown-item" href="google.com">English</a>
+        <a className="dropdown-item" href="google.com">Spanish</a>
+      </div> 
 */

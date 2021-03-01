@@ -8,16 +8,18 @@ import NYCTravel from './Images/TravelBanner.jpeg';
 import BrooklynBridge from './Images/BrooklynBridge.jpg';
 import Macys from './Images/Macy\'s.jpg';
 import BroadwayStreet from './Images/BroadwayStreet.jpg';
+import { useTranslation } from "react-i18next";
 import './Home.css';
 
 
 export default function Home() {
+    const { t } = useTranslation();
     return (
     <div className="Home">
       <div className="landingPage">
           <div className="text">
               <p className="title">AEROURA TRAVEL</p>
-              <p className="subTitle">EXPERIENCE THE WORLD</p>
+              <p className="subTitle">{t("EXPERIENCE THE WORLD")}</p>
           </div>
       </div>
       <div className="container-fluid">
