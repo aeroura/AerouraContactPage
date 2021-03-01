@@ -30,50 +30,86 @@
 }
 
 /* Description Boxes section */
-.PlacesToSee {
-    background-color: rgb(209, 208, 208);
-    padding: 0 0 5px 0;
+.descriptionBoxes {
+    margin: 0 0 20px 0;
 }
 
-
-.TravelCounselor {
+.PlacesToSee {
     background-color: rgb(209, 208, 208);
-    margin-top: 6%;
-    width: 90%;
-    position: absolute;
+    padding-bottom: 1%;
+    margin: 0 0 0 10px;
+    width: 100%;
+    height: 85%;
+}
+
+/* Places to see Image*/
+.slideShowImage {
+    height: 90%;
+    width: 100%;
+}
+
+/*Travel counselor section*/
+#TravelCounselor {
+    background-color: rgb(209, 208, 208);
+    margin: 2% 0 2% 0;
+    display: inline-block;
+    padding: 0;
+}
+
+/* Josue Portrait Image*/
+.josueImage {
+    height: 100%;
+    width: 50%;
+}
+
+/* Josue Portrait Image Information*/
+.josuePortraitInfo {
+    float: right;
+    width: 49%;
+    padding: 10px 0 0 10px;
 }
 
 .Name {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 }
 
 .ContactInfo {
-    position: relative;
-    top: 30%;
-    left: 30%;
+    margin-top: 35%;
 }
 
-.VirtualHours {
+/*Virtual Hours Section*/
+#VirtualHours {
     background-color: rgb(209, 208, 208);
-    margin-top: 6%;
-    position: absolute;
+    margin: 2% 0 2% 0;
+    display: inline-block;
 }
 
+/* Josue Mountains Image */
+.josueMountainsImage {
+    height: 50%;
+    width: 50%;
+}
+
+/* Virtual Hours Information*/
+.virtualHoursInfo {
+    float: right;
+    width: 49%;
+    padding: 10px 0 10px 10px;
+}
 
 .Title {
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: relative;
 }
 
 .joinButton {
-    position: relative;
-    left: 50%;
-    top: 55%;
+    margin: 35% 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
 /* Travel Banner section */
@@ -99,6 +135,11 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 0;
+    margin: 0;
     font-size: 100px;
     font-weight: bold;
     font-family: Verdana, Tahoma, sans-serif;
@@ -109,6 +150,7 @@
 .SpecializeBoxes {
     background-color: rgb(0, 95, 105);
     text-align: center;
+    padding-bottom: 10px;
 }
 
 .box {
@@ -183,3 +225,63 @@
     font-size: .7em;
     padding: 10px;
 }
+
+/* Css section for small devices */
+@media only screen and (max-width: 600px) {
+    /* Landing Page Image section */
+.landingPage {
+    background-size: 100% 50vh;
+    width: 100%;
+    height: 50vh;
+}
+
+/* Text positioning on Landing Page Image */
+.text {
+    height: 50vh;
+    padding-top: 35vh;
+}
+
+/* Top Text on Landing Page Image */
+.title {
+    font-size: 30px;
+    color: white;
+    font-weight: bold;
+}
+
+/* Bottom Text on Landing Page Image */
+.subTitle {
+    font-size: 20px;
+    color: white;
+}
+
+/* Travel Banner section */
+.travelBanner {
+    height: 100%;
+    width: 100%;
+    position: relative;
+}
+
+.travelBannerBackground {
+    background-repeat: no-repeat;
+    opacity: .5;
+    width: 98%;
+    transform: translate(1%, 5%);
+    height: 50vh;
+    overflow: hidden;
+    margin-bottom: 3%;
+}
+
+.travelBannerText {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    font-size: 40px;
+    font-weight: bold;
+    font-family: Verdana, Tahoma, sans-serif;
+    color: rgb(0, 95, 105);
+    padding: 0;
+    margin: 0;
+}
+}
+
