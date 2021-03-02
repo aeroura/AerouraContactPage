@@ -24,14 +24,14 @@ export default function Home() {
       </div>
       <div className="descriptionBoxes">
                 <div className="row">
-                    <div className="col-md-4 col-sm-6 col-xs-12">
+                    <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <h4>Places to See - NYC</h4>
                         <div className="PlacesToSee">
                             <img src={BrookfieldPlace} alt="BrookfieldPlace" className="slideShowImage"></img>
                             <h6>Brookfield Place - </h6>
                         </div>
                     </div>
-                    <div className="col-md-4 col-sm-6 col-xs-12" id="TravelCounselor">
+                    <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="TravelCounselor">
                             <img src={JehieliProfessional} alt="Josue" className="josueImage"></img>
                         <div className="josuePortraitInfo">
                             <div className="Name">
@@ -45,7 +45,7 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-md-4 col-sm-6 col-xs-12" id="VirtualHours">
+                    <div className="col-lg-4 col-md-8 col-sm-6 col-xs-12" id="VirtualHours">
                         <img src={JehieliMountains} alt="JehieliMountains" className="josueMountainsImage"></img>
                         <div className="virtualHoursInfo">
                             <div className="Title">

@@ -10,7 +10,7 @@
 .aboutText {
     background-color: rgba(109, 138, 109, 0.7);
     width: 100%;
-    height: 80%;
+    height: 100%;
     padding: 10%;
 }
 
@@ -31,6 +31,7 @@
 #visionText {
     padding: 2% 0 0 5%;
     font-size: 30px;
+    
 }
 
 /* Image in section with company vision statement */
@@ -173,4 +174,30 @@
 /* Call Specialist section */
 #callSpecialist {
     padding: 1% 0 1% 0;
+}
+
+/* Section for mobile devices */
+@media only screen and (max-width: 1024px){
+
+/* Landing page image text for about page */
+.aboutTitle {
+    font-size: 30px;
+    }
+
+}
+
+@media only screen and (max-width: 600px){
+/* Landing page image text for about page */
+.aboutTitle {
+    font-size: 20px;
+
+    }
+
+}
+
+@media only screen and (max-width: 425px){
+    .aboutTitle {
+        font-size: 12px;
+    
+        }
 }
