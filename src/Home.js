@@ -35,13 +35,13 @@ export default function Home() {
                             <img src={JehieliProfessional} alt="Josue" className="josueImage"></img>
                         <div className="josuePortraitInfo">
                             <div className="Name">
-                                <h3>Josue Jehieli Bastidas</h3>
-                                <h5>Travel Counselor</h5>
+                                <h3 className="nameHead">Josue Jehieli Bastidas</h3>
+                                <h5 className="nameSub">Travel Counselor</h5>
                             </div>
                             <div className="ContactInfo">
                                 <p><FontAwesomeIcon icon={faPhoneAlt} style={{ color: 'rgb(19, 143, 137)' }} /> (347)-619-2214</p>
                                 <p><FontAwesomeIcon icon={faEnvelope} style={{ color: 'rgb(19, 143, 137)' }} /> Josue@aeroura.com</p>
-                                <button type="submit" className="btn btn-primary">Schedule an Appointment</button>
+                                <button type="submit" className="btn btn-primary" id="scheduleBtn">Schedule an Appointment</button>
                             </div>
                         </div>
                     </div>
@@ -112,20 +112,16 @@ export default function Home() {
                                 <p>Your Details</p>
                                 <hr className="horizontalLine"></hr>
                                 <div className="row" id="arrangeAppointmentSection">
-                                    <div className="col-md-1" id="videoIcon">
+                                    <div className="col-xl-2 col-lg-2 col-md-3 col-sm-2 col-xs-2" id="videoIcon">
                                         <FontAwesomeIcon icon={faVideo} size="3x" style={{ color: 'white' }} />
                                     </div>
-                                    <div className="col">
-                                        <span className="pb-0">
+                                    <div className="col-xl-10 col-lg-10 col-md-9 col-sm-10 col-xs-10" id="videoAppointmentInfo">
+                                        <span className="videoAppointmentSpan">
                                             <p>Arrange a video appointment</p>
                                         </span>
-                                        <div className="row">
-                                            <div className="col-md-1 pt-0 mt-0">
-                                                <FontAwesomeIcon icon={faCheckSquare} size="3x" style={{ color: 'rgb(19, 143, 137)' }}/>
-                                            </div>
-                                            <div className="col-md-11 p-0">
-                                                <p>Request your appointment and a specialist will be in touch to confirm a date and time to suit you</p>
-                                            </div>
+                                        <div className="row" id="appointmentRequest">
+                                           <p>  <FontAwesomeIcon icon={faCheckSquare} size="2x" style={{ color: 'rgb(19, 143, 137)' }}/> <tab></tab>
+                                           Request your appointment and a specialist will be in touch to confirm a date and time to suit you</p>
                                         </div>
                                     </div>
                                 </div>
@@ -193,29 +189,23 @@ export default function Home() {
                             <div className="hours">
                                 <FontAwesomeIcon icon={faClock} size="3x" style={{ color: 'rgb(19, 143, 137)' }} />
                                 <h3>Virtual Hours (EST)</h3>
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <p>Monday</p>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <p>11 am - 2pm</p>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <p>Wednesday</p>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <p>11 am - 2pm</p>
-                                    </div>
-                                </div>
-                                <div className="row">
-                                    <div className="col-md-6">
-                                        <p>Friday</p>
-                                    </div>
-                                    <div className="col-md-6">
-                                        <p>11 am - 2pm</p>
-                                    </div>
+                                <div className="table-responsive">
+                                    <table className="table">
+                                        <tbody>
+                                            <tr>
+                                                <td>Monday</td>
+                                                <td>11 am - 2pm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Wednesday</td>
+                                                <td>11 am - 2pm</td>
+                                            </tr>
+                                            <tr>
+                                                <td>Friday</td>
+                                                <td>11 am - 2pm</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
                                 </div>
                             </div>
                             <hr className="horizontalLine"></hr>

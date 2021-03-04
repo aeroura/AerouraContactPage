@@ -77,6 +77,11 @@
     margin: 65% 0 0 10%;
 }
 
+#scheduleBtn {
+    padding: 5px;
+    margin: 10px;
+}
+
 /*Virtual Hours Section*/
 #VirtualHours {
     background-color: rgb(209, 208, 208);
@@ -87,6 +92,7 @@
 .josueMountainsImage {
     height: 100%;
     width: 60%;
+    transform: translate(-5%, 0%);
 }
 
 /* Virtual Hours Information*/
@@ -179,8 +185,12 @@
 
 #videoIcon {
     background-color: rgb(0, 95, 105);
-    padding-top: 20px;
+    padding-top: 30px;
     border-radius: 10px 0 0 10px;
+}
+
+#videoAppointmentInfo {
+    padding: 10px 15px 10px 20px;
 }
 
 #firstSection {
@@ -199,7 +209,7 @@
 
 .travelPlansForm {
     border: black solid 1px;
-    padding: 5px 0 5px 20px;
+    padding: 5px 20px 5px 20px;
     border-radius: 10px;
 }
 
@@ -282,12 +292,73 @@
     margin: 0;
 }
 
+/*Travel counselor section*/
+#TravelCounselor {
+    padding-right: 10px;
+}
+
+.nameHead {
+    font-size: 1em;
+}
+
+.nameSub {
+    font-size: .9em;
+}
+
+.ContactInfo {
+    font-size: 70%;
+
+}
+
+#scheduleBtn {
+    font-size: 10px;
+}
+
+/*Virtual Hours Section*/
+.Title :nth-child(2) {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+}
+
+.Title :nth-child(3) {
+    font-size: 14px;
+}
+
+.videoAppointmentSpan{
+    font-size: 15px;
+}
+
+#appointmentRequest p{
+    font-size: 6px;
+}
+
+#videoAppointmentInfo {
+    padding: 2% 8%;
+}
+
+#videoIcon {
+    border-radius: 10px;
+}
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
     #VirtualHours {
         transform: translate(25%, 0%);
     }
+    #videoIcon {
+        padding-right: 15px;
+    }
+
+    #videoAppointmentInfo :nth-child(2){
+        font-size: 12px;
+    }
+
+    #videoAppointmentInfo :nth-child(4){
+        font-size: 12px;
+    }
+
+    
 }
 
 @media only screen and (min-width: 1024px) {
