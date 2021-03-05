@@ -24,7 +24,7 @@ export default function Home() {
       </div>
       <div className="descriptionBoxes">
                 <div className="row">
-                    <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div className="col-lg-4 col-md-12 col-sm-6 col-xs-12">
                         <h4>Places to See - NYC</h4>
                         <div className="PlacesToSee">
                             <img src={BrookfieldPlace} alt="BrookfieldPlace" className="slideShowImage"></img>
@@ -45,13 +45,13 @@ export default function Home() {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-8 col-sm-6 col-xs-12" id="VirtualHours">
+                    <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="VirtualHours">
                         <img src={JehieliMountains} alt="JehieliMountains" className="josueMountainsImage"></img>
                         <div className="virtualHoursInfo">
                             <div className="Title">
-                                <h4><FontAwesomeIcon icon={faClock} style={{ color: 'rgb(19, 143, 137)' }} /> Virtual Hours</h4>
-                                <h6>Monday, Wednesday, Friday</h6>
-                                <h6>11am - 2pm (EST)</h6>
+                                <h4 className="TitleIcon"><FontAwesomeIcon icon={faClock} style={{ color: 'rgb(19, 143, 137)' }} /> Virtual Hours</h4>
+                                <h6 className="TitleText">Monday, Wednesday, Friday</h6>
+                                <h6 className="TitleText">11am - 2pm (EST)</h6>
                             </div>
                             <div className="joinButton">
                                 <button type="submit" className="btn btn-primary">Join Here</button>

@@ -52,6 +52,7 @@
     background-color: rgb(209, 208, 208);
     margin: 2% 0 2% 0;
     padding: 0;
+    transform: translate(-.5em, 0em);
 }
 
 /* Josue Portrait Image*/
@@ -92,7 +93,7 @@
 .josueMountainsImage {
     height: 100%;
     width: 60%;
-    transform: translate(-5%, 0%);
+    transform: translate(-6.5%, 0%);
 }
 
 /* Virtual Hours Information*/
@@ -158,7 +159,7 @@
 
 .box {
     background-color: rgb(204, 209, 209);
-    margin: 10px;
+    margin: 10px 5px;
     text-align: start;
     height: 90%;
 }
@@ -315,14 +316,16 @@
 }
 
 /*Virtual Hours Section*/
-.Title :nth-child(2) {
+.TitleIcon {
     font-size: 16px;
     display: flex;
     align-items: center;
 }
 
-.Title :nth-child(3) {
-    font-size: 14px;
+.TitleText {
+    font-size: 12px;
+    display: flex;
+    align-items: center;
 }
 
 .videoAppointmentSpan{
@@ -343,9 +346,6 @@
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    #VirtualHours {
-        transform: translate(25%, 0%);
-    }
     #videoIcon {
         padding-right: 15px;
     }
@@ -361,8 +361,14 @@
     
 }
 
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 1024px) and (max-width:1440px) {
     #VirtualHours {
-        transform: translate(1%, 0%);
+        transform:translate(1%, 0%);
+    }
+}
+
+@media only screen and (min-width: 1441px) {
+    #VirtualHours {
+        transform:translate(2%, 0%);
     }
 }
