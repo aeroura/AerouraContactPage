@@ -112,8 +112,8 @@ export default function Home() {
                                 <p>Your Details</p>
                                 <hr className="horizontalLine"></hr>
                                 <div className="row" id="arrangeAppointmentSection">
-                                    <div className="col-xl-2 col-lg-2 col-md-3 col-sm-2 col-xs-2" id="videoIcon">
-                                        <FontAwesomeIcon icon={faVideo} size="3x" style={{ color: 'white' }} />
+                                    <div className="col-xl-2 col-lg-2 col-md-3 col-sm-2 col-xs-2" id="videoIconSection">
+                                        <FontAwesomeIcon icon={faVideo} style={{ color: 'white'}} id="videoIcon" />
                                     </div>
                                     <div className="col-xl-10 col-lg-10 col-md-9 col-sm-10 col-xs-10" id="videoAppointmentInfo">
                                         <span className="videoAppointmentSpan">
@@ -147,7 +147,7 @@ export default function Home() {
                                         </div>
                                     </div>
                                     <div className="form-row">
-                                    <div className="form-group col-md-4">
+                                    <div className="form-group col-md-6">
                                             <label for="inputEmail4">Email</label>
                                             <input type="email" className="form-control" id="inputEmail4" placeholder="Email"/>
                                         </div>
@@ -157,7 +157,7 @@ export default function Home() {
                                             <label for="phoneNumber">Phone Number</label>
                                             <input type="tel" className="form-control" id="phoneNumber" placeholder="1-(555)-555-5555"/>
                                         </div>
-                                        <div className="form-group col-md-3">
+                                        <div className="form-group col-md-6">
                                             <label for="callTime">Best Time To Call You</label>
                                             <select id="callTime" className="form-control">
                                              <option selected>No Preference</option>
@@ -216,7 +216,7 @@ export default function Home() {
                             <p className="sub-text">Fields marked* are required</p>  
                         <form>
                             <div className="form-row">
-                                <div className="form-group col-md-6">
+                                <div className="form-group col-md-8">
                                     <label>Destination</label>
                                     <select id="title" className="form-control">
                                         <option selected>Choose...</option>

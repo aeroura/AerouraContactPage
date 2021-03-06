@@ -1,4 +1,6 @@
-/* Landing Page Image section */
+/* ===============================
+    Landing Page Image section 
+==================================*/
 .landingPage {
     background-image: url('./Images/NYCsunrise.jpg');
     background-repeat: no-repeat;
@@ -9,9 +11,7 @@
 
 /* Text positioning on Landing Page Image */
 .text {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
     height: 80vh;
     padding-top: 55vh;
 }
@@ -29,7 +29,9 @@
     color: white;
 }
 
-/* Description Boxes section */
+/* ===============================
+    Description boxes section 
+==================================*/
 .descriptionBoxes {
     margin: 0;
 }
@@ -47,7 +49,9 @@
     width: 100%;
 }
 
-/*Travel counselor section*/
+/* ===============================
+    Travel Counselor section 
+==================================*/
 #TravelCounselor {
     background-color: rgb(209, 208, 208);
     margin: 2% 0 2% 0;
@@ -69,9 +73,7 @@
 }
 
 .Name {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
 .ContactInfo {
@@ -83,7 +85,9 @@
     margin: 10px;
 }
 
-/*Virtual Hours Section*/
+/* ===============================
+    Virtual Hours Info section 
+==================================*/
 #VirtualHours {
     background-color: rgb(209, 208, 208);
     margin: 2% 0 2% 0;
@@ -104,9 +108,7 @@
 }
 
 .Title {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    text-align: center;
 }
 
 .joinButton {
@@ -116,7 +118,9 @@
     align-items: flex-end;
 }
 
-/* Travel Banner section */
+/* ===============================
+    Travel Banner section 
+==================================*/
 .travelBanner {
     height: 80%;
     width: 100%;
@@ -150,7 +154,9 @@
     color: rgb(0, 95, 105);
 }
 
-/* Specialize boxes section */
+/* ===============================
+    Specialize boxes section 
+==================================*/
 .SpecializeBoxes {
     background-color: rgb(0, 95, 105);
     text-align: center;
@@ -172,7 +178,9 @@
     color: white;
 }
 
-/* Virtual Hours section */
+/* ===============================
+    Virtual Hours Form section 
+==================================*/
 .virtualHours {
     padding: 10px;
     font-size: 1.3em;
@@ -184,7 +192,7 @@
     border-radius: 10px;
 }
 
-#videoIcon {
+#videoIconSection {
     background-color: rgb(0, 95, 105);
     padding-top: 30px;
     border-radius: 10px 0 0 10px;
@@ -234,139 +242,209 @@
     padding: 10px;
 }
 
-/* Css section for small devices */
+/* ===============================
+Media quieries for small devices 
+==================================*/
 @media only screen and (max-width: 600px) {
     /* Landing Page Image section */
-.landingPage {
-    background-size: 100% 50vh;
-    width: 100%;
-    height: 50vh;
-}
+    .landingPage {
+        background-size: 100% 50vh;
+        width: 100%;
+        height: 50vh;
+    }
 
-/* Text positioning on Landing Page Image */
-.text {
-    height: 50vh;
-    padding-top: 35vh;
-}
+    /* Text positioning on Landing Page Image */
+    .text {
+        height: 50vh;
+        padding-top: 35vh;
+    }
 
-/* Top Text on Landing Page Image */
-.title {
-    font-size: 30px;
-    color: white;
-    font-weight: bold;
-}
+    /* Top Text on Landing Page Image */
+    .title {
+        font-size: 30px;
+        color: white;
+        font-weight: bold;
+    }
 
-/* Bottom Text on Landing Page Image */
-.subTitle {
-    font-size: 20px;
-    color: white;
-}
+    /* Bottom Text on Landing Page Image */
+    .subTitle {
+        font-size: 20px;
+        color: white;
+    }
 
-/* Travel banner bottom padding on small devices*/
-.travelBanner {
-    height: 100%;
-    width: 100%;
-    position: relative;
-    padding-bottom: 20px;
-}
+    /* Travel banner bottom padding on small devices*/
+    .travelBanner {
+        height: 100%;
+        width: 100%;
+        position: relative;
+        padding-bottom: 20px;
+    }
 
-.travelBannerBackground {
-    background-repeat: no-repeat;
-    opacity: .5;
-    width: 98%;
-    transform: translate(1%, 5%);
-    height: 50vh;
-    overflow: hidden;
-    margin-bottom: 3%;
-}
+    .travelBannerBackground {
+        background-repeat: no-repeat;
+        opacity: .5;
+        width: 98%;
+        transform: translate(1%, 5%);
+        height: 50vh;
+        overflow: hidden;
+        margin-bottom: 3%;
+    }
 
-.travelBannerText {
-    position: absolute;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
-    font-size: 40px;
-    font-weight: bold;
-    font-family: Verdana, Tahoma, sans-serif;
-    color: rgb(0, 95, 105);
-    padding: 0;
-    margin: 0;
-}
+    .travelBannerText {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        font-size: 40px;
+        font-weight: bold;
+        font-family: Verdana, Tahoma, sans-serif;
+        color: rgb(0, 95, 105);
+        padding: 0;
+        margin: 0;
+    }
 
-/*Travel counselor section*/
-#TravelCounselor {
-    padding-right: 10px;
-}
+    /*Travel counselor section*/
+    #TravelCounselor {
+        padding-right: 10px;
+    }
 
-.nameHead {
-    font-size: 1em;
-}
+    .nameHead {
+        font-size: 1em;
+    }
 
-.nameSub {
-    font-size: .9em;
-}
+    .nameSub {
+        font-size: .9em;
+    }
 
-.ContactInfo {
-    font-size: 70%;
+    .ContactInfo {
+        font-size: 70%;
 
-}
+    }
 
-#scheduleBtn {
-    font-size: 10px;
-}
+    #scheduleBtn {
+        font-size: 10px;
+    }
 
-/*Virtual Hours Section*/
-.TitleIcon {
-    font-size: 16px;
-    display: flex;
-    align-items: center;
-}
+    /*****Virtual Hours Info Section******/
+    .virtualHoursInfo {
+        padding: 10px 0;
+    }
 
-.TitleText {
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-}
+    .TitleIcon {
+        font-size: 16px;
 
-.videoAppointmentSpan{
-    font-size: 15px;
-}
+    }
 
-#appointmentRequest p{
-    font-size: 6px;
-}
+    .TitleText {
+        font-size: 12px;
+    }
 
-#videoAppointmentInfo {
-    padding: 2% 8%;
-}
 
-#videoIcon {
-    border-radius: 10px;
-}
-}
+    /***** Virtual Hours Form Section ******/
+    #firstSection {
+        margin-bottom: 10px;
+        padding-bottom: 3px;
+    }
+    
+    .videoAppointmentSpan{
+        font-size: .75em;
+        font-family:'Helvetica Neue', sans-serif;
+    }
 
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+    #appointmentRequest p{
+        font-size: 10px;
+    }
+
+    #videoAppointmentInfo {
+        padding: 2% 8%;
+    }
+
+    #videoIconSection {
+        border-radius: 10px;
+        padding: 10px;
+    }
+
     #videoIcon {
+        font-size: 2.5em;
+    }
+
+    /* Table with the dates and time info */
+    table td {
+        font-size: .9em;
+    }
+
+}
+
+/* ===============================
+Media quieries for tablets/medium devices 
+==================================*/
+@media only screen and (min-width: 768px) and (max-width: 1023px) {
+
+    .nameHead {
+        font-size: 1.15em;
+    }
+
+    .nameSub {
+        font-size: 1.15em;
+    }
+    /***** Virtual Hours Info Section ******/
+    .TitleIcon {
+        font-size: 1.15em;
+
+    }
+
+    /***** Virtual Hours Form Section ******/
+    #videoIconSection {
         padding-right: 15px;
     }
 
-    #videoAppointmentInfo :nth-child(2){
-        font-size: 12px;
+    #videoIcon {
+        font-size: 3em;
     }
 
-    #videoAppointmentInfo :nth-child(4){
-        font-size: 12px;
+    .videoAppointmentSpan{
+        font-size: .85em;
+        font-family:'Helvetica Neue', sans-serif;
+        font-weight: normal;
     }
 
-    
+    #appointmentRequest p{
+        font-size: .65em;
+    }
+
+    /* Table with the dates and time info */
+    table td {
+        font-size: .7em;
+    }
+
 }
 
+/* =======================================
+Media quieries for computers/larger displays 
+==================================*/
 @media only screen and (min-width: 1024px) and (max-width:1440px) {
     #VirtualHours {
         transform:translate(1%, 0%);
     }
 }
 
+/* Travel Banner Text*/
+.travelBannerText {
+    font-size: 4.5em;
+}
+
+#videoIconSection {
+    padding: 20px 0 0 45px;
+}
+
+/* video icon in vitual hours form section*/
+#videoIcon {
+    font-size: 4.5em;
+}
+
+/* ===============================
+Media quieries for extra large displays 
+==================================*/
 @media only screen and (min-width: 1441px) {
     #VirtualHours {
         transform:translate(2%, 0%);
