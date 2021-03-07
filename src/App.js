@@ -18,6 +18,11 @@ const languageMap = {
   sp: { label: "Español", dir: "ltr", active: false }
 };
 
+/* 
+const changeLanguage = (lng) => {
+  i18n.changeLanguage(lng);
+};
+ */
   
 function App() {
   /* useState for hamburger menu */
@@ -136,7 +141,7 @@ export default App;
 
   ------Back up in case previous dropdown doesnt work-----
   <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
-        <a className="dropdown-item" href="google.com">English</a>
-        <a className="dropdown-item" href="google.com">Spanish</a>
+        <a className="dropdown-item" onClick={() => changeLanguage('en')}>English</a>
+        <a className="dropdown-item" onClick={() => changeLanguage('es')}>Spanish</a>
       </div> 
 */

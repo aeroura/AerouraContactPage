@@ -13,7 +13,9 @@ import './Home.css';
 
 
 export default function Home() {
-    const { t } = useTranslation();
+    
+        const { t } = useTranslation();
+      
     return (
     <div className="Home">
       <div className="landingPage">

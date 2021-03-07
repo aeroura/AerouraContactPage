@@ -443,10 +443,10 @@ Media quieries for computers/larger displays
 }
 
 /* ===============================
-Media quieries for extra large displays 
+Media quieries for extra large displays  
 ==================================*/
 @media only screen and (min-width: 1441px) {
     #VirtualHours {
-        transform:translate(2%, 0%);
+        transform: translate(2%, 0%);
     }
 }
