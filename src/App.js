@@ -11,6 +11,14 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
+import WebFont from 'webfontloader';
+
+/* Used to load google fonts */
+WebFont.load({
+  google: {
+    families: ['Spectral:300', 'Karla', 'Source-Sans-Pro']
+  }
+});
 
 /* Languages Library */
 const languageMap = {
@@ -144,4 +152,11 @@ export default App;
         <a className="dropdown-item" onClick={() => changeLanguage('en')}>English</a>
         <a className="dropdown-item" onClick={() => changeLanguage('es')}>Spanish</a>
       </div> 
+
+********Fonts*****
+Spectral - Headings
+Karla- Body
+Source Sans Pro - Detailed text
+
+
 */
