@@ -23,22 +23,22 @@ function About() {
             </div>
             {/* Vision Section */}
             <div className="row" id="visionRow">
-                <div className="col-md-10" id="visionText">
-                    <p>Vision</p>
-                    <p>All people feels empowered through technology in global service and travel.</p>
+                <div className="col-md-9" id="visionText">
+                    <p className="visionHead">Vision</p>
+                    <p className="visionSubHead">All people feels empowered through technology in global service and travel.</p>
                 </div>
-                <div className="col-md-2" id="visionImage">
-                    <img src={JehieliGreece} alt="JehieliGreece" width={300} height={280}></img>
+                <div className="col-md-3" id="visionImage">
+                    <img src={JehieliGreece} alt="JehieliGreece" className="visionImage"></img>
                 </div>
             </div>
             {/* Mission Section */}
             <div className="row" id="missionRow">
-                <div className="col-md-2" id="missionImage">
-                    <img src={Oculus} alt="Oculus" width={300} height={280}></img>
+                <div className="col-md-3" id="missionImage">
+                    <img src={Oculus} alt="Oculus" className="missionImage"></img>
                 </div>
-                <div className="col-md-10" id="missionText">
-                    <p>MISSION</p>
-                    <p>To provide friendly quality service to travelers seeking cultural experiences.</p>
+                <div className="col-md-9" id="missionText">
+                    <p className="missionHead">Mission</p>
+                    <p className="missionSubHead">To provide friendly quality service to travelers seeking cultural experiences.</p>
                 </div>
             </div>
             {/* Values Section 1 */}
@@ -77,73 +77,73 @@ function About() {
                 <div className="adventurousTeamTitle"><h1>Our Adventurous Team</h1></div>
                 {/* Jehieli Section */}
                 <div className="row" id="teamSectionRow">
-                    <div className="col-md-2" id="imagePortrait">
-                        <img src={JehieliPortrait} alt="JehieliPortrait" width={200} height={200}></img>
+                    <div className="col-md-2 col-sm-12" id="imagePortrait">
+                        <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
                         <p className ="imagePortaitText">Josue Jehieli Bastidas</p>
                         <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
                     </div>
-                    <div className="col-md-7" id="teamText">
+                    <div className="col-md-7 col-sm-12" id="teamText">
                         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                     </div>
-                    <div className="col-md-3" id="imageSection">
-                        <img src={CityHallPark} alt="CityHallPark" width={250} height={200} className="image"></img>
+                    <div className="col-md-3 col-sm-12" id="imageSection">
+                        <img src={CityHallPark} alt="CityHallPark" className="image"></img>
                         <p className ="imageText">City Hall Park</p>
                     </div>
                 </div>
                 {/* Joab Section */}
                 <div className="row" id="teamSectionRow">
-                    <div className="col-md-2" id="imagePortrait">
-                        <img src={JehieliPortrait} alt="JehieliPortrait" width={200} height={200}></img>
+                    <div className="col-md-2 col-sm-12" id="imagePortrait">
+                        <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
                         <p className ="imagePortaitText">Joab Bastidas</p>
                         <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
                     </div>
-                    <div className="col-md-7" id="teamText">
+                    <div className="col-md-7 col-sm-12" id="teamText">
                         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                     </div>
-                    <div className="col-md-3" id="imageSection">
-                        <img src={Oculus} alt="Oculus" width={250} height={200} className="image"></img>
+                    <div className="col-md-3 col-sm-12" id="imageSection">
+                        <img src={Oculus} alt="Oculus" className="image"></img>
                         <p className ="imageText">Oculus</p>
                     </div>
                 </div>
                 {/* Luis Section */}
                 <div className="row" id="teamSectionRow">
-                    <div className="col-md-2" id="imagePortrait">
-                        <img src={JehieliPortrait} alt="JehieliPortrait" width={200} height={200}></img>
+                    <div className="col-md-2 col-sm-12" id="imagePortrait">
+                        <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
                         <p className ="imagePortaitText">Luis Ugalde</p>
                         <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
                     </div>
-                    <div className="col-md-7" id="teamText">
+                    <div className="col-md-7 col-sm-12" id="teamText">
                         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                     </div>
-                    <div className="col-md-3" id="imageSection">
-                        <img src={BatteryPark} alt="BatteryPark" width={250} height={200} className="image"></img>
+                    <div className="col-md-3 col-sm-12" id="imageSection">
+                        <img src={BatteryPark} alt="BatteryPark" className="image"></img>
                         <p className ="imageText">Battery Park</p>
                     </div>
                 </div>
                 {/* Alexis Section */}
                 <div className="row" id="teamSectionRow">
-                    <div className="col-md-2" id="imagePortrait">
-                        <img src={JehieliPortrait} alt="JehieliPortrait" width={200} height={200}></img>
+                    <div className="col-md-2 col-sm-12" id="imagePortrait">
+                        <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
                         <p className ="imagePortaitText">Alexis Sanchez</p>
                         <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
                     </div>
-                    <div className="col-md-7" id="teamText">
+                    <div className="col-md-7 col-sm-12" id="teamText">
                         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                     </div>
-                    <div className="col-md-3" id="imageSection">
-                        <img src={WorldTradeCenter} alt="WorldTradeCenter" width={250} height={200} className="image"></img>
+                    <div className="col-md-3 col-sm-12" id="imageSection">
+                        <img src={WorldTradeCenter} alt="WorldTradeCenter" className="image"></img>
                         <p className ="imageText">World Trade Center</p>
                     </div>
                 </div>
@@ -217,8 +217,8 @@ function About() {
                         </div>
                     </div>
                     {/* Pic of Jehieli in museum */}
-                    <div className="col-md-5">
-                        <img src={JehieliMuseum} alt="JehieliMuseum" width={700} height={800} ></img>
+                    <div className="col-md-5 p-0 m-0">
+                        <img src={JehieliMuseum} alt="JehieliMuseum" className="visionImage"></img>
                     </div>
                 </div>
                 
