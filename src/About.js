@@ -69,7 +69,7 @@ function About() {
                        <p>We may not always have the answer, but we are committed to finding it.</p>
                     </div>
                     <div className="col-md-4">
-                        <img src={JehieliGreece} alt="JehieliGreece" width={440} height={280} id="valuesImage"></img>
+                        <img src={JehieliGreece} alt="JehieliGreece" id="valuesImage"></img>
                     </div>
                 </div>
             </div>
@@ -164,7 +164,7 @@ function About() {
                             {/* Form Tag */}
                             <form>
                                 <div className="form-row">
-                                    <div className="form-group col-md-3">
+                                    <div className="form-group col-md-4">
                                         <label for="firstName">First name</label>
                                         <input type="text" className="form-control" id="firstName" placeholder="First Name"/>
                                     </div>
@@ -185,7 +185,7 @@ function About() {
                         </div>
                         {/* Virtual Hours Section */}
                         <div className="row" id="virtualHoursSection">
-                            <div className="col-md-6">
+                            <div className="col-md-6 p-0">
                                 <FontAwesomeIcon icon={faClock} size="3x" style={{ color: 'rgb(19, 143, 137)' }} />
                                 <h3>Virtual Hours (EST)</h3>
                                 <div className="table-responsive">
@@ -218,7 +218,7 @@ function About() {
                     </div>
                     {/* Pic of Jehieli in museum */}
                     <div className="col-md-5 p-0 m-0">
-                        <img src={JehieliMuseum} alt="JehieliMuseum" className="visionImage"></img>
+                        <img src={JehieliMuseum} alt="JehieliMuseum" className="contactImage"></img>
                     </div>
                 </div>
                 

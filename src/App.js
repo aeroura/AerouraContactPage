@@ -11,14 +11,6 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import i18next from "i18next";
-import WebFont from 'webfontloader';
-
-/* Used to load google fonts */
-WebFont.load({
-  google: {
-    families: ['Spectral:300', 'Karla', 'Source-Sans-Pro']
-  }
-});
 
 /* Languages Library */
 const languageMap = {
@@ -33,9 +25,11 @@ const changeLanguage = (lng) => {
  */
   
 function App() {
+
   /* useState for hamburger menu */
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
+  
   /* useState for dropdown menu */
   const [showDropDown, setShowDropDown] = useState(false);
   const handleShowDropDown = () => setShowDropDown(!showDropDown);

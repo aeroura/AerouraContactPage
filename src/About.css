@@ -40,7 +40,7 @@
 }
 
 .visionSubHead {
-    font-size: 2.5em;
+    font-size: 1.9em;
 }
 
 /* Image in section with company vision statement */
@@ -72,7 +72,8 @@
 }
 
 .missionSubHead {
-    font-size: 2.5em;
+    font-size: 1.7em;
+    margin-bottom: 2em;
 }
 
 /* Image in section with company mission statement */
@@ -105,6 +106,7 @@
 /* Image in bottom section with company values */
 #valuesImage {
     float: right;
+    height: 25rem;
 }
 
 /* Section with team member info */
@@ -211,6 +213,11 @@
     padding: 1% 0 1% 0;
 }
 
+/* Image next to contact us form*/
+.contactImage {
+    height: 53rem;
+}
+
 /*=========================
 Section for mobile devices
 ===========================*/
@@ -230,6 +237,7 @@ Section for mobile devices
         padding-left: 10px;
     }
 
+    /* div containing image */
     #visionImage {
         height: 26em;
     }
@@ -279,11 +287,58 @@ Section for medium devices
 /*=========================
 Section for larger screens
 ===========================*/
-@media only screen and (min-width: 601px) and (max-width: 1024px){
+@media only screen and (min-width: 601px) and (max-width: 767px){
 /* Adjust font size for about landing page text */
     .aboutTitle {
         font-size: 30px;
         }
     
     }
+
+/*=========================
+Section for large screens
+===========================*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+     /* Adjust font size for about landing page text */
+    .aboutTitle {
+        font-size: 30px;
+        }
     
+    /* div containing vision section */
+     #visionRow {
+        height: 20em;
+    }
+
+    /* actual image */
+    .visionImage {
+        height: 20em;
+    }
+
+    /* our values image */
+    #valuesImage {
+        height: 20em;
+    }
+}
+
+/*=========================
+Section for extra large screens
+===========================*/
+@media only screen and (min-width: 1025px) {
+   
+    /* div containing vision section */
+    #visionRow {
+        height: 35em;
+    }
+
+    /* actual image */
+    .visionImage {
+        height: 35em;
+    }
+
+    /* Image next to contact us form */
+    .contactImage {
+        transform:translate(13%, 0%);
+        height: 56rem;
+        width: 55rem;
+    }
+}
