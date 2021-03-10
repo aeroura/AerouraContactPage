@@ -47,3 +47,12 @@
 {
  color: #fff;
 }
+
+/*=========================
+Section for mobile devices
+===========================*/
+@media only screen and (max-width: 425px){
+  .main-footer {
+    margin-top: 0;
+  }
+}
