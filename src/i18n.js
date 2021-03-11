@@ -18,10 +18,10 @@ i18n
     },
     
     detection: {
-      checkWhitelist: true, // options for language detection
+      checkWhitelist: true,  //options for language detection
     },
 
-    debug: false,
+    debug: true,
 
     whitelist: availableLanguages,
 

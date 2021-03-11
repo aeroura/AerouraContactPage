@@ -14,7 +14,11 @@ import './Home.css';
 
 export default function Home() {
     
-        const { t } = useTranslation();
+        const { t, i18n } = useTranslation();
+
+        const language = props => {
+            i18n.changeLanguage();
+        }
       
     return (
     <div className="Home">

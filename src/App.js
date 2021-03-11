@@ -10,19 +10,8 @@ import About from "./About.js";
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
-import i18next from "i18next";
+import i18n from "i18next";
 
-/* Languages Library */
-const languageMap = {
-  en: { label: "English", dir: "ltr", active: true },
-  sp: { label: "Español", dir: "ltr", active: false }
-};
-
-/* 
-const changeLanguage = (lng) => {
-  i18n.changeLanguage(lng);
-};
- */
   
 function App() {
 
@@ -49,13 +38,12 @@ function App() {
     });
 
   /* Translation code */
-  const selected = localStorage.getItem("i18nextLng") || "en";
-  const { t } = useTranslation();
+  const { t, i18n } = useTranslation();
 
-  const [menuAnchor, setMenuAnchor] = useState(null);
-  useEffect(() => {
-    document.body.dir = languageMap[selected].dir;
-  }, [menuAnchor, selected]);
+const changeLanguage = lng => {
+  i18n.changeLanguage(lng);
+}
+
 
   return (
 <Suspense fallback="loading">
@@ -86,21 +74,12 @@ function App() {
       </button>
       {showDropDown ?
       <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
-      {Object.keys(languageMap)?.map(item => (
-        <button
-        className= "btn"
-          key={item}
-          onClick={() => {
-            i18next.changeLanguage(item);
-            setMenuAnchor(null);
-          }}
-        >
-          {languageMap[item].label}
-        </button>
-    ))}
-    </div> 
+          <a className="dropdown-item" onClick={() => changeLanguage('en')}>English</a>
+          <a className="dropdown-item" onClick={() => changeLanguage('es')}>Spanish</a>
+      </div> 
       : null}
     </div>  
+    <div>{t('test')}</div>
   </div>
 </nav>
 
@@ -109,7 +88,7 @@ function App() {
         {/* Contains website data in multiple routes */}
           <Switch>
             <Route exact path="/">
-              <Home/>
+              <Home  />
             </Route>
             <Route path="/about">
               <About/>
@@ -142,10 +121,8 @@ export default App;
 </NavLink>
 
   ------Back up in case previous dropdown doesnt work-----
-  <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
-        <a className="dropdown-item" onClick={() => changeLanguage('en')}>English</a>
+          <a className="dropdown-item" onClick={() => changeLanguage('en')}>English</a>
         <a className="dropdown-item" onClick={() => changeLanguage('es')}>Spanish</a>
-      </div> 
 
 ********Fonts*****
 Spectral - Headings
