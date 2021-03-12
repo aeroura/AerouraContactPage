@@ -79,7 +79,6 @@ const changeLanguage = lng => {
       </div> 
       : null}
     </div>  
-    <div>{t('test')}</div>
   </div>
 </nav>
 
