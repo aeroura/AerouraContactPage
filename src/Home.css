@@ -29,6 +29,65 @@
     color: white;
 }
 
+/* Side bar with icons */
+.sidePanel {
+    z-index: 2;
+    position: fixed;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: white;
+    border: 1px solid rgb(78, 77, 77, 0.7);
+}
+
+.sidePanel .btn:hover {
+    background-color: rgb(227, 227, 230);
+}
+
+.iconBar {
+    background-color: white;
+  }
+
+  /* Style the icon bar links */
+  .iconBar a {
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: rgb(0, 119, 255);
+    z-index: initial;
+  }
+
+  .icon-bar a:hover {
+    background-color: #000;
+  }
+
+  /* Individual icons*/
+  .facebook {
+    font-size: 40px;
+    background: transparent;
+    color: #3B5998;
+  }
+
+  .twitter {
+    font-size: 40px;
+    background: #55ACEE;
+    color: white;
+
+  }
+
+  .instagram {
+    font-size: 40px;
+    background: transparent;
+    color: #DD2A7B;
+  }
+
+  .linkedin {
+    font-size: 40px;
+    background: transparent;
+    color: #007bb5;
+  }
+
 /* ===============================
     Description boxes section 
 ==================================*/

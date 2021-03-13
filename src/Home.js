@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import JehieliProfessional from './Images/JehieliPortrait.jpg';
 import BrookfieldPlace from './Images/BrookfieldPlace.jpg';
 import JehieliMountains from './Images/JehieliMountains.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram} from 'react-icons/fa';
 import { faEnvelope, faPhoneAlt, faClock, faVideo, faCheckSquare, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import NYCTravel from './Images/TravelBanner.jpeg';
 import BrooklynBridge from './Images/BrooklynBridge.jpg';
@@ -13,15 +14,28 @@ import './Home.css';
 
 
 export default function Home() {
-    
-        const { t, i18n } = useTranslation();
+    /* Set and change languages */
+    const { t, i18n } = useTranslation();
 
-        const language = props => {
+    const language = props => {
             i18n.changeLanguage();
         }
-      
+    /* Open and close side panel */
+    const [isOpen, setIsOpen] = useState(false);
+    const toggle = () => setIsOpen(!isOpen);
+
     return (
     <div className="Home">
+        <div className="sidePanel">
+            <button className="btn" onClick={toggle}>&#9776;
+            </button> 
+            <div className="iconBar" isOpen={isOpen}>
+                <a href="facebook.com"><FaFacebookSquare className="facebook"/></a>
+                <a href="twitter.com"><FaTwitter className="twitter"/></a>
+                <a href="instagram.com"><FaInstagram className="instagram"/></a>
+                <a href="linkedin.com"><FaLinkedin className="linkedin"/></a>  
+            </div>
+        </div>
       <div className="landingPage">
           <div className="text">
               <p className="title">AEROURA TRAVEL</p>

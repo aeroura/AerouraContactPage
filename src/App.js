@@ -111,6 +111,9 @@ export default App;
 /* 
 
 ----Replace if above doesnt work------
+<Route path='/' component={Home} exact />
+<Route path='/about' component={About} exact />
+
 <Route exact path="/" component={Home}/>
 <Route exact path="/about" component={About} />
 
