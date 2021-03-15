@@ -122,6 +122,7 @@
 .josueImage {
     height: 100%;
     width: 50%;
+    object-fit: cover;
 }
 
 /* Josue Portrait Image Information*/
@@ -190,7 +191,7 @@
 
 .travelBannerBackground {
     background-repeat: no-repeat;
-    opacity: .5;
+    opacity: .6;
     width: 98%;
     transform: translate(1%, 5%);
     height: 50vh;
@@ -491,27 +492,69 @@ Media quieries for computers/larger displays
     #VirtualHours {
         transform:translate(1%, 0%);
     }
-}
 
-/* Travel Banner Text*/
-.travelBannerText {
-    font-size: 4.5em;
-}
+    /* Description Boxes */
+    .descriptionBoxes {
+        margin: 0 110px 0 90px;
+    }
 
-#videoIconSection {
-    padding: 20px 10px 0 45px;
-}
+    /* Travel Banner */
+    .travelBanner {
+        margin: 0 80px 0 80px;
+        width: auto;
+    }
 
-/* video icon in vitual hours form section*/
-#videoIcon {
-    font-size: 90px;
-}
+    /* Travel Banner Text*/
+    .travelBannerText {
+        font-size: 4.5em;
+    }
 
+    #videoIconSection {
+        padding: 20px 10px 0 45px;
+    }
+
+    /* video icon in vitual hours form section*/
+    #videoIcon {
+        font-size: 90px;
+    }
+
+    /* Specialize Boxes */
+    .SpecializeBoxes {
+        margin: 0 85px 0 85px;
+    }
+
+    /* Vitual Hours Info Section */
+    .virtualHours {
+        margin: 0 80px 0 80px;
+    }
+}
 /* ===============================
 Media quieries for extra large displays  
 ==================================*/
 @media only screen and (min-width: 1441px) {
+    /* Virtual hours info section*/
     #VirtualHours {
         transform: translate(2%, 0%);
+    }
+    
+    /* Description Boxes */
+    .descriptionBoxes {
+        margin: 0 240px 0 200px;
+    }
+
+    /* Travel Banner */
+    .travelBanner {
+        margin: 0 180px 0 180px;
+        width: auto;
+    }
+
+    /* Specialize Boxes */
+    .SpecializeBoxes {
+        margin: 0 200px 0 200px;
+    }
+
+    /* Vitual Hours Info Section */
+    .virtualHours {
+        margin: 0 200px 0 200px;
     }
 }
