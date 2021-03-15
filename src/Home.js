@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, {useState} from 'react';
 import JehieliProfessional from './Images/JehieliPortrait.jpg';
 import BrookfieldPlace from './Images/BrookfieldPlace.jpg';
 import JehieliMountains from './Images/JehieliMountains.jpg';
@@ -21,21 +21,35 @@ export default function Home() {
             i18n.changeLanguage();
         }
     /* Open and close side panel */
-    const [isOpen, setIsOpen] = useState(false);
-    const toggle = () => setIsOpen(!isOpen);
+    const [isActive, setIsActive] = useState(true);
+    //Toggle the icon bar
+    const [iconBarStyle, setIconBarStyle] = useState({});   
+    //Reduce opacity of toggle button
+    const [sidePanelStyle, setSidePanelSyle] = useState({});
+    const toggle = () => {
+         
+        if (isActive === true) {
+            //Must find a way to add multiple styles 
+            setIconBarStyle({transition: "cubic-bezier(0, .52, 0, 1) transform .3s", transform: "translate3d(-100vw, 0, 0)"});
+            setSidePanelSyle({backgroundColor: "rgb(255, 255, 255, 0.2)"});
+        }
+        else {
+            setIconBarStyle({transform: "translate3d(0, -50%, 0)"});
+            setSidePanelSyle({backgroundColor: "rgb(255, 255, 255)"});
+        }
+        setIsActive(!isActive);
+    }
 
     return (
     <div className="Home">
-        <div className="sidePanel">
-            <button className="btn" onClick={toggle}>&#9776;
+            <button className="btn" id="sidePanel" onClick={toggle} style={sidePanelStyle}>&#9776;
             </button> 
-            <div className="iconBar" isOpen={isOpen}>
+            <div className="iconBarActive" style={iconBarStyle}>
                 <a href="facebook.com"><FaFacebookSquare className="facebook"/></a>
                 <a href="twitter.com"><FaTwitter className="twitter"/></a>
                 <a href="instagram.com"><FaInstagram className="instagram"/></a>
                 <a href="linkedin.com"><FaLinkedin className="linkedin"/></a>  
             </div>
-        </div>
       <div className="landingPage">
           <div className="text">
               <p className="title">AEROURA TRAVEL</p>
