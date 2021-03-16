@@ -1,9 +1,9 @@
-import React, {useState} from 'react';
+import React, {useState, useEffect} from 'react';
 import JehieliProfessional from './Images/JehieliPortrait.jpg';
 import BrookfieldPlace from './Images/BrookfieldPlace.jpg';
 import JehieliMountains from './Images/JehieliMountains.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram} from 'react-icons/fa';
+import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram, FaArrowCircleUp} from 'react-icons/fa';
 import { faEnvelope, faPhoneAlt, faClock, faVideo, faCheckSquare, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 import NYCTravel from './Images/TravelBanner.jpeg';
 import BrooklynBridge from './Images/BrooklynBridge.jpg';
@@ -39,6 +39,28 @@ export default function Home() {
         }
         setIsActive(!isActive);
     }
+
+    //Scroll to top button
+    const [showScroll, setShowScroll] = useState(false)
+
+    useEffect(()=>{
+      window.addEventListener('scroll', checkScrollTop)
+      return function cleanup() {
+        window.removeEventListener('scroll', checkScrollTop)
+      }
+    })
+  
+    const checkScrollTop = () => {
+      if (!showScroll && window.pageYOffset > 400){
+        setShowScroll(true)
+      } else if (showScroll && window.pageYOffset <= 400){
+        setShowScroll(false)
+      }
+    };
+  
+    const scrollTop = () =>{
+      window.scrollTo({top: 0, behavior: 'smooth'});
+    };
 
     return (
     <div className="Home">
@@ -278,6 +300,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
+            <FaArrowCircleUp className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
     </div>
     )
 }
