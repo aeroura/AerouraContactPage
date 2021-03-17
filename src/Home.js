@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useRef} from 'react';
 import JehieliProfessional from './Images/JehieliPortrait.jpg';
 import BrookfieldPlace from './Images/BrookfieldPlace.jpg';
 import JehieliMountains from './Images/JehieliMountains.jpg';
@@ -62,6 +62,10 @@ export default function Home() {
       window.scrollTo({top: 0, behavior: 'smooth'});
     };
 
+    //Used to scroll to bottom of page
+    const fillOutForm = useRef(null)
+    const executeScroll = () => fillOutForm.current.scrollIntoView() 
+
     return (
     <div className="Home">
             <button className="btn" id="sidePanel" onClick={toggle} style={sidePanelStyle}>&#9776;
@@ -97,7 +101,7 @@ export default function Home() {
                             <div className="ContactInfo">
                                 <p><FontAwesomeIcon icon={faPhoneAlt} style={{ color: 'rgb(19, 143, 137)' }} /> (347)-619-2214</p>
                                 <p><FontAwesomeIcon icon={faEnvelope} style={{ color: 'rgb(19, 143, 137)' }} /> Josue@aeroura.com</p>
-                                <button type="submit" className="btn btn-primary" id="scheduleBtn">Schedule an Appointment</button>
+                                <button type="submit" className="btn btn-primary" id="scheduleBtn" onClick={executeScroll}>Schedule an Appointment</button>
                             </div>
                         </div>
                     </div>
@@ -110,7 +114,7 @@ export default function Home() {
                                 <h6 className="TitleText">11am - 2pm (EST)</h6>
                             </div>
                             <div className="joinButton">
-                                <button type="submit" className="btn btn-primary">Join Here</button>
+                                <button type="submit" className="btn btn-primary" onClick={executeScroll}>Join Here</button>
                             </div>
                         </div>
                     </div>
@@ -158,7 +162,7 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-            <div className="virtualHours">
+            <div className="virtualHours" ref={fillOutForm}>
                 <h1>Virtual Hours</h1>
                 <p>Meet With Our Friendly Representatives via Video Chat to Plan Your Future Trips.</p>
                 <div className="container-fluid">
