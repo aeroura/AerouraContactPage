@@ -66,6 +66,19 @@ export default function Home() {
     const fillOutForm = useRef(null)
     const executeScroll = () => fillOutForm.current.scrollIntoView() 
 
+    //used to control next and prev slides in carousel
+    const [activeSlide, setActiveSlide] = useState(true);
+    const carouselItemActive = "carousel-item active";
+    const carouselItem = "carousel-item";
+
+    const prevSlide = () => {
+        
+    }
+
+    const nextSlide = () => {
+        
+    }
+
     return (
     <div className="Home">
             <button className="btn" id="sidePanel" onClick={toggle} style={sidePanelStyle}>&#9776;
@@ -86,9 +99,39 @@ export default function Home() {
                 <div className="row">
                     <div className="col-lg-4 col-md-12 col-sm-6 col-xs-12">
                         <h4>Places to See - NYC</h4>
-                        <div className="PlacesToSee">
+                        <div className="PlacesToSee"> {/*
                             <img src={BrookfieldPlace} alt="BrookfieldPlace" className="slideShowImage"></img>
-                            <h6>Brookfield Place - </h6>
+                            <h6>Brookfield Place - </h6> */}
+                            <div className="carousel" data-ride="carousel">
+                                <div className="carousel-inner">
+                                    <div className={carouselItem} key={0}>
+                                    <img className="d-block w-100" src={BrookfieldPlace} alt="First slide"/>
+                                        <div className="carousel-caption d-none d-md-block">
+                                            <h5>Brookfield Place</h5>
+                                        </div>
+                                    </div>
+                                    <div className={carouselItem} key={1}>
+                                    <img className="d-block w-100" src={BrooklynBridge} alt="Second slide"/>
+                                        <div className="carousel-caption d-none d-md-block">
+                                            <h5>BrooklynBridge</h5>
+                                        </div>
+                                    </div>
+                                    <div className={carouselItemActive} key={2}>
+                                    <img className="d-block w-100" src={Macys} alt="Third slide"/>
+                                        <div className="carousel-caption d-none d-md-block">
+                                            <h5>Macys Parade</h5>
+                                        </div>
+                                    </div>
+                                </div>
+                                    <button className="carousel-control-prev" data-slide="prev" onClick={prevSlide}>
+                                        <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                        <span className="sr-only">Previous</span>
+                                    </button>
+                                    <button className="carousel-control-next" data-slide="next" onClick={nextSlide}>
+                                        <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                        <span className="sr-only">Next</span>
+                                    </button>
+                            </div>
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="TravelCounselor">
@@ -308,3 +351,47 @@ export default function Home() {
     </div>
     )
 }
+
+
+/* 
+
+<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
+  <ol className="carousel-indicators">
+    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  </ol>
+  <div className="carousel-inner">
+    <div className="carousel-item active">
+      <img className="d-block w-100" src="..." alt="First slide">
+        <div className="carousel-caption d-none d-md-block">
+            <h5>...</h5>
+            <p>...</p>
+        </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="..." alt="Second slide">
+      <div className="carousel-caption d-none d-md-block">
+            <h5>...</h5>
+            <p>...</p>
+        </div>
+    </div>
+    <div className="carousel-item">
+      <img className="d-block w-100" src="..." alt="Third slide">
+      <div className="carousel-caption d-none d-md-block">
+            <h5>...</h5>
+            <p>...</p>
+        </div>
+    </div>
+  </div>
+  <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span className="sr-only">Previous</span>
+  </a>
+  <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+    <span className="sr-only">Next</span>
+  </a>
+</div>
+
+*/
