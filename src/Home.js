@@ -72,11 +72,19 @@ export default function Home() {
     const carouselItem = "carousel-item";
 
     const prevSlide = () => {
-        
+        if(activeSlide > 0){
+            setActiveSlide(activeSlide-1);
+        }else{
+            setActiveSlide(carouselItem.length-1);
+        }
     }
 
     const nextSlide = () => {
-        
+        if(activeSlide === carouselItem.length-1){
+            setActiveSlide(0);
+        }else{
+            setActiveSlide(activeSlide+1);
+        }
     }
 
     return (
@@ -355,43 +363,35 @@ export default function Home() {
 
 /* 
 
-<div id="carouselExampleIndicators" className="carousel slide" data-ride="carousel">
-  <ol className="carousel-indicators">
-    <li data-target="#carouselExampleIndicators" data-slide-to="0" className="active"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
-  </ol>
-  <div className="carousel-inner">
-    <div className="carousel-item active">
-      <img className="d-block w-100" src="..." alt="First slide">
+const slides = [{BrookfieldPlace}, {BrooklynBridge}, {Macys}];
+const title = ["BrookfieldPlace", "BrooklynBridge", "Macys"];
+
+
+{slides.map((s, i) => (
+    <div className={carouselItem} key={s.length}>
+    <img className="d-block w-100" src={s.image} alt="slide"/>
         <div className="carousel-caption d-none d-md-block">
-            <h5>...</h5>
-            <p>...</p>
+            <h5>{s.title}</h5>
         </div>
     </div>
-    <div className="carousel-item">
-      <img className="d-block w-100" src="..." alt="Second slide">
-      <div className="carousel-caption d-none d-md-block">
-            <h5>...</h5>
-            <p>...</p>
-        </div>
-    </div>
-    <div className="carousel-item">
-      <img className="d-block w-100" src="..." alt="Third slide">
-      <div className="carousel-caption d-none d-md-block">
-            <h5>...</h5>
-            <p>...</p>
-        </div>
-    </div>
-  </div>
-  <a className="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
-    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span className="sr-only">Previous</span>
-  </a>
-  <a className="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
-    <span className="carousel-control-next-icon" aria-hidden="true"></span>
-    <span className="sr-only">Next</span>
-  </a>
-</div>
+))}
+
+
+
+
+
+  const i = 0;
+
+const nextSlide = () => {
+    // Check if we've reached the final slide in the array
+    // If so, go back to 0, else curr + 1
+    setCurr(curr === length - 1 ? 0 : curr + 1);
+  }
+
+// if active slide, include the "active" class
+          className={i === curr ? "slide active" : "slide"}
+          key={s.title}
+          // if not active, hide from screen readers for accessibility
+          aria-hidden={i !== curr}
 
 */
