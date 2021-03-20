@@ -9,6 +9,7 @@ import NYCTravel from './Images/TravelBanner.jpeg';
 import BrooklynBridge from './Images/BrooklynBridge.jpg';
 import Macys from './Images/Macy\'s.jpg';
 import BroadwayStreet from './Images/BroadwayStreet.jpg';
+import WorldTradeCenter from './Images/WorldTradeCenter.jpg';
 import { useTranslation } from "react-i18next";
 import './Home.css';
 
@@ -51,9 +52,9 @@ export default function Home() {
     })
   
     const checkScrollTop = () => {
-      if (!showScroll && window.pageYOffset > 400){
+      if (!showScroll && window.pageYOffset > 500){
         setShowScroll(true)
-      } else if (showScroll && window.pageYOffset <= 400){
+      } else if (showScroll && window.pageYOffset <= 500){
         setShowScroll(false)
       }
     };
@@ -66,25 +67,38 @@ export default function Home() {
     const fillOutForm = useRef(null)
     const executeScroll = () => fillOutForm.current.scrollIntoView() 
 
-    //used to control next and prev slides in carousel
-    const [activeSlide, setActiveSlide] = useState(true);
-    const carouselItemActive = "carousel-item active";
-    const carouselItem = "carousel-item";
+    //Slides info objects
+    const slides = ([
+        {
+            title: 'BrookfieldPlace',
+            image: BrookfieldPlace,
+        },
+        {
+            title: "BrooklynBridge",
+            image: BrooklynBridge
+        },
+        {
+            title: "WorldTradeCenter",
+            image: WorldTradeCenter
+        },
+    ]);
+    
+    //State for active slide index
+    const [activeSlide, setActiveSlide] = useState(0);
+    // Set the length of the slides array
+    const { length } = slides;
 
-    const prevSlide = () => {
-        if(activeSlide > 0){
-            setActiveSlide(activeSlide-1);
-        }else{
-            setActiveSlide(carouselItem.length-1);
-        }
+    //used to control next and prev slides in carousel
+    const nextSlide = () => {
+    // Check if we've reached the final slide in the array
+    // If so, go back to 0, else activeSlide + 1
+    setActiveSlide(activeSlide === length - 1 ? 0 : activeSlide + 1);
     }
 
-    const nextSlide = () => {
-        if(activeSlide === carouselItem.length-1){
-            setActiveSlide(0);
-        }else{
-            setActiveSlide(activeSlide+1);
-        }
+    const prevSlide = () => {
+    // Check if we've reached the first slide in the array
+    // If so, go back to 2, else activeSlide - 1
+    setActiveSlide(activeSlide === 0 ? 2 : activeSlide - 1);
     }
 
     return (
@@ -107,29 +121,22 @@ export default function Home() {
                 <div className="row">
                     <div className="col-lg-4 col-md-12 col-sm-6 col-xs-12">
                         <h4>Places to See - NYC</h4>
-                        <div className="PlacesToSee"> {/*
-                            <img src={BrookfieldPlace} alt="BrookfieldPlace" className="slideShowImage"></img>
-                            <h6>Brookfield Place - </h6> */}
+                        <div className="PlacesToSee">
                             <div className="carousel" data-ride="carousel">
                                 <div className="carousel-inner">
-                                    <div className={carouselItem} key={0}>
-                                    <img className="d-block w-100" src={BrookfieldPlace} alt="First slide"/>
+                                {slides.map((s, i) => (
+                                    <div 
+                                    // if active slide, include the "active" class
+                                className={i === activeSlide ? "carousel-item active" : "carousel-item"}
+                                key={s.title}
+                                // if not active, hide from screen readers for accessibility
+                                aria-hidden={i !== activeSlide}>
+                                    <img className="d-block w-100" src={s.image} alt={`${s.title}`} />
                                         <div className="carousel-caption d-none d-md-block">
-                                            <h5>Brookfield Place</h5>
+                                            <h5>{s.title}</h5>
                                         </div>
                                     </div>
-                                    <div className={carouselItem} key={1}>
-                                    <img className="d-block w-100" src={BrooklynBridge} alt="Second slide"/>
-                                        <div className="carousel-caption d-none d-md-block">
-                                            <h5>BrooklynBridge</h5>
-                                        </div>
-                                    </div>
-                                    <div className={carouselItemActive} key={2}>
-                                    <img className="d-block w-100" src={Macys} alt="Third slide"/>
-                                        <div className="carousel-caption d-none d-md-block">
-                                            <h5>Macys Parade</h5>
-                                        </div>
-                                    </div>
+                                ))}
                                 </div>
                                     <button className="carousel-control-prev" data-slide="prev" onClick={prevSlide}>
                                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
@@ -363,49 +370,7 @@ export default function Home() {
 
 /* 
 
-const slides = [{BrookfieldPlace}, {BrooklynBridge}, {Macys}];
-const title = ["BrookfieldPlace", "BrooklynBridge", "Macys"];
 
 
-{slides.map((s, i) => (
-    <div className={carouselItem} key={s.length}>
-    <img className="d-block w-100" src={s.image} lt={`Image for ${s.title}`} />
-        <div className="carousel-caption d-none d-md-block">
-            <h5>{s.title}</h5>
-        </div>
-    </div>
-))}
-
-
-
-<================= Code to get slideshow to work ======================>
-  const [activeSlide, setActiveSlide] = useState(0);
-  const { length } = slides;
-
-const nextSlide = () => {
-    // Check if we've reached the final slide in the array
-    // If so, go back to 0, else activeSlide + 1
-    setActiveSlide(activeSlide === length - 1 ? 0 : activeSlide + 1);
-  }
-
-  const prevSlide = () => {
-    // Check if we've reached the final slide in the array
-    // If so, go back to 0, else activeSlide + 1
-    setActiveSlide(activeSlide === length - 1 ? 0 : activeSlide + 1);
-  }
-
-        {slides.map((s, i) => (
-            <div 
-            // if active slide, include the "active" class
-          className={i === activeSlide ? "carousel-item active" : "carousel-item"}
-          key={s.title}
-          // if not active, hide from screen readers for accessibility
-          aria-hidden={i !== activeSlide}>
-            <img className="d-block w-100" src={s.image} lt={`Image for ${s.title}`} />
-                <div className="carousel-caption d-none d-md-block">
-                    <h5>{s.title}</h5>
-                </div>
-            </div>
-        ))}
 
 */
