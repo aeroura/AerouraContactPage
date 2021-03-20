@@ -369,7 +369,7 @@ const title = ["BrookfieldPlace", "BrooklynBridge", "Macys"];
 
 {slides.map((s, i) => (
     <div className={carouselItem} key={s.length}>
-    <img className="d-block w-100" src={s.image} alt="slide"/>
+    <img className="d-block w-100" src={s.image} lt={`Image for ${s.title}`} />
         <div className="carousel-caption d-none d-md-block">
             <h5>{s.title}</h5>
         </div>
@@ -378,20 +378,34 @@ const title = ["BrookfieldPlace", "BrooklynBridge", "Macys"];
 
 
 
-
-
-  const i = 0;
+<================= Code to get slideshow to work ======================>
+  const [activeSlide, setActiveSlide] = useState(0);
+  const { length } = slides;
 
 const nextSlide = () => {
     // Check if we've reached the final slide in the array
-    // If so, go back to 0, else curr + 1
-    setCurr(curr === length - 1 ? 0 : curr + 1);
+    // If so, go back to 0, else activeSlide + 1
+    setActiveSlide(activeSlide === length - 1 ? 0 : activeSlide + 1);
   }
 
-// if active slide, include the "active" class
-          className={i === curr ? "slide active" : "slide"}
+  const prevSlide = () => {
+    // Check if we've reached the final slide in the array
+    // If so, go back to 0, else activeSlide + 1
+    setActiveSlide(activeSlide === length - 1 ? 0 : activeSlide + 1);
+  }
+
+        {slides.map((s, i) => (
+            <div 
+            // if active slide, include the "active" class
+          className={i === activeSlide ? "carousel-item active" : "carousel-item"}
           key={s.title}
           // if not active, hide from screen readers for accessibility
-          aria-hidden={i !== curr}
+          aria-hidden={i !== activeSlide}>
+            <img className="d-block w-100" src={s.image} lt={`Image for ${s.title}`} />
+                <div className="carousel-caption d-none d-md-block">
+                    <h5>{s.title}</h5>
+                </div>
+            </div>
+        ))}
 
 */
