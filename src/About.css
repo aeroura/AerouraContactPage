@@ -1,3 +1,76 @@
+/* ===============================
+    Side bar with icons 
+==================================*/
+#sidePanel {
+    z-index: 2;
+    position: fixed;
+    top: 34.5%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(78, 77, 77, 0.7);
+    border-radius: 0 5px 0 0;
+    padding-right: 14px;
+}
+
+#sidePanel:hover {
+    background-color: rgb(227, 227, 230);
+    border-radius: 0 5px 0 0;
+}
+
+.iconBarActive {
+    z-index: 2;
+    position: fixed;
+    top: 45%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    background-color: rgb(255, 255, 255);
+    border: 1px solid rgb(78, 77, 77, 0.7);
+    transition: cubic-bezier(0, .52, 0, 1) transform .3s ;
+  }
+
+  /* Style the icon bar links */
+  .iconBarActive a {
+    display: block;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: rgb(0, 119, 255);
+    z-index: initial;
+  }
+
+  .iconBarActive a:hover {
+    background-color: #000;
+  }
+
+  /* Individual icons*/
+  .facebook {
+    font-size: 40px;
+    background: transparent;
+    color: #3B5998;
+    
+  }
+
+  .twitter {
+    font-size: 40px;
+    background: #55ACEE;
+    color: white;
+
+  }
+
+  .instagram {
+    font-size: 40px;
+    background: transparent;
+    color: #DD2A7B;
+  }
+
+  .linkedin {
+    font-size: 40px;
+    background: transparent;
+    color: #007bb5;
+  }
+
 /* Landing page image for about page */
 .aboutLandingPage {
     background-image: url('./Images/NYCsunrise.jpg');
@@ -217,6 +290,36 @@
 .contactImage {
     height: 53rem;
 }
+
+/* ===============================
+    Scroll to Top Button
+==================================*/
+.scrollTop {
+    position: fixed; 
+    width: 100%;
+    bottom: 20px;
+    align-items: center;
+    height: 20px;
+    justify-content: center;
+    z-index: 1000;
+    cursor: pointer;
+    animation: fadeIn 0.3s;
+    transition: opacity 0.4s;
+    opacity: 0.5;
+    }
+    
+    .scrollTop:hover{
+      opacity: 1;
+    }
+    
+    @keyframes fadeIn {
+      0% {
+        opacity: 0;
+      }
+      100% {
+        opacity: 0.5;
+      }
+    }
 
 /*=========================
 Section for mobile devices

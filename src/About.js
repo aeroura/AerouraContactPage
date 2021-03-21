@@ -1,6 +1,6 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCogs, faStar, faCommentDots, faMap, faBell, faArrowRight, faClock, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
+import React, {useEffect, useState} from 'react';
 import './About.css';
 import JehieliGreece from './Images/JehieliGreece.jpg';
 import JehieliPortrait from './Images/JehieliPortrait.jpg';
@@ -9,10 +9,63 @@ import CityHallPark from './Images/CityHallPark.jpg';
 import BatteryPark from './Images/BatteryPark.jpg';
 import WorldTradeCenter from './Images/WorldTradeCenter.jpg';
 import JehieliMuseum from './Images/JehieliMuseum.jpg';
+import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram, FaArrowCircleUp} from 'react-icons/fa';
 
 function About() {
+
+        /* Open and close side panel */
+        const [isActive, setIsActive] = useState(true);
+        //Toggle the icon bar
+        const [iconBarStyle, setIconBarStyle] = useState({});   
+        //Reduce opacity of toggle button
+        const [sidePanelStyle, setSidePanelSyle] = useState({});
+        const toggle = () => {
+             
+            if (isActive === true) {
+                //Must find a way to add multiple styles 
+                setIconBarStyle({transition: "cubic-bezier(0, .52, 0, 1) transform .3s", transform: "translate3d(-100vw, 0, 0)"});
+                setSidePanelSyle({backgroundColor: "rgb(255, 255, 255, 0.2)"});
+            }
+            else {
+                setIconBarStyle({transform: "translate3d(0, -50%, 0)"});
+                setSidePanelSyle({backgroundColor: "rgb(255, 255, 255)"});
+            }
+            setIsActive(!isActive);
+        }
+    
+        //Scroll to top button
+        const [showScroll, setShowScroll] = useState(false)
+    
+        useEffect(()=>{
+          window.addEventListener('scroll', checkScrollTop)
+          return function cleanup() {
+            window.removeEventListener('scroll', checkScrollTop)
+          }
+        })
+      
+        const checkScrollTop = () => {
+          if (!showScroll && window.pageYOffset > 500){
+            setShowScroll(true)
+          } else if (showScroll && window.pageYOffset <= 500){
+            setShowScroll(false)
+          }
+        };
+      
+        const scrollTop = () =>{
+          window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+
+
     return (
         <div className="About">
+            <button className="btn" id="sidePanel" onClick={toggle} style={sidePanelStyle}>&#9776;
+            </button> 
+            <div className="iconBarActive" style={iconBarStyle}>
+                <a href="facebook.com"><FaFacebookSquare className="facebook"/></a>
+                <a href="twitter.com"><FaTwitter className="twitter"/></a>
+                <a href="instagram.com"><FaInstagram className="instagram"/></a>
+                <a href="linkedin.com"><FaLinkedin className="linkedin"/></a>  
+            </div>
             {/* Landing Page Image */}
             <div className="aboutLandingPage">
                 <div className="aboutText">
@@ -223,6 +276,7 @@ function About() {
                 </div>
                 
             </div>
+            <FaArrowCircleUp className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
         </div>
     )
 }
