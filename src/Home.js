@@ -9,7 +9,7 @@ import NYCTravel from './Images/TravelBanner.jpeg';
 import BrooklynBridge from './Images/BrooklynBridge.jpg';
 import Macys from './Images/Macy\'s.jpg';
 import BroadwayStreet from './Images/BroadwayStreet.jpg';
-import WorldTradeCenter from './Images/WorldTradeCenter.jpg';
+import TimeSquare from './Images/TimeSquare.jpg';
 import { useTranslation } from "react-i18next";
 import './Home.css';
 
@@ -78,8 +78,8 @@ export default function Home() {
             image: BrooklynBridge
         },
         {
-            title: "WorldTradeCenter",
-            image: WorldTradeCenter
+            title: "Times Square",
+            image: TimeSquare
         },
     ]);
     
