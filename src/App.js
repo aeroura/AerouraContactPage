@@ -11,9 +11,18 @@ import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
 import { useTranslation } from "react-i18next";
 import i18n from "i18next";
+import WebFont from 'webfontloader';
 
   
 function App() {
+    //Google Fonts
+    useEffect(() => {
+      WebFont.load({
+        google: {
+          families: ['Spectral', 'Karla', 'Source Sans Pro']
+        }
+      });
+     }, []);
 
   /* useState for hamburger menu */
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -59,10 +68,10 @@ const changeLanguage = lng => {
   </button>
   {/* Hamburger menu section */}
   <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarToggle">
-    <span className="homeLink"><NavLink exact to="/" activeClassName="active" style={{textDecoration: 'none'}}
+    <span className="homeLink" style={{fontFamily: 'Karla'}}><NavLink exact to="/" activeClassName="active" style={{textDecoration: 'none'}}
     >AEROURA TRAVEL</NavLink></span>
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li className="nav-item"><Link to="/about" style={{textDecoration: 'none'}}>About</Link></li>
+      <li className="nav-item" style={{fontFamily: 'Karla'}}><Link to="/about" style={{textDecoration: 'none'}}>About</Link></li>
       {/*<li className="nav-item"><Link to="/community">Community</Link></li>*/}
       
     </ul>
@@ -74,8 +83,8 @@ const changeLanguage = lng => {
       </button>
       {showDropDown ?
       <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
-          <a className="dropdown-item" onClick={() => changeLanguage('en')}>English</a>
-          <a className="dropdown-item" onClick={() => changeLanguage('es')}>Spanish</a>
+          <a className="dropdown-item" onClick={() => changeLanguage('en')} style={{fontFamily: 'Karla'}}>English</a>
+          <a className="dropdown-item" onClick={() => changeLanguage('es')} style={{fontFamily: 'Karla'}}>Spanish</a>
       </div> 
       : null}
     </div>  

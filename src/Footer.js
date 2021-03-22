@@ -12,9 +12,9 @@ export default class Footer extends Component {
           {/* Footer List Items Section */}
             <div className="col-lg-8 col-md-12 col-sm-12 col-xs-12">
               <ul className="footerList">
-                <li>Aeroura Travel</li>
-                <a href="facebook.com"><li>Privacy Policy</li></a>
-                <a href="facebook.com"><li>Terms & Conditions</li></a>
+                <li style={{fontFamily: 'Karla'}}>Aeroura Travel</li>
+                <a href="facebook.com"><li style={{fontFamily: 'Karla'}}>Privacy Policy</li></a>
+                <a href="facebook.com"><li style={{fontFamily: 'Karla'}}>Terms & Conditions</li></a>
               </ul>
                {/*&copy;{new Date().getFullYear()}*/}
             </div>
