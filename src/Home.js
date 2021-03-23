@@ -11,17 +11,19 @@ import Macys from './Images/Macy\'s.jpg';
 import BroadwayStreet from './Images/BroadwayStreet.jpg';
 import TimeSquare from './Images/TimeSquare.jpg';
 import { useTranslation } from "react-i18next";
+import i18n from "i18next";
 import './Home.css';
 
 
 export default function Home() {
-      
+    
     /* Set and change languages */
-    const { t, i18n } = useTranslation();
+    var changeLanguage = this.props;
+    const { t } = useTranslation();
+    const [activeLanguage, setActiveLanguage] = useState('en');
+    changeLanguage = activeLanguage;
+    setActiveLanguage(i18n.changeLanguage(changeLanguage));
 
-    const language = props => {
-            i18n.changeLanguage();
-        }
     /* Open and close side panel */
     const [isActive, setIsActive] = useState(true);
     //Toggle the icon bar
@@ -115,7 +117,7 @@ export default function Home() {
       <div className="landingPage">
           <div className="text">
               <p className="title" style={{fontFamily: 'Spectral'}}>AEROURA TRAVEL</p>
-              <p className="subTitle" style={{fontFamily: 'Karla'}}>{t("EXPERIENCE THE WORLD")}</p>
+              <p className="subTitle" style={{fontFamily: 'Karla'}}>{t('landing.page.title')}</p>
           </div>
       </div>
       <div className="descriptionBoxes">

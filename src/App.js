@@ -9,8 +9,8 @@ import About from "./About.js";
 /*import Community from "./Community.js";*/
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
-import { useTranslation } from "react-i18next";
 import i18n from "i18next";
+import { useTranslation } from "react-i18next";
 import WebFont from 'webfontloader';
 
   
@@ -23,6 +23,13 @@ function App() {
         }
       });
      }, []);
+
+     /* Set and change languages */
+     const {t} = useTranslation();
+    const changeLanguage = lng => {
+     i18n.changeLanguage(lng);
+    }
+  
 
   /* useState for hamburger menu */
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
@@ -46,14 +53,6 @@ function App() {
         return () => document.removeEventListener('mousedown', handleClickOutside);
     });
 
-  /* Translation code */
-  const { t, i18n } = useTranslation();
-
-const changeLanguage = lng => {
-  i18n.changeLanguage(lng);
-}
-
-
   return (
 <Suspense fallback="loading">
   <BrowserRouter>
@@ -71,7 +70,7 @@ const changeLanguage = lng => {
     <span className="homeLink" style={{fontFamily: 'Karla'}}><NavLink exact to="/" activeClassName="active" style={{textDecoration: 'none'}}
     >AEROURA TRAVEL</NavLink></span>
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li className="nav-item" style={{fontFamily: 'Karla'}}><Link to="/about" style={{textDecoration: 'none'}}>About</Link></li>
+      <li className="nav-item" style={{fontFamily: 'Karla'}}><Link to="/about" style={{textDecoration: 'none'}}>{t('about.visionHead')}</Link></li>
       {/*<li className="nav-item"><Link to="/community">Community</Link></li>*/}
       
     </ul>
@@ -96,7 +95,7 @@ const changeLanguage = lng => {
         {/* Contains website data in multiple routes */}
           <Switch>
             <Route exact path="/">
-              <Home  />
+              <Home changeLanguage = {this.changeLanguage}/>
             </Route>
             <Route path="/about">
               <About/>
