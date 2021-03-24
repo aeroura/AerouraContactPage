@@ -24,11 +24,11 @@ function App() {
       });
      }, []);
 
-     /* Set and change languages */
-     const {t} = useTranslation();
-    const changeLanguage = lng => {
-     i18n.changeLanguage(lng);
-    }
+    /* Set and change languages */
+    const { t, i18n } = useTranslation();
+    const changeLanguage = (lang) => {
+      i18n.changeLanguage(lang);
+    };
   
 
   /* useState for hamburger menu */
@@ -95,7 +95,7 @@ function App() {
         {/* Contains website data in multiple routes */}
           <Switch>
             <Route exact path="/">
-              <Home changeLanguage = {this.changeLanguage}/>
+              <Home lang = {changeLanguage}/>
             </Route>
             <Route path="/about">
               <About/>

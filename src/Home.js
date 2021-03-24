@@ -15,14 +15,19 @@ import i18n from "i18next";
 import './Home.css';
 
 
-export default function Home() {
+export default function Home({lang}) {
     
     /* Set and change languages */
-    var changeLanguage = this.props;
     const { t } = useTranslation();
     const [activeLanguage, setActiveLanguage] = useState('en');
-    changeLanguage = activeLanguage;
-    setActiveLanguage(i18n.changeLanguage(changeLanguage));
+
+    i18n.on('languageChanged', function(lang) {
+        setActiveLanguage(lang);
+        i18n.changeLanguage(lang)
+    })
+
+    
+
 
     /* Open and close side panel */
     const [isActive, setIsActive] = useState(true);
