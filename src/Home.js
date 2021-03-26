@@ -5,7 +5,7 @@ import JehieliMountains from './Images/JehieliMountains.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram, FaArrowCircleUp} from 'react-icons/fa';
 import { faEnvelope, faPhoneAlt, faClock, faVideo, faCheckSquare, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
-import NYCTravel from './Images/TravelBanner.jpeg';
+import NYCTravel from './Images/TravelBanner.jpeg';//Check to see jpg vs jpeg
 import BrooklynBridge from './Images/BrooklynBridge.jpg';
 import Macys from './Images/Macy\'s.jpg';
 import BroadwayStreet from './Images/BroadwayStreet.jpg';
