@@ -19,11 +19,10 @@ export default function Home({lang}) {
     
     /* Set and change languages */
     const { t } = useTranslation();
-    const [activeLanguage, setActiveLanguage] = useState('en');
+    const [activeLanguage, setActiveLanguage] = useState(lang);
 
     i18n.on('languageChanged', function(lang) {
-        setActiveLanguage(lang);
-        i18n.changeLanguage(lang)
+        setActiveLanguage(i18n.changeLanguage(activeLanguage));
     })
 
     

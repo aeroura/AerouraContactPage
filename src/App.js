@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React, { useEffect, useRef, useState, Suspense} from 'react';
 import './App.css';
 import Footer from "./Footer.js";
@@ -25,10 +26,13 @@ function App() {
      }, []);
 
     /* Set and change languages */
-    const { t, i18n } = useTranslation();
+    const { i18n, t } = useTranslation();
+    const [currentLanguage, setCurrentLanguage] = useState('en');
+
     const changeLanguage = (lang) => {
-      i18n.changeLanguage(lang);
-    };
+      setCurrentLanguage(i18n.changeLanguage(lang));
+    }
+    
   
 
   /* useState for hamburger menu */
@@ -95,7 +99,7 @@ function App() {
         {/* Contains website data in multiple routes */}
           <Switch>
             <Route exact path="/">
-              <Home lang = {changeLanguage}/>
+              <Home lang = {currentLanguage}/>
             </Route>
             <Route path="/about">
               <About/>
