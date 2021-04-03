@@ -7,6 +7,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGlobe } from '@fortawesome/free-solid-svg-icons';
 import Home from "./Home.js";
 import About from "./About.js";
+import Contact from "./Contact.js";
 /*import Community from "./Community.js";*/
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
@@ -62,7 +63,7 @@ function App() {
   <BrowserRouter>
     <div className="App">
 {/* Header with links Navbar Bootstrap */}
-<nav className="navbar navbar-expand-lg navbar-light bg-light" id="navHeader">
+<nav className="navbar navbar-expand-lg" id="navHeader">
   {/* Hamburger menu button */}
 <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" 
     aria-controls="navbar" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" 
@@ -74,7 +75,8 @@ function App() {
     <span className="homeLink" style={{fontFamily: 'Karla'}}><NavLink exact to="/" activeClassName="active" style={{textDecoration: 'none'}}
     >AEROURA TRAVEL</NavLink></span>
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
-      <li className="nav-item" style={{fontFamily: 'Karla'}}><Link to="/about" style={{textDecoration: 'none'}}>{t('about.visionHead')}</Link></li>
+      <li className="nav-item" style={{fontFamily: 'Karla'}}><Link to="/about" style={{textDecoration: 'none'}}>About</Link></li>
+      <li className="nav-item" style={{fontFamily: 'Karla'}}><Link to="/contact" style={{textDecoration: 'none'}}>Contact</Link></li>
       {/*<li className="nav-item"><Link to="/community">Community</Link></li>*/}
       
     </ul>
@@ -103,6 +105,9 @@ function App() {
             </Route>
             <Route path="/about">
               <About/>
+            </Route>
+            <Route path="/contact">
+              <Contact/>
             </Route>
               {/* <Route path="/community" component={Community} /> */}
              {/* This gives an error  <Route component={Error} /> */}
