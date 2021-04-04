@@ -586,12 +586,18 @@ Media quieries for extra large displays
     
     /* Description Boxes */
     .descriptionBoxes {
-        margin: 0 240px 0 200px;
+        margin: 0 100px 0 100px;
+        
+    }
+
+    /* Border Radius of all boxes in section*/
+    .descriptionBoxes :nth-child(1n) {
+        border-radius: 10px;
     }
 
     /* Travel Banner */
     .travelBanner {
-        margin: 0 180px 0 180px;
+        margin: 0 100px 0 100px;
         width: auto;
     }
 
