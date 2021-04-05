@@ -69,7 +69,7 @@ function About() {
             {/* Landing Page Image */}
             <div className="aboutLandingPage">
                 <div className="aboutText">
-                    <p className="aboutTitle" style={{fontFamily: 'Spectral'}}>
+                    <p className="aboutTitle">
                         At Aeroua Travel, we believe in empowering individuals through global services
                         and travel, so that we can learn from each other; by sharing ideas.</p>
                 </div>
@@ -77,8 +77,8 @@ function About() {
             {/* Vision Section */}
             <div className="row" id="visionRow">
                 <div className="col-md-9" id="visionText">
-                    <p className="visionHead" style={{fontFamily: 'Spectral'}}>Vision</p>
-                    <p className="visionSubHead" style={{fontFamily: 'Karla'}}>All people feels empowered through technology in global service and travel.</p>
+                    <p className="visionHead">Vision</p>
+                    <p className="visionSubHead"h4>All people feels empowered through technology in global service and travel.</p>
                 </div>
                 <div className="col-md-3" id="visionImage">
                     <img src={JehieliGreece} alt="JehieliGreece" className="visionImage"></img>
@@ -90,36 +90,36 @@ function About() {
                     <img src={Oculus} alt="Oculus" className="missionImage"></img>
                 </div>
                 <div className="col-md-9" id="missionText">
-                    <p className="missionHead" style={{fontFamily: 'Spectral'}}>Mission</p>
-                    <p className="missionSubHead" style={{fontFamily: 'Karla'}}>To provide friendly quality service to travelers seeking cultural experiences.</p>
+                    <p className="missionHead">Mission</p>
+                    <p className="missionSubHead"h4>To provide friendly quality service to travelers seeking cultural experiences.</p>
                 </div>
             </div>
             {/* Values Section 1 */}
             <div className="ourValues">
-                <h3 style={{fontFamily: 'Spectral'}}>Our Values</h3>
+                <h3>Our Values</h3>
                 <div className="row" id="values1">
                     <div className="col-md-4">
-                       <h4 style={{fontFamily: 'Karla'}}><FontAwesomeIcon icon={faCogs} style={{ color: 'rgb(19, 143, 137)' }} /> Resourcefulness</h4>
-                       <p style={{fontFamily: 'Source Sans Pro'}}>We may not always have the answer, but we are committed to finding it.</p>
+                       <h4><FontAwesomeIcon icon={faCogs} style={{ color: 'rgb(19, 143, 137)' }} /> Resourcefulness</h4>
+                       <p>We may not always have the answer, but we are committed to finding it.</p>
                     </div>
                     <div className="col-md-4">
-                        <h4 style={{fontFamily: 'Karla'}}><FontAwesomeIcon icon={faStar} style={{ color: 'rgb(19, 143, 137)' }} /> Honesty</h4>
-                       <p style={{fontFamily: 'Source Sans Pro'}}>We stand by the truth and what is best for our customers, even if it may cost us business.</p>
+                        <h4><FontAwesomeIcon icon={faStar} style={{ color: 'rgb(19, 143, 137)' }} /> Honesty</h4>
+                       <p>We stand by the truth and what is best for our customers, even if it may cost us business.</p>
                     </div>
                     <div className="col-md-4">
-                        <h4 style={{fontFamily: 'Karla'}}><FontAwesomeIcon icon={faCommentDots} style={{ color: 'rgb(19, 143, 137)' }} /> Communication</h4>
-                       <p style={{fontFamily: 'Source Sans Pro'}}>Communication is clear and concise, and always necessary throughout.</p>
+                        <h4><FontAwesomeIcon icon={faCommentDots} style={{ color: 'rgb(19, 143, 137)' }} /> Communication</h4>
+                       <p>Communication is clear and concise, and always necessary throughout.</p>
                     </div>
                 </div>
                 {/* Values Section 2 */}
                 <div className="row" id="values2">
                     <div className="col-md-4">
-                       <h4 style={{fontFamily: 'Karla'}}><FontAwesomeIcon icon={faMap} style={{ color: 'rgb(19, 143, 137)' }} /> Planning</h4>
-                       <p style={{fontFamily: 'Source Sans Pro'}}>We may not always have the answer, but we are committed to finding it.</p>
+                       <h4><FontAwesomeIcon icon={faMap} style={{ color: 'rgb(19, 143, 137)' }} /> Planning</h4>
+                       <p>We may not always have the answer, but we are committed to finding it.</p>
                     </div>
                     <div className="col-md-4">
-                        <h4 style={{fontFamily: 'Karla'}}><FontAwesomeIcon icon={faBell} style={{ color: 'rgb(19, 143, 137)' }} /> Service</h4>
-                       <p style={{fontFamily: 'Source Sans Pro'}}>We may not always have the answer, but we are committed to finding it.</p>
+                        <h4><FontAwesomeIcon icon={faBell} style={{ color: 'rgb(19, 143, 137)' }} /> Service</h4>
+                       <p>We may not always have the answer, but we are committed to finding it.</p>
                     </div>
                     <div className="col-md-4">
                         <img src={JehieliGreece} alt="JehieliGreece" id="valuesImage"></img>
@@ -132,72 +132,73 @@ function About() {
                 <div className="row" id="teamSectionRow">
                     <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
                         <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
-                        <p className ="imagePortaitText" style={{fontFamily: 'Source Sans Pro'}}>Josue Jehieli Bastidas</p>
+                        <p className ="imagePortaitText">Josue Jehieli Bastidas</p>
                         <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
                     </div>
                     <div className="col-lg-7 col-md-6 col-sm-12" id="teamText">
-                        <p style={{fontFamily: 'Karla'}}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-12" id="imageSection">
                         <img src={CityHallPark} alt="CityHallPark" className="image"></img>
-                        <p className ="imageText" style={{fontFamily: 'Source Sans Pro'}}>City Hall Park</p>
+                        <p className ="imageText">City Hall Park</p>
                     </div>
                 </div>
                 {/* Joab Section */}
                 <div className="row" id="teamSectionRow">
                     <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
                         <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
-                        <p className ="imagePortaitText" style={{fontFamily: 'Source Sans Pro'}}>Joab Bastidas</p>
+                        <p className ="imagePortaitText">Joab Bastidas</p>
                         <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
                     </div>
                     <div className="col-lg-7 col-md-6 col-sm-12" id="teamText">
-                        <p style={{fontFamily: 'Karla'}}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+                        </p>
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-12" id="imageSection">
                         <img src={Oculus} alt="Oculus" className="image"></img>
-                        <p className ="imageText" style={{fontFamily: 'Source Sans Pro'}}>Oculus</p>
+                        <p className ="imageText">Oculus</p>
                     </div>
                 </div>
                 {/* Luis Section */}
                 <div className="row" id="teamSectionRow">
                     <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
                         <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
-                        <p className ="imagePortaitText" style={{fontFamily: 'Source Sans Pro'}}>Luis Ugalde</p>
+                        <p className ="imagePortaitText">Luis Ugalde</p>
                         <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
                     </div>
                     <div className="col-lg-7 col-md-6 col-sm-12" id="teamText">
-                        <p style={{fontFamily: 'Karla'}}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-12" id="imageSection">
                         <img src={BatteryPark} alt="BatteryPark" className="image"></img>
-                        <p className ="imageText" style={{fontFamily: 'Source Sans Pro'}}>Battery Park</p>
+                        <p className ="imageText">Battery Park</p>
                     </div>
                 </div>
                 {/* Alexis Section */}
                 <div className="row" id="teamSectionRow">
                     <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
                         <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
-                        <p className ="imagePortaitText" style={{fontFamily: 'Source Sans Pro'}}>Alexis Sanchez</p>
+                        <p className ="imagePortaitText">Alexis Sanchez</p>
                         <FontAwesomeIcon icon={faArrowRight} className="arrowIcon"/>
                     </div>
                     <div className="col-lg-7 col-md-6 col-sm-12" id="teamText">
-                        <p style={{fontFamily: 'Karla'}}>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
+                        <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore 
                             et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. 
                             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
                             Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."</p>
                     </div>
                     <div className="col-lg-3 col-md-3 col-sm-12" id="imageSection">
                         <img src={WorldTradeCenter} alt="WorldTradeCenter" className="image"></img>
-                        <p className ="imageText" style={{fontFamily: 'Source Sans Pro'}}>World Trade Center</p>
+                        <p className ="imageText">World Trade Center</p>
                     </div>
                 </div>
             </div>
@@ -205,45 +206,45 @@ function About() {
             <div classame="contactUsSection">
                 <div className="row" id="contactUsRow">
                     <div className="col-md-7">
-                        <h2 style={{fontFamily: 'Spectral'}}>Reach Out To Us</h2>
-                        <h4 style={{fontFamily: 'Karla'}}>We love to hear from travelers and share their stories together. 
+                        <h2>Reach Out To Us</h2>
+                        <h4>We love to hear from travelers and share their stories together. 
                             We get back to you within 24 hours.
                         </h4>
                         {/* Contact us form Section */}
                         <div className="contactUs">
-                            <h4 style={{fontFamily: 'Spectral'}}>Contact Us</h4>
+                            <h4>Contact Us</h4>
                             <hr></hr>
-                            <p style={{fontFamily: 'Source Sans Pro'}}>Fields Marked * are required</p>
+                            <p>Fields Marked * are required</p>
                             {/* Form Tag */}
                             <form>
                                 <div className="form-row">
                                     <div className="form-group col-md-4">
-                                        <label for="firstName" style={{fontFamily: 'Source Sans Pro'}}>First name</label>
+                                        <label for="firstName">First name</label>
                                         <input type="text" className="form-control" id="firstName" placeholder="First Name"/>
                                     </div>
                                     <div class="form-group col-md-5">
-                                        <label for="LastName" style={{fontFamily: 'Source Sans Pro'}}>Last name</label>
+                                        <label for="LastName">Last name</label>
                                         <input type="text" className="form-control" id="lastName" placeholder="Last Name"/>
                                     </div>
                                 </div>
                                 <div className="form-row">
                                     <div class="form-group col-md-10">
-                                        <label for="QuestionsOrConcerns" style={{fontFamily: 'Source Sans Pro'}}>Subject</label>
+                                        <label for="QuestionsOrConcerns">Subject</label>
                                         <textarea class="form-control" id="QuestionsOrConcerns" rows="3">
                                         </textarea>
                                     </div>
                                 </div>
-                                <button type="submit" className="btn btn-primary" style={{fontFamily: 'Source Sans Pro'}}>Submit</button>
+                                <button type="submit" className="btn btn-primary">Submit</button>
                             </form>
                         </div>
                         {/* Virtual Hours Section */}
                         <div className="row" id="virtualHoursSection">
                             <div className="col-md-6 p-0">
                                 <FontAwesomeIcon icon={faClock} size="3x" style={{ color: 'rgb(19, 143, 137)' }} />
-                                <h3 style={{fontFamily: 'Spectral'}}>Virtual Hours (EST)</h3>
+                                <h3>Virtual Hours (EST)</h3>
                                 <div className="table-responsive">
                                     <table className="table">
-                                        <tbody style={{fontFamily: 'Karla'}}>
+                                        <tbody>
                                             <tr>
                                                 <td>Monday</td>
                                                 <td>11 am - 2pm</td>
@@ -263,9 +264,9 @@ function About() {
                             {/* Call Specialist Section */}
                             <div className="col-md-6" id="callSpecialist">
                                 <FontAwesomeIcon icon={faPhoneAlt} size="3x" style={{ color: 'rgb(19, 143, 137)' }} />
-                                <h3 style={{fontFamily: 'Spectral'}}>Call a Specialist</h3>
-                                <p className="phoneNumber" style={{fontFamily: 'Source Sans Pro'}}>1-800-###-####</p>
-                                <p style={{fontFamily: 'Source Sans Pro'}}>Call toll free until 2pm EST</p>
+                                <h3>Call a Specialist</h3>
+                                <p className="phoneNumber">1-800-###-####</p>
+                                <p>Call toll free until 2pm EST</p>
                             </div>
                         </div>
                     </div>

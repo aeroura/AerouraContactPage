@@ -114,14 +114,14 @@ export default function Home({lang}) {
             </div>
       <div className="landingPage">
           <div className="text">
-              <p className="title" style={{fontFamily: 'Spectral'}}>AEROURA TRAVEL</p>
-              <p className="subTitle" style={{fontFamily: 'Karla'}}>{t('landing.page.title')}</p>
+              <p className="title">AEROURA TRAVEL</p>
+              <p className="subTitle">{t('landing.page.title')}</p>
           </div>
       </div>
       <div className="descriptionBoxes">
                 <div className="row">
                     <div className="col-lg-4 col-md-12 col-sm-6 col-xs-12">
-                        <h4 style={{fontFamily: 'Spectral'}}>Places to See - NYC</h4>
+                        <h4>Places to See - NYC</h4>
                         <div className="PlacesToSee">
                             <div className="carousel" data-ride="carousel">
                                 <div className="carousel-inner">
@@ -134,7 +134,7 @@ export default function Home({lang}) {
                                 aria-hidden={i !== activeSlide}>
                                     <img className="d-block w-100" src={s.image} alt={`${s.title}`} />
                                         <div className="carousel-caption d-none d-md-block">
-                                            <h5 style={{fontFamily: 'Karla'}}>{s.title}</h5>
+                                            <h5>{s.title}</h5>
                                         </div>
                                     </div>
                                 ))}
@@ -154,14 +154,14 @@ export default function Home({lang}) {
                             <img src={JehieliProfessional} alt="Josue" className="josueImage"></img>
                         <div className="josuePortraitInfo">
                             <div className="Name">
-                                <h3 className="nameHead" style={{fontFamily: 'Spectral'}}>Josue Jehieli Bastidas</h3>
-                                <h5 className="nameSub" style={{fontFamily: 'Karla'}}>Travel Counselor</h5>
+                                <h3 className="nameHead">Josue Jehieli Bastidas</h3>
+                                <h5 className="nameSub">Travel Counselor</h5>
                             </div>
                             <div className="ContactInfo">
-                                <p style={{fontFamily: 'Source Sans Pro'}}><FontAwesomeIcon icon={faPhoneAlt} style={{ color: 'rgb(19, 143, 137)' }} /> (347)-619-2214</p>
-                                <p style={{fontFamily: 'Source Sans Pro'}}><FontAwesomeIcon icon={faEnvelope} style={{ color: 'rgb(19, 143, 137)' }} /> Josue@aeroura.com</p>
+                                <p><FontAwesomeIcon icon={faPhoneAlt} style={{ color: 'rgb(19, 143, 137)' }} /> (347)-619-2214</p>
+                                <p><FontAwesomeIcon icon={faEnvelope} style={{ color: 'rgb(19, 143, 137)' }} /> Josue@aeroura.com</p>
                                 <button type="submit" className="btn btn-primary" id="scheduleBtn" onClick={event => window.location.href='/contact'}
-                                 style={{fontFamily: 'Source Sans Pro'}}>Schedule an Appointment</button>
+                                >Schedule an Appointment</button>
                             </div>
                         </div>
                     </div>
@@ -169,12 +169,12 @@ export default function Home({lang}) {
                         <img src={JehieliMountains} alt="JehieliMountains" className="josueMountainsImage"></img>
                         <div className="virtualHoursInfo">
                             <div className="Title">
-                                <h4 className="TitleIcon" style={{fontFamily: 'Spectral'}}><FontAwesomeIcon icon={faClock} style={{ color: 'rgb(19, 143, 137)' }} /> Virtual Hours</h4>
-                                <h6 className="TitleText" style={{fontFamily: 'Karla'}}>Monday, Wednesday, Friday</h6>
-                                <h6 className="TitleText" style={{fontFamily: 'Karla'}}>11am - 2pm (EST)</h6>
+                                <h4 className="TitleIcon"><FontAwesomeIcon icon={faClock} style={{ color: 'rgb(19, 143, 137)' }} /> Virtual Hours</h4>
+                                <h6 className="TitleText">Monday, Wednesday, Friday</h6>
+                                <h6 className="TitleText">11am - 2pm (EST)</h6>
                             </div>
                             <div className="joinButton">
-                                <button type="submit" className="btn btn-primary" onClick={event => window.location.href='/contact'} style={{fontFamily: 'Source Sans Pro'}}>Join Here</button>
+                                <button type="submit" className="btn btn-primary" onClick={event => window.location.href='/contact'}>Join Here</button>
                             </div>
                         </div>
                     </div>
@@ -183,40 +183,40 @@ export default function Home({lang}) {
             <div className="travelBanner">
                 <img src={NYCTravel} alt="NYCTravel" className="travelBannerBackground">  
                 </img>
-                <div className="travelBannerText" style={{fontFamily: 'Spectral'}}>
+                <div className="travelBannerText">
                     NYC TRAVEL
                 </div>
             </div>
             <div className="SpecializeBoxes">
-                <h3 className="headingText" style={{fontFamily: 'Spectral'}}>We Specialize In...</h3>
+                <h3 className="headingText">We Specialize In...</h3>
                 <div className="row">
                     <div className="col-md-4">
-                       <h4 className="headingText" style={{fontFamily: 'Karla'}}>Local Travel</h4> 
+                       <h4 className="headingText">Local Travel</h4> 
                        <div className="box">
                         <img src={BrooklynBridge} alt="BrooklynBridge" className="img-fluid"></img>
                             <div className="descriptionText">
-                                <p style={{fontFamily: 'Source Sans Pro'}}>Relax and Enjoy. There's not much else to it and we're just fine with that.</p>
-                                <p style={{fontFamily: 'Source Sans Pro'}}>A trip for the entire family or a solo adventure is just around the corner.</p>
+                                <p>Relax and Enjoy. There's not much else to it and we're just fine with that.</p>
+                                <p>A trip for the entire family or a solo adventure is just around the corner.</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4">
-                    <h4 className="headingText" style={{fontFamily: 'Karla'}}>Planning Trips</h4>
+                    <h4 className="headingText">Planning Trips</h4>
                         <div className="box">
                         <img src={Macys} alt="Macys" className="img-fluid"></img>
                             <div className="descriptionText">
-                                <p style={{fontFamily: 'Source Sans Pro'}}>There's magic in planning and we can't get enough of it.</p>
-                                <p style={{fontFamily: 'Source Sans Pro'}}>We enjoy planning your vacation, weekend Getaways, and family retreats.</p>
+                                <p>There's magic in planning and we can't get enough of it.</p>
+                                <p>We enjoy planning your vacation, weekend Getaways, and family retreats.</p>
                             </div>
                         </div>
                     </div>
                     <div className="col-md-4">
-                    <h4 className="headingText" style={{fontFamily: 'Karla'}}>New York City</h4>
+                    <h4 className="headingText">New York City</h4>
                         <div className="box">
                         <img src={BroadwayStreet} alt="BroadwayStreet" className="img-fluid"></img>
                             <div className="descriptionText">
-                                <p style={{fontFamily: 'Source Sans Pro'}}>The best and brightest come to New York. There's no place like it so reach out to us to get the ins-and-outs of our booming city.</p>
-                                <p style={{fontFamily: 'Source Sans Pro'}}>We love it and we know you will too.</p>
+                                <p>The best and brightest come to New York. There's no place like it so reach out to us to get the ins-and-outs of our booming city.</p>
+                                <p>We love it and we know you will too.</p>
                             </div>
                         </div>
                     </div>
