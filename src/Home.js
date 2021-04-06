@@ -121,8 +121,8 @@ export default function Home({lang}) {
       <div className="descriptionBoxes">
                 <div className="row">
                     <div className="col-lg-4 col-md-12 col-sm-6 col-xs-12">
-                        <h4>Places to See - NYC</h4>
                         <div className="PlacesToSee">
+                            <h4>Places to See - NYC</h4>
                             <div className="carousel" data-ride="carousel">
                                 <div className="carousel-inner">
                                 {slides.map((s, i) => (
@@ -151,35 +151,61 @@ export default function Home({lang}) {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="TravelCounselor">
-                            <img src={JehieliProfessional} alt="Josue" className="josueImage"></img>
-                        <div className="josuePortraitInfo">
-                            <div className="Name">
-                                <h3 className="nameHead">Josue Jehieli Bastidas</h3>
-                                <h5 className="nameSub">Travel Counselor</h5>
-                            </div>
                             <div className="ContactInfo">
+                                <h1>Travel Advisor</h1>
+                                <p>Connect with an advisor to plan your next trip</p>
                                 <p><FontAwesomeIcon icon={faPhoneAlt} style={{ color: 'rgb(19, 143, 137)' }} /> (347)-619-2214</p>
                                 <p><FontAwesomeIcon icon={faEnvelope} style={{ color: 'rgb(19, 143, 137)' }} /> Josue@aeroura.com</p>
                                 <button type="submit" className="btn btn-primary" id="scheduleBtn" onClick={event => window.location.href='/contact'}
                                 >Schedule an Appointment</button>
                             </div>
-                        </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="VirtualHours">
-                        <img src={JehieliMountains} alt="JehieliMountains" className="josueMountainsImage"></img>
-                        <div className="virtualHoursInfo">
+                    <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="PlanTrip">
+                        <form className="planYourTrip">
                             <div className="Title">
-                                <h4 className="TitleIcon"><FontAwesomeIcon icon={faClock} style={{ color: 'rgb(19, 143, 137)' }} /> Virtual Hours</h4>
-                                <h6 className="TitleText">Monday, Wednesday, Friday</h6>
-                                <h6 className="TitleText">11am - 2pm (EST)</h6>
+                                <h2 className="TitleIcon">Plan Your Trip</h2>
+                                <p className="TitleText">What would your next vacation look like?</p>
+                            </div>
+                            <div className="form-group">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value=""/>Option 1
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value=""/>Option 2
+                                    </label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value=""/>Option 1
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value=""/>Option 2
+                                    </label>
+                                </div>
+                            </div>
+                            <div className="form-group">
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="checkbox" class="form-check-input" value=""/>Option 1
+                                    </label>
+                                </div>
                             </div>
                             <div className="joinButton">
-                                <button type="submit" className="btn btn-primary" onClick={event => window.location.href='/contact'}>Join Here</button>
+                                <button type="submit" className="btn btn-danger" onClick={event => window.location.href='/contact'}>Join Here</button>
                             </div>
-                        </div>
+                        </form>
                     </div>
                 </div>
             </div>
+
+            {/* Travel Banner Section */}
             <div className="travelBanner">
                 <img src={NYCTravel} alt="NYCTravel" className="travelBannerBackground">  
                 </img>
@@ -187,6 +213,8 @@ export default function Home({lang}) {
                     NYC TRAVEL
                 </div>
             </div>
+
+            {/* Specialization Boxes Section */}
             <div className="SpecializeBoxes">
                 <h3 className="headingText">We Specialize In...</h3>
                 <div className="row">
