@@ -117,11 +117,8 @@
 
 .PlacesToSee {
     background-color: #f2f0e6;
-    margin: 10px;
-}
+    margin: 40px 10px;
 
-.carousel-item {
-    height: 100%;
 }
 
 /* Carousel Buttons */
@@ -130,26 +127,15 @@
     background-color: transparent;
 }
 
-/* Places to see Images*/
-.slideShowImage {
-    height: 90%;
-    width: 100%;
-}
-
 /* ===============================
     Travel Counselor section 
 ==================================*/
 #TravelCounselor {
     background-color: #f2f0e6;
-    margin: 2% 0 2% 0;
+    height: 80%;
+    margin: 40px 10px;
     padding: 0;
     transform: translate(-.5em, 0em);
-}
-
-/* Josue Portrait Image Information*/
-.josuePortraitInfo {
-    float: right;
-    padding: 10px 0 0 10px;
 }
 
 .ContactInfo {
@@ -166,7 +152,8 @@
 ==================================*/
 #PlanTrip {
     background-color: #f2f0e6;
-    margin: 2% 0 2% 0;
+    height: 80%;
+    margin: 40px 10px;
 }
 
 /* Plan Your Trip Information*/

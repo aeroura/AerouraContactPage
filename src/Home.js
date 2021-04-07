@@ -150,7 +150,8 @@ export default function Home({lang}) {
                             </div>
                         </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="TravelCounselor">
+                    <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div id="TravelCounselor">
                             <div className="ContactInfo">
                                 <h1>Travel Advisor</h1>
                                 <p>Connect with an advisor to plan your next trip</p>
@@ -159,48 +160,52 @@ export default function Home({lang}) {
                                 <button type="submit" className="btn btn-primary" id="scheduleBtn" onClick={event => window.location.href='/contact'}
                                 >Schedule an Appointment</button>
                             </div>
+                        </div>
                     </div>
-                    <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12" id="PlanTrip">
-                        <form className="planYourTrip">
-                            <div className="Title">
-                                <h2 className="TitleIcon">Plan Your Trip</h2>
-                                <p className="TitleText">What would your next vacation look like?</p>
-                            </div>
-                            <div className="form-group">
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value=""/>Option 1
-                                    </label>
+                    
+                    <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        <div id="PlanTrip">
+                            <form className="planYourTrip">
+                                <div className="Title">
+                                    <h2 className="TitleIcon">Plan Your Trip</h2>
+                                    <p className="TitleText">What would your next vacation look like?</p>
                                 </div>
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value=""/>Option 2
-                                    </label>
+                                <div className="form-group">
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value=""/>Option 1
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value=""/>Option 2
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="form-group">
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value=""/>Option 1
-                                    </label>
+                                <div className="form-group">
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value=""/>Option 1
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value=""/>Option 2
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value=""/>Option 2
-                                    </label>
+                                <div className="form-group">
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value=""/>Option 1
+                                        </label>
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="form-group">
-                                <div class="form-check-inline">
-                                    <label class="form-check-label">
-                                        <input type="checkbox" class="form-check-input" value=""/>Option 1
-                                    </label>
+                                <div className="joinButton">
+                                    <button type="submit" className="btn btn-danger" onClick={event => window.location.href='/contact'}>Join Here</button>
                                 </div>
-                            </div>
-                            <div className="joinButton">
-                                <button type="submit" className="btn btn-danger" onClick={event => window.location.href='/contact'}>Join Here</button>
-                            </div>
-                        </form>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
