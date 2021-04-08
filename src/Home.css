@@ -2,23 +2,31 @@
     Landing Page Image section 
 ==================================*/
 .landingPage {
-    background-image: url('./Images/BrooklynBridge.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 80vh;
     width: 100%;
     height: 60vh;
-   
 }
 
-.landingPage img {
+.landingPageBackground {
+    background-repeat: no-repeat;
+    overflow: hidden;
     object-fit: cover;
+    width: 100%;
+    height: inherit;
 }
 
 /* Text positioning on Landing Page Image */
 .text {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    height: 60vh;
-    padding-top: 45vh;
+    padding: 0;
+    margin: 0;
+    font-size: 10rem;
+    width: max-content;
 }
 
 /* Top Text on Landing Page Image */

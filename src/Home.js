@@ -113,6 +113,7 @@ export default function Home({lang}) {
                 <a href="linkedin.com"><FaLinkedin className="linkedin"/></a>  
             </div>
       <div className="landingPage">
+      <img src={BrooklynBridge} alt="BrooklynBridge" className="landingPageBackground"></img>
           <div className="text">
               <p className="title">AEROURA TRAVEL</p>
               <p className="subTitle">{t('landing.page.title')}</p>
