@@ -89,12 +89,23 @@ export default function Home({lang}) {
     // Set the length of the slides array
     const { length } = slides;
 
+   
+
     //used to control next and prev slides in carousel
     const nextSlide = () => {
     // Check if we've reached the final slide in the array
     // If so, go back to 0, else activeSlide + 1
-    setActiveSlide(activeSlide === length - 1 ? 0 : activeSlide + 1);
+    setActiveSlide(activeSlide === length - 1 ? 0 : activeSlide + 1); 
     }
+
+     // Change image every few seconds
+     useEffect(() => {
+        const timer = setInterval(() => {
+          nextSlide();
+        }, 5000);
+        return () => clearInterval(timer);
+      }, []);
+
 
     const prevSlide = () => {
     // Check if we've reached the first slide in the array
@@ -116,7 +127,7 @@ export default function Home({lang}) {
       <img src={BrooklynBridge} alt="BrooklynBridge" className="landingPageBackground"></img>
           <div className="text">
               <p className="title">AEROURA TRAVEL</p>
-              <p className="subTitle">{t('landing.page.title')}</p>
+              <p className="subTitle">{t(`landing.page.title`)}</p>
           </div>
       </div>
       <div className="descriptionBoxes">
@@ -265,7 +276,29 @@ export default function Home({lang}) {
 
 /* 
 
+function showSlides() {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    for (i = 0; i < slides.length; i++) {
+       slides[i].style.display = "none";  
+    }
+    slideIndex++;
+    if (slideIndex > slides.length) {slideIndex = 1}    
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";  
+    dots[slideIndex-1].className += " active";
+    setTimeout(showSlides, 2000); // Change image every 7 seconds
+}
 
 
+Function that clears interval and then restarts it
 
+
+const timer = setInterval(() => {
+          nextSlide();
+        }, 5000);
+        return () => clearInterval(timer);
 */
