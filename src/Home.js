@@ -1,11 +1,9 @@
-import React, {useState, useEffect} from 'react';
-import JehieliProfessional from './Images/JehieliPortrait.jpg';
+import React, {useState, useEffect, useCallback} from 'react';
 import BrookfieldPlace from './Images/BrookfieldPlace.jpg';
-import JehieliMountains from './Images/JehieliMountains.jpg';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram, FaArrowCircleUp} from 'react-icons/fa';
-import { faEnvelope, faPhoneAlt, faClock } from '@fortawesome/free-solid-svg-icons';
-import NYCTravel from './Images/TravelBanner.jpeg';//Check to see jpg vs jpeg
+import { faEnvelope, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
+import NYCTravel from './Images/TravelBanner.jpg';
 import BrooklynBridge from './Images/BrooklynBridge.jpg';
 import Macys from './Images/Macy\'s.jpg';
 import BroadwayStreet from './Images/BroadwayStreet.jpg';
@@ -92,19 +90,19 @@ export default function Home({lang}) {
    
 
     //used to control next and prev slides in carousel
-    const nextSlide = () => {
+    const nextSlide = useCallback(() => {
     // Check if we've reached the final slide in the array
     // If so, go back to 0, else activeSlide + 1
     setActiveSlide(activeSlide === length - 1 ? 0 : activeSlide + 1); 
-    }
+    }, [activeSlide, length])
 
-     // Change image every few seconds
+// Change image every few seconds
      useEffect(() => {
         const timer = setInterval(() => {
           nextSlide();
-        }, 5000);
+        }, 4000);
         return () => clearInterval(timer);
-      }, []);
+      }, [nextSlide]);
 
 
     const prevSlide = () => {
@@ -276,29 +274,5 @@ export default function Home({lang}) {
 
 /* 
 
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";  
-    }
-    slideIndex++;
-    if (slideIndex > slides.length) {slideIndex = 1}    
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-    setTimeout(showSlides, 2000); // Change image every 7 seconds
-}
 
-
-Function that clears interval and then restarts it
-
-
-const timer = setInterval(() => {
-          nextSlide();
-        }, 5000);
-        return () => clearInterval(timer);
 */
