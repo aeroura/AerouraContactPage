@@ -264,15 +264,13 @@ export default function Home({lang}) {
                         </div>
                     </div>
                 </div>
-            </div>
-            
-            <FaArrowCircleUp className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
+            </div> 
+            <FaArrowCircleUp className="scrollTop" onClick={scrollTop} style={{height: 40, width: 100, display: showScroll ? 'flex' : 'none'}}/>
     </div>
     )
 }
 
 
 /* 
-
 
 */
