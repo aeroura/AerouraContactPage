@@ -121,12 +121,15 @@
 .descriptionBoxes {
     padding: 0 50px 0 50px;
     background-color: rgb(0, 95, 105);
+    
 }
 
 .PlacesToSee {
     background-color: #f2f0e6;
     margin: 40px 10px;
-
+    height: 80%;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 /* Carousel Buttons */
@@ -144,6 +147,7 @@
     margin: 40px 10px;
     padding: 0;
     transform: translate(-.5em, 0em);
+    border-radius: 10px;
 }
 
 .ContactInfo {
@@ -162,6 +166,7 @@
     background-color: #f2f0e6;
     height: 80%;
     margin: 40px 10px;
+    border-radius: 10px;
 }
 
 /* Plan Your Trip Information*/
@@ -493,11 +498,6 @@ Media quieries for extra large displays
     /* Description Boxes */
     .descriptionBoxes {
         margin: 0;
-    }
-
-    /* Border Radius of all boxes in section*/
-    .descriptionBoxes :nth-child(1n) {
-        border-radius: 10px;
     }
 
     /* Travel Banner */
