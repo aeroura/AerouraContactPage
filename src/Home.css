@@ -121,15 +121,19 @@
 .descriptionBoxes {
     padding: 0 50px 0 50px;
     background-color: rgb(0, 95, 105);
-    
 }
 
 .PlacesToSee {
     background-color: #f2f0e6;
     margin: 40px 10px;
-    height: 80%;
+    height: 350px;
     overflow: hidden;
     border-radius: 10px;
+}
+
+.PlacesToSee h4 {
+    font-size: 2rem;
+    padding-left: 10px;
 }
 
 /* Carousel Buttons */
@@ -143,10 +147,9 @@
 ==================================*/
 #TravelCounselor {
     background-color: #f2f0e6;
-    height: 80%;
+    height: 350px;
     margin: 40px 10px;
     padding: 0;
-    transform: translate(-.5em, 0em);
     border-radius: 10px;
 }
 
@@ -154,9 +157,18 @@
     margin: 4%;
 }
 
+.ContactInfo h1{
+    margin-bottom: 20px;
+}
+
+.ContactInfo p{
+    font-size: 1.2rem;
+}
+
 #scheduleBtn {
     padding: 5px;
     float: right;
+    margin-top: 90px;
 }
 
 /* ===============================
@@ -164,20 +176,35 @@
 ==================================*/
 #PlanTrip {
     background-color: #f2f0e6;
-    height: 80%;
+    height: 350px;
     margin: 40px 10px;
     border-radius: 10px;
+    padding: 0;
 }
 
 /* Plan Your Trip Information*/
 .planYourTrip {
-    float: left;
     padding: 10px 0 10px 10px;
+    margin: 4%;
+}
+
+.planYourTrip p {
+    font-size: 1.2rem;
+}
+
+.planYourTrip label {
+    font-size: 1.2rem;
+    padding: 5px;
+}
+
+.TitleIcon {
+    margin-bottom: 20px;
 }
 
 .joinButton {
-    margin: 20px;
+    padding: 15px;
     float: right;
+    margin-top: 5px;
 }
 
 /* ===============================

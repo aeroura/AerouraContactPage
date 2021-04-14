@@ -183,31 +183,31 @@ export default function Home({lang}) {
                                 <div className="form-group">
                                     <div class="form-check-inline">
                                         <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value=""/>Option 1
+                                            <input type="checkbox" class="form-check-input" value=""/>Flight
                                         </label>
                                     </div>
                                     <div class="form-check-inline">
                                         <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value=""/>Option 2
-                                        </label>
-                                    </div>
-                                </div>
-                                <div className="form-group">
-                                    <div class="form-check-inline">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value=""/>Option 1
-                                        </label>
-                                    </div>
-                                    <div class="form-check-inline">
-                                        <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value=""/>Option 2
+                                            <input type="checkbox" class="form-check-input" value=""/>Tour
                                         </label>
                                     </div>
                                 </div>
                                 <div className="form-group">
                                     <div class="form-check-inline">
                                         <label class="form-check-label">
-                                            <input type="checkbox" class="form-check-input" value=""/>Option 1
+                                            <input type="checkbox" class="form-check-input" value=""/>Hotel
+                                        </label>
+                                    </div>
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value=""/>Other
+                                        </label>
+                                    </div>
+                                </div>
+                                <div className="form-group">
+                                    <div class="form-check-inline">
+                                        <label class="form-check-label">
+                                            <input type="checkbox" class="form-check-input" value=""/>Rental Car
                                         </label>
                                     </div>
                                 </div>
