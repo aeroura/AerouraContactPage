@@ -100,7 +100,7 @@ function App() {
       <div className="content-wrap">
         {/* Contains website data in multiple routes */}
           <Switch>
-            <Route exact path="/">
+            <Route path= "/">
               <Home lang = {currentLanguage}/>
             </Route>
             <Route path="/about">
