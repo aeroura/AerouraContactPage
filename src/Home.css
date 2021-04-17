@@ -45,10 +45,14 @@
 /* ===============================
     Side bar with icons 
 ==================================*/
+/* Div with side bar and social media */
+.socialMediaIcons {
+    position: fixed;
+    top: 45%;
+}
+
 #sidePanel {
     z-index: 2;
-    position: fixed;
-    top: 34.5%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -65,8 +69,6 @@
 
 .iconBarActive {
     z-index: 2;
-    position: fixed;
-    top: 45%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -143,7 +145,7 @@
 }
 
 .slideTitle {
-    padding-bottom: 30px;
+    padding-bottom: 10vh;
 }
 
 /* ===============================
@@ -263,6 +265,10 @@
     margin: 10px 5px;
     text-align: start;
     height: 90%;
+}
+
+.box img {
+    width: 100%;
 }
 
 .descriptionText {
@@ -526,6 +532,11 @@ Media quieries for computers/larger displays
 Media quieries for extra large displays  
 ==================================*/
 @media only screen and (min-width: 1441px) {
+
+    .iconBarActive {
+        top: 20%;
+      }
+      
     /* Description Boxes */
     .descriptionBoxes {
         margin: 0;

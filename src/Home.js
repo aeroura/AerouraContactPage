@@ -113,6 +113,7 @@ export default function Home({lang}) {
 
     return (
     <div className="Home">
+        <div className="socialMediaPanel">
             <button className="btn" id="sidePanel" onClick={toggle} style={sidePanelStyle}>&#9776;
             </button> 
             <div className="iconBarActive" style={iconBarStyle}>
@@ -121,6 +122,7 @@ export default function Home({lang}) {
                 <a href="instagram.com"><FaInstagram className="instagram"/></a>
                 <a href="linkedin.com"><FaLinkedin className="linkedin"/></a>  
             </div>
+        </div>
       <div className="landingPage">
       <img src={BrooklynBridge} alt="BrooklynBridge" className="landingPageBackground"></img>
           <div className="text">
