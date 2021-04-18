@@ -496,6 +496,20 @@ Media quieries for computers/larger displays
     /* Description Boxes */
     .descriptionBoxes {
         margin: 0 110px 0 90px;
+        padding: 0;
+    }
+
+    .slideTitle {
+        padding: 0;
+    }
+
+    #scheduleBtn {
+        margin-top: 70px;
+    }
+
+    .joinButton {
+        padding:0;
+        margin: 0 0 20px 0;
     }
 
     /* Travel Banner */
@@ -516,11 +530,6 @@ Media quieries for computers/larger displays
     /* video icon in vitual hours form section*/
     #videoIcon {
         font-size: 90px;
-    }
-
-    /* Specialize Boxes */
-    .SpecializeBoxes {
-        margin: 0 85px 0 85px;
     }
 
     /* Vitual Hours Info Section */
