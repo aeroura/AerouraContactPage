@@ -72,7 +72,7 @@ function App() {
   </button>
   {/* Hamburger menu section */}
   <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarToggle">
-    <span className="homeLink"><NavLink exact to="/" activeClassName="active" style={{textDecoration: 'none'}}
+    <span className="homeLink"><NavLink to="/" activeClassName="active" style={{textDecoration: 'none'}}
     >AEROURA TRAVEL</NavLink></span>
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
       <li className="nav-item"><Link to="/about" style={{textDecoration: 'none'}}>About</Link></li>

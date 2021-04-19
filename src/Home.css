@@ -441,10 +441,20 @@ Media quieries for small devices
 
 }
 
-/* ===============================
+/* =======================================
 Media quieries for tablets/medium devices 
-==================================*/
-@media only screen and (min-width: 768px) and (max-width: 1023px) {
+========================================== */
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    /* Description Boxes */
+    .descriptionBoxes {
+        padding: 0;
+        margin: 0;
+    }
+
+    .descriptionBoxes .row :nth-child(2) {
+        padding: 0;
+        margin: 0;
+    }
 
     .nameHead {
         font-size: 1.15em;
@@ -488,15 +498,15 @@ Media quieries for tablets/medium devices
 /* =======================================
 Media quieries for computers/larger displays 
 ==================================*/
-@media only screen and (min-width: 1024px) and (max-width:1440px) {
+@media only screen and (min-width: 1025px) and (max-width:1440px) {
     #VirtualHours {
         transform:translate(1%, 0%);
     }
 
     /* Description Boxes */
     .descriptionBoxes {
-        margin: 0 110px 0 90px;
-        padding: 0;
+        padding: 0 110px 0 90px;
+        margin: 0;
     }
 
     .slideTitle {
