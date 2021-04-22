@@ -20,12 +20,13 @@
     top: 60%;
     left: 50%;
     transform: translate(-50%, -50%);
+    font-size: 10rem;
     display: flex;
     flex-direction: column;
     text-align: center;
     padding: 0;
     margin: 0;
-    font-size: 10rem;
+    
     width: max-content;
 }
 
@@ -321,8 +322,7 @@ Media quieries for small devices
 
     /* Text positioning on Landing Page Image */
     .text {
-        height: 50vh;
-        padding-top: 35vh;
+        height: 40vh;
     }
 
     /* Top Text on Landing Page Image */
@@ -338,12 +338,61 @@ Media quieries for small devices
         color: white;
     }
 
-    /* Travel banner bottom padding on small devices*/
+    /*====================================
+    Social Media Bar Section 
+    ===================================== */
+
+    #sidePanel {
+        position: fixed;
+        top: 33.4%;
+    }
+
+    /*====================================
+    Description Boxes Section 
+    ===================================== */
+    .descriptionBoxes {
+        padding: 0;
+    }
+
+    .PlacesToSee {
+        margin: 10px;
+        height: auto;
+    }
+
+    .slideTitle {
+        z-index: 10;
+    }
+    /* Travel couselor section */
+    #TravelCounselor {
+        margin: 10px;
+    }
+
+    #scheduleBtn {
+        padding: 5px;
+        position: absolute;
+        right: 10%;
+        bottom: 10%;
+        font-size: 16px;
+    }
+
+    /* Plan Your Trip section */
+    #PlanTrip {
+        margin: 10px;
+    }
+
+    .joinButton {
+        padding: 0;
+        margin: 0;
+    }
+
+   /*====================================
+     Travel banner bottom padding on small devices
+    ===================================== */
     .travelBanner {
         height: 100%;
         width: 100%;
         position: relative;
-        padding-bottom: 20px;
+        padding-bottom: 10px;
     }
 
     .travelBannerBackground {
@@ -351,27 +400,11 @@ Media quieries for small devices
         opacity: .5;
         width: 98%;
         transform: translate(1%, 5%);
-        height: 50vh;
-        overflow: hidden;
-        margin-bottom: 3%;
+        height: 25vh;
     }
 
     .travelBannerText {
-        position: absolute;
-        display: flex;
-        flex-direction: column;
-        text-align: center;
         font-size: 40px;
-        font-weight: bold;
-        font-family: Verdana, Tahoma, sans-serif;
-        color: rgb(0, 95, 105);
-        padding: 0;
-        margin: 0;
-    }
-
-    /*Travel counselor section*/
-    #TravelCounselor {
-        padding-right: 10px;
     }
 
     .nameHead {
@@ -387,18 +420,9 @@ Media quieries for small devices
 
     }
 
-    #scheduleBtn {
-        font-size: 10px;
-    }
-
     /*****Virtual Hours Info Section******/
     .virtualHoursInfo {
         padding: 10px 0;
-    }
-
-    .TitleIcon {
-        font-size: 16px;
-
     }
 
     .TitleText {
@@ -437,6 +461,11 @@ Media quieries for small devices
     /* Table with the dates and time info */
     table td {
         font-size: .9em;
+    }
+
+    /* Specialization Boxes */
+    .SpecializeBoxes {
+        padding: 0;
     }
 
 }

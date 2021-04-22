@@ -325,7 +325,16 @@
 Section for mobile devices
 ===========================*/
 @media only screen and (max-width: 425px){
-/* Adjust font size for about landing page text */
+    /*====================================
+    Social Media Bar Section 
+    ===================================== */
+
+    #sidePanel {
+        position: fixed;
+        top: 33.4%;
+    }
+
+  /* Adjust font size for about landing page text */  
     .aboutTitle {
         font-size: 12px;
         }
