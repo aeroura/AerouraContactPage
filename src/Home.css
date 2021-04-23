@@ -476,9 +476,6 @@ Media quieries for small devices
 Media quieries for tablets/medium devices 
 ========================================== */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
-/* change grey to beige 
-add email to site vs last name 
-*/
 
     /* Social media bar */
     #sidePanel {

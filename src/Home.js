@@ -275,4 +275,7 @@ export default function Home({lang}) {
 
 /* 
 
+change grey to beige 
+add email to site vs last name 
+
 */
