@@ -54,6 +54,8 @@
 
 #sidePanel {
     z-index: 2;
+    position: fixed;
+    top: 34.5%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
@@ -470,19 +472,96 @@ Media quieries for small devices
 
 }
 
+    /* =======================================
+Media quieries for tablets/medium devices 
+========================================== */
+@media only screen and (min-width: 601px) and (max-width: 768px) {
+/* change grey to beige 
+add email to site vs last name 
+*/
+
+    /* Social media bar */
+    #sidePanel {
+        position: fixed;
+        top: 33.5%;
+    }
+
+    .PlacesToSee {
+        margin: 10px;
+    }
+
+    .slideTitle {
+        font-size: 10px;
+    }
+
+    /* Travel couselor section */
+    #TravelCounselor {
+        margin: 10px;
+    }
+
+    #scheduleBtn {
+        padding: 5px;
+        position: absolute;
+        right: 10%;
+        bottom: 7%;
+        font-size: 16px;
+    }
+
+    /* Plan Your Trip section */
+    #PlanTrip {
+        margin: 10px;
+    }
+
+    .joinButton {
+        padding: 0;
+        margin: 0;
+    }
+
+}
+
 /* =======================================
 Media quieries for tablets/medium devices 
 ========================================== */
-@media only screen and (min-width: 768px) and (max-width: 1024px) {
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    /* Social media bar */
+    #sidePanel {
+        position: fixed;
+        top: 33.5%;
+    }
+
     /* Description Boxes */
     .descriptionBoxes {
         padding: 0;
         margin: 0;
     }
 
-    .descriptionBoxes .row :nth-child(2) {
+    .carousel-item.active {
+        width: 460px;
+        transform: translate(-10%)
+    }
+
+    .slideTitle {
+        padding-bottom: 10px;
+        transform: translate(-10%)
+    }
+    
+    /* Button to schedule an appointment */
+    #scheduleBtn {
+        margin-top: 75px;
+    }
+
+    /* Button to aeroura voyage */
+    .joinButton {
         padding: 0;
         margin: 0;
+    }
+
+    .travelBannerText {
+        font-size: 7rem;
+    }
+
+    .SpecializeBoxes {
+        padding: 10px;
     }
 
     .nameHead {
@@ -491,11 +570,6 @@ Media quieries for tablets/medium devices
 
     .nameSub {
         font-size: 1.15em;
-    }
-    /***** Virtual Hours Info Section ******/
-    .TitleIcon {
-        font-size: 1.15em;
-
     }
 
     /***** Virtual Hours Form Section ******/

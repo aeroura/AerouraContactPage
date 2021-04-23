@@ -69,11 +69,11 @@ export default function Home({lang}) {
     //Slides info objects
     const slides = ([
         {
-            title: 'BrookfieldPlace',
+            title: 'Brookfield Place',
             image: BrookfieldPlace,
         },
         {
-            title: "BrooklynBridge",
+            title: "Brooklyn Bridge",
             image: BrooklynBridge
         },
         {
