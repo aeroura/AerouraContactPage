@@ -149,6 +149,7 @@
 
 .slideTitle {
     padding-bottom: 10vh;
+    overflow: hidden;
 }
 
 /* ===============================
@@ -363,7 +364,9 @@ Media quieries for small devices
 
     .slideTitle {
         z-index: 10;
+        padding-bottom: 0;
     }
+
     /* Travel couselor section */
     #TravelCounselor {
         margin: 10px;
@@ -488,7 +491,7 @@ Media quieries for tablets/medium devices
     }
 
     .slideTitle {
-        font-size: 10px;
+        font-size: 30px;
     }
 
     /* Travel couselor section */
@@ -512,6 +515,14 @@ Media quieries for tablets/medium devices
     .joinButton {
         padding: 0;
         margin: 0;
+    }
+
+    .travelBannerText {
+        font-size: 7rem;
+    }
+
+    .SpecializeBoxes {
+        padding: 10px;
     }
 
 }

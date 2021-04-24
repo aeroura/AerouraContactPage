@@ -145,7 +145,7 @@ export default function Home({lang}) {
                                 // if not active, hide from screen readers for accessibility
                                 aria-hidden={i !== activeSlide}>
                                     <img className="d-block w-100" src={s.image} alt={`${s.title}`} />
-                                        <div className="carousel-caption d-none d-md-block">
+                                        <div className="carousel-caption d-md-block">
                                             <h5 className="slideTitle">{s.title}</h5>
                                         </div>
                                     </div>
