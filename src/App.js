@@ -10,7 +10,7 @@ import About from "./About.js";
 import Contact from "./Contact.js";
 /*import Community from "./Community.js";*/
 import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter, Route, Switch, Link, NavLink } from 'react-router-dom';
+import { BrowserRouter, Route, Switch, Link, NavLink, Redirect } from 'react-router-dom';
 import i18n from "i18next";
 import { useTranslation } from "react-i18next";
 import WebFont from 'webfontloader';

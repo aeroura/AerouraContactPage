@@ -174,12 +174,6 @@
     padding: 2% 0px 0px 2%;
 }
 
-/* Image in bottom section with company values */
-#valuesImage {
-    float: right;
-    height: 25rem;
-}
-
 /* Section with team member info */
 .adventurousTeam {
     background-color: rgb(234, 235, 236);
@@ -282,11 +276,6 @@
 /* Call Specialist section */
 #callSpecialist {
     padding: 1% 0 1% 0;
-}
-
-/* Image next to contact us form*/
-.contactImage {
-    height: 53rem;
 }
 
 /* ===============================

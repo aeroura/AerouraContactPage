@@ -121,9 +121,6 @@ function About() {
                         <h4><FontAwesomeIcon icon={faBell} style={{ color: 'rgb(19, 143, 137)' }} /> Service</h4>
                        <p>We may not always have the answer, but we are committed to finding it.</p>
                     </div>
-                    <div className="col-md-4">
-                        <img src={JehieliGreece} alt="JehieliGreece" id="valuesImage"></img>
-                    </div>
                 </div>
             </div>
             <div className="adventurousTeam">
@@ -269,10 +266,6 @@ function About() {
                                 <p>Call toll free until 2pm EST</p>
                             </div>
                         </div>
-                    </div>
-                    {/* Pic of Jehieli in museum */}
-                    <div className="col-md-5 p-0 m-0">
-                        <img src={JehieliMuseum} alt="JehieliMuseum" className="contactImage"></img>
                     </div>
                 </div>
                 
