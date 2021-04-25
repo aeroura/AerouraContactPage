@@ -100,15 +100,14 @@ function App() {
       <div className="content-wrap">
         {/* Contains website data in multiple routes */}
           <Switch>
-            <Route exact path= "/" component={Home}>
-              
-            </Route>
-            <Route exact path="/about">
-              <About/>
-            </Route>
-            <Route exact path="/contact">
-              <Contact/>
-            </Route>
+            <Route path= "/" exact component={Home}/>
+            <Route path= "/"  component={Home}/>
+            <Route path="/about" component={About}/> 
+
+            <Route exact path="/contact" component={Contact}/>
+
+            {/* <Route path="/legal" component={Legal} /> */}
+
               {/* <Route path="/community" component={Community} /> */}
              {/* This gives an error  <Route component={Error} /> */}
           </Switch>
