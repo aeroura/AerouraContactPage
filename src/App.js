@@ -100,8 +100,10 @@ function App() {
       <div className="content-wrap">
         {/* Contains website data in multiple routes */}
           <Switch>
+            <Route exact path= "/"> 
+              <Home/>
+            </Route>
             <Route path= "/" exact component={Home}/>
-            <Route path= "/"  component={Home}/>
             <Route path="/about" component={About}/> 
 
             <Route exact path="/contact" component={Contact}/>
@@ -123,21 +125,3 @@ function App() {
       }
 
 export default App;
-
-/* 
-
-----Replace if above doesnt work------
-<Home lang = {currentLanguage}/>
-
-
---------Extra Info for Navlink-------
-<NavLink className="navbar-item" activeClassName="is-active" to="/">
-  Home
-</NavLink>
-
-  ------Back up in case previous dropdown doesnt work-----
-          <a className="dropdown-item" onClick={() => changeLanguage('en')}>English</a>
-        <a className="dropdown-item" onClick={() => changeLanguage('es')}>Spanish</a>
-
-
-*/

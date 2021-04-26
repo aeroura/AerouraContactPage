@@ -271,11 +271,3 @@ export default function Home({lang}) {
     </div>
     )
 }
-
-
-/* 
-
-change grey to beige 
-add email to site vs last name 
-
-*/

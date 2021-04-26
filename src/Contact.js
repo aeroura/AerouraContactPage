@@ -27,7 +27,7 @@ function Contact() {
                                         </div>
                                     </div>
                                 </div>
-                                <form>
+                                <form className ="scheduleTripForm">
                                     <div className="form-row">
                                         <div className="form-group col-md-2">
                                             <label for="title">Title</label>

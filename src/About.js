@@ -8,7 +8,6 @@ import Oculus from './Images/Oculus.jpg';
 import CityHallPark from './Images/CityHallPark.jpg';
 import BatteryPark from './Images/BatteryPark.jpg';
 import WorldTradeCenter from './Images/WorldTradeCenter.jpg';
-import JehieliMuseum from './Images/JehieliMuseum.jpg';
 import {FaTwitter, FaFacebookSquare, FaLinkedin, FaInstagram, FaArrowCircleUp} from 'react-icons/fa';
 
 function About() {
@@ -80,13 +79,13 @@ function About() {
                     <p className="visionHead">Vision</p>
                     <p className="visionSubHead"h4>All people feels empowered through technology in global service and travel.</p>
                 </div>
-                <div className="col-md-3" id="visionImage">
-                    <img src={JehieliGreece} alt="JehieliGreece" className="visionImage"></img>
+                <div className="col-md-3" id="visionImageDiv">
+                    <img src={WorldTradeCenter} alt="WorldTradeCenter" className="visionImage"></img>
                 </div>
             </div>
             {/* Mission Section */}
             <div className="row" id="missionRow">
-                <div className="col-md-3" id="missionImage">
+                <div className="col-md-3" id="missionImageDiv">
                     <img src={Oculus} alt="Oculus" className="missionImage"></img>
                 </div>
                 <div className="col-md-9" id="missionText">
@@ -213,20 +212,20 @@ function About() {
                             <hr></hr>
                             <p>Fields Marked * are required</p>
                             {/* Form Tag */}
-                            <form>
+                            <form className = "contactUsForm">
                                 <div className="form-row">
                                     <div className="form-group col-md-4">
                                         <label for="firstName">First name</label>
                                         <input type="text" className="form-control" id="firstName" placeholder="First Name"/>
                                     </div>
-                                    <div class="form-group col-md-5">
-                                        <label for="LastName">Last name</label>
-                                        <input type="text" className="form-control" id="lastName" placeholder="Last Name"/>
+                                    <div class="form-group col-md-6">
+                                        <label for="email">Email*</label>
+                                        <input type="email" className="form-control" id="email" placeholder="example@example.com"/>
                                     </div>
                                 </div>
                                 <div className="form-row">
                                     <div class="form-group col-md-10">
-                                        <label for="QuestionsOrConcerns">Subject</label>
+                                        <label for="QuestionsOrConcerns">Subject*</label>
                                         <textarea class="form-control" id="QuestionsOrConcerns" rows="3">
                                         </textarea>
                                     </div>
@@ -276,3 +275,5 @@ function About() {
 }
 
 export default About
+
+

@@ -95,8 +95,8 @@
 
 /* Section with company vision statement */
 #visionRow {
-    background-color: rgb(199, 191, 191);
-    height: 25em;
+    background-color: #f2f0e6;
+    height: auto;
 }
 
 /* Text for section with company vision statement */
@@ -115,15 +115,16 @@
 }
 
 /* Image in section with company vision statement */
-#visionImage {
+#visionImageDiv {
     padding: 0;
     margin: 0;
-    height: 100%;
+    height: 50%;
 }
 
 .visionImage {
     width: 100%;
-    height: 100%;
+    height: 20em;
+    object-fit: cover;
 }
 
 /* Section with company mission statement */
@@ -148,7 +149,7 @@
 }
 
 /* Image in section with company mission statement */
-#missionImage {
+#missionImageDiv {
     padding: 0;
     margin: 0;
 }
@@ -160,7 +161,7 @@
 
 /* Section with company values */
 .ourValues {
-    background-color: rgb(219, 205, 205);
+    background-color: #f2f0e6;
     padding: 2% 0px 0px 2%;
 }
 
@@ -256,8 +257,7 @@
 
 /* Contact us form */
 #contactUsRow {
-    padding: 1%;
-    margin: 1%;
+    padding: 2%;
 }
 
 /* Section with virtual hours */
@@ -283,7 +283,7 @@
 ==================================*/
 .scrollTop {
     position: fixed; 
-    width: 100%;
+    width: 100px;
     bottom: 20px;
     align-items: center;
     height: 20px;
@@ -334,18 +334,6 @@ Section for mobile devices
     .visionSubHead{
         font-size: 1.4em;
         padding-left: 10px;
-    }
-
-    /* div containing image */
-    #visionImage {
-        height: 26em;
-    }
-
-    /* actual image */
-    .visionImage {
-        width: 100%;
-        height: 25em;
-        
     }
 
     /* Mision section */
@@ -411,14 +399,14 @@ Section for large screens
     .aboutTitle {
         font-size: 30px;
         }
+
+    /* Image for mission section */
+    .missionImage {
+        object-fit: cover;
+    }
     
     /* div containing vision section */
      #visionRow {
-        height: 20em;
-    }
-
-    /* actual image */
-    .visionImage {
         height: 20em;
     }
 
@@ -431,28 +419,26 @@ Section for large screens
     #teamText {
         font-size: .5em;
     }
+
+    /* Center the contact form */
+    #contactUsRow {
+        transform: translate(20%, 0);
+    }
+    
+    /* Table content on the same row */
+    .table td {
+        padding: 0.46rem !important;
+    }
 }
 
 /*=========================
 Section for larger screens
 ===========================*/
 @media only screen and (min-width: 1025px) {
-   
-    /* div containing vision section */
-    #visionRow {
-        height: 35em;
-    }
 
-    /* actual image */
-    .visionImage {
-        height: 35em;
-    }
-
-    /* Image next to contact us form */
-    .contactImage {
-        transform:translate(13%, 0%);
-        height: 56rem;
-        width: 55rem;
+    /* Center the contact form */
+    #contactUsRow {
+        transform: translate(20%, 0);
     }
 }
 
@@ -460,6 +446,11 @@ Section for larger screens
 Section for extra large screens
 ===========================*/
 @media only screen and (min-width: 1441px) { 
+    /* Button to open social media tab */
+    #sidePanel {
+        top: 40%;
+    }
+    
     .arrowIcon {
         left: 85%;
     }
