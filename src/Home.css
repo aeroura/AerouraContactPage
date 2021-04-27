@@ -425,49 +425,6 @@ Media quieries for small devices
 
     }
 
-    /*****Virtual Hours Info Section******/
-    .virtualHoursInfo {
-        padding: 10px 0;
-    }
-
-    .TitleText {
-        font-size: 12px;
-    }
-
-
-    /***** Virtual Hours Form Section ******/
-    #firstSection {
-        margin-bottom: 10px;
-        padding-bottom: 3px;
-    }
-    
-    .videoAppointmentSpan{
-        font-size: .75em;
-        font-family:'Helvetica Neue', sans-serif;
-    }
-
-    #appointmentRequest p{
-        font-size: 10px;
-    }
-
-    #videoAppointmentInfo {
-        padding: 2% 8%;
-    }
-
-    #videoIconSection {
-        border-radius: 10px;
-        padding: 10px;
-    }
-
-    #videoIcon {
-        font-size: 50px;
-    }
-
-    /* Table with the dates and time info */
-    table td {
-        font-size: .9em;
-    }
-
     /* Specialization Boxes */
     .SpecializeBoxes {
         padding: 0;

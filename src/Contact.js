@@ -14,7 +14,7 @@ function Contact() {
                                 <p>Your Details</p>
                                 <hr className="horizontalLine"></hr>
                                 <div className="row" id="arrangeAppointmentSection">
-                                    <div className="col-xl-2 col-lg-2 col-md-3 col-sm-2 col-xs-2" id="videoIconSection">
+                                    <div className="col-xl-1 col-lg-1 col-md-2 col-sm-1 col-xs-1" id="videoIconSection">
                                         <FontAwesomeIcon icon={faVideo} style={{ color: 'white'}} id="videoIcon" />
                                     </div>
                                     <div className="col-xl-10 col-lg-10 col-md-9 col-sm-10 col-xs-10" id="videoAppointmentInfo">

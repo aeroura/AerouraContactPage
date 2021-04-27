@@ -3,6 +3,10 @@
     font-family: Spectral;
 }
 
+.content-wrap{
+    height: 100%;
+}
+
 /* Full App Section */
 .App {
     overflow: hidden;

@@ -11,8 +11,6 @@
     padding: 10px;
     font-size: 1.3em;
     background-color: #f2f0e6;
-    padding: 50px;
-    height: 84.5vh;
 }
 
 #arrangeAppointmentSection {
@@ -23,7 +21,7 @@
 
 #videoIconSection {
     background-color: rgb(0, 95, 105);
-    padding-top: 30px;
+    padding: 30px 0 0 0;
     border-radius: 10px 0 0 10px;
 }
 
@@ -73,4 +71,122 @@
     margin: 5px;
     font-size: .7em;
     padding: 10px;
+}
+
+/*====================================
+Media quieries for large screens 
+=====================================*/
+@media screen and (max-width: 600px) {
+    /*****Virtual Hours Info Section******/
+    .virtualHoursInfo {
+        padding: 10px 0;
+    }
+
+    .TitleText {
+        font-size: 12px;
+    }
+
+
+    /***** Virtual Hours Form Section ******/
+    #firstSection {
+        margin-bottom: 10px;
+        padding-bottom: 3px;
+    }
+    
+    .videoAppointmentSpan{
+        font-size: .75em;
+        font-family:'Helvetica Neue', sans-serif;
+    }
+
+    #appointmentRequest p{
+        font-size: 10px;
+    }
+
+    #videoAppointmentInfo {
+        padding: 2% 8%;
+    }
+
+    #videoIconSection {
+        border-radius: 10px;
+        padding: 10px 10px 10px 40%;
+    }
+
+    #videoIcon {
+        font-size: 50px;
+    }
+
+    /* Table with the dates and time info */
+    table td {
+        font-size: .9em;
+    }
+}
+
+/*====================================
+Media quieries for medium screens 
+=====================================*/
+@media screen and ( min-width: 601px) and ( max-width: 768px){
+    /* Adjust the size and position of video icon */
+    #videoIconSection {
+        padding: 45px 0 0 20px;
+        
+    }
+
+    #videoIcon {
+        font-size: 4.1rem;
+    }
+}
+
+/*====================================
+Media quieries for large screens 
+=====================================*/
+@media screen and ( min-width: 769px) and ( max-width: 1024px){
+    /* Adjust height of form when on larger screens */
+    .virtualHours {
+        height: 83vh;
+    }    
+
+    /* Adjust the size and position of video icon */
+    #videoIconSection {
+        padding: 30px 0 0 15px;
+    }
+}
+
+
+/*====================================
+Media quieries for large screens 
+=====================================*/
+@media screen and ( min-width: 1440px) and (max-width: 2559px){
+    /* Adjust height of form when on larger screens */
+    .virtualHours {
+        margin: 2.8% 10% 5% 10%;
+    } 
+    
+    /* Adjust the size and position of video icon */
+    #videoIconSection {
+        padding: 30px 0 0 30px;
+    }
+
+    #videoIcon {
+        font-size: 4.1rem;
+    }
+}
+
+/*====================================
+Media quieries for extra large screens 
+=====================================*/
+@media screen and ( min-width: 2560px){
+/* Adjust height of form when on extra large screens */
+    .virtualHours {
+        margin: 100px 100px 24.5% 100px;
+        padding: 30px;
+    } 
+
+    /* Adjust the size and position of video icon */
+    #videoIconSection {
+        padding: 25px 0 0 45px;
+    }
+
+    #videoIcon {
+        font-size: 5rem;
+    }
 }
