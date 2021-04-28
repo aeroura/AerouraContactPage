@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCogs, faStar, faCommentDots, faMap, faBell, faArrowRight, faClock, faPhoneAlt } from '@fortawesome/free-solid-svg-icons';
 import React, {useEffect, useState} from 'react';
 import './About.css';
-import JehieliGreece from './Images/JehieliGreece.jpg';
 import JehieliPortrait from './Images/JehieliPortrait.jpg';
 import Oculus from './Images/Oculus.jpg';
 import CityHallPark from './Images/CityHallPark.jpg';
@@ -19,9 +18,8 @@ function About() {
         //Reduce opacity of toggle button
         const [sidePanelStyle, setSidePanelSyle] = useState({});
         const toggle = () => {
-             
+             //Toggle the side panel on and off screen
             if (isActive === true) {
-                //Must find a way to add multiple styles 
                 setIconBarStyle({transition: "cubic-bezier(0, .52, 0, 1) transform .3s", transform: "translate3d(-100vw, 0, 0)"});
                 setSidePanelSyle({backgroundColor: "rgb(255, 255, 255, 0.2)"});
             }
@@ -34,14 +32,14 @@ function About() {
     
         //Scroll to top button
         const [showScroll, setShowScroll] = useState(false)
-    
+        // Add event listner if scroll to top button toggled
         useEffect(()=>{
           window.addEventListener('scroll', checkScrollTop)
           return function cleanup() {
             window.removeEventListener('scroll', checkScrollTop)
           }
         })
-      
+      //Scroll to top button visibility toggle
         const checkScrollTop = () => {
           if (!showScroll && window.pageYOffset > 500){
             setShowScroll(true)
@@ -49,7 +47,7 @@ function About() {
             setShowScroll(false)
           }
         };
-      
+      //Behavior of scroll to top animation
         const scrollTop = () =>{
           window.scrollTo({top: 0, behavior: 'smooth'});
         };
@@ -57,15 +55,17 @@ function About() {
 
     return (
         <div className="About">
+            {/* Button to toggle side panel */}
             <button className="btn" id="sidePanel" onClick={toggle} style={sidePanelStyle}>&#9776;
             </button> 
+            {/* Social media icons in side panel */}
             <div className="iconBarActive" style={iconBarStyle}>
                 <a href="facebook.com"><FaFacebookSquare className="facebook"/></a>
                 <a href="twitter.com"><FaTwitter className="twitter"/></a>
                 <a href="instagram.com"><FaInstagram className="instagram"/></a>
                 <a href="linkedin.com"><FaLinkedin className="linkedin"/></a>  
             </div>
-            {/* Landing Page Image */}
+            {/* Landing Page Image and text */}
             <div className="aboutLandingPage">
                 <div className="aboutText">
                     <p className="aboutTitle">
@@ -73,7 +73,7 @@ function About() {
                         and travel, so that we can learn from each other; by sharing ideas.</p>
                 </div>
             </div>
-            {/* Vision Section */}
+            {/* Vision Section, text and image */}
             <div className="row" id="visionRow">
                 <div className="col-md-9" id="visionText">
                     <p className="visionHead">Vision</p>
@@ -83,7 +83,7 @@ function About() {
                     <img src={WorldTradeCenter} alt="WorldTradeCenter" className="visionImage"></img>
                 </div>
             </div>
-            {/* Mission Section */}
+            {/* Mission Section, text and image */}
             <div className="row" id="missionRow">
                 <div className="col-md-3" id="missionImageDiv">
                     <img src={Oculus} alt="Oculus" className="missionImage"></img>
@@ -93,29 +93,34 @@ function About() {
                     <p className="missionSubHead"h4>To provide friendly quality service to travelers seeking cultural experiences.</p>
                 </div>
             </div>
-            {/* Values Section 1 */}
+            {/* Values Section top row */}
             <div className="ourValues">
                 <h3>Our Values</h3>
                 <div className="row" id="values1">
+                    {/* 'Resourcefulness' with icon */}
                     <div className="col-md-4">
                        <h4><FontAwesomeIcon icon={faCogs} style={{ color: 'rgb(19, 143, 137)' }} /> Resourcefulness</h4>
                        <p>We may not always have the answer, but we are committed to finding it.</p>
                     </div>
+                    {/* 'Honesty' with icon */}
                     <div className="col-md-4">
                         <h4><FontAwesomeIcon icon={faStar} style={{ color: 'rgb(19, 143, 137)' }} /> Honesty</h4>
                        <p>We stand by the truth and what is best for our customers, even if it may cost us business.</p>
                     </div>
+                    {/* 'Communication' with icon */}
                     <div className="col-md-4">
                         <h4><FontAwesomeIcon icon={faCommentDots} style={{ color: 'rgb(19, 143, 137)' }} /> Communication</h4>
                        <p>Communication is clear and concise, and always necessary throughout.</p>
                     </div>
                 </div>
-                {/* Values Section 2 */}
+                {/* Values Section bottom row */}
                 <div className="row" id="values2">
+                    {/* 'Planning' with icon */}
                     <div className="col-md-4">
                        <h4><FontAwesomeIcon icon={faMap} style={{ color: 'rgb(19, 143, 137)' }} /> Planning</h4>
                        <p>We may not always have the answer, but we are committed to finding it.</p>
                     </div>
+                    {/* 'Service' with icon */}
                     <div className="col-md-4">
                         <h4><FontAwesomeIcon icon={faBell} style={{ color: 'rgb(19, 143, 137)' }} /> Service</h4>
                        <p>We may not always have the answer, but we are committed to finding it.</p>
@@ -124,7 +129,7 @@ function About() {
             </div>
             <div className="adventurousTeam">
                 <div className="adventurousTeamTitle"><h1>Our Adventurous Team</h1></div>
-                {/* Jehieli Section */}
+                {/* Jehieli Section, portait image with text info */}
                 <div className="row" id="teamSectionRow">
                     <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
                         <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
@@ -142,7 +147,7 @@ function About() {
                         <p className ="imageText">City Hall Park</p>
                     </div>
                 </div>
-                {/* Joab Section */}
+                {/* Joab Section, portait image with text info */}
                 <div className="row" id="teamSectionRow">
                     <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
                         <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
@@ -161,7 +166,7 @@ function About() {
                         <p className ="imageText">Oculus</p>
                     </div>
                 </div>
-                {/* Luis Section */}
+                {/* Luis Section, portait image with text info */}
                 <div className="row" id="teamSectionRow">
                     <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
                         <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
@@ -179,7 +184,7 @@ function About() {
                         <p className ="imageText">Battery Park</p>
                     </div>
                 </div>
-                {/* Alexis Section */}
+                {/* Alexis Section, portait image with text info */}
                 <div className="row" id="teamSectionRow">
                     <div className="col-lg-2 col-md-3 col-sm-12" id="imagePortrait">
                         <img src={JehieliPortrait} alt="JehieliPortrait" className="portraitImage"></img>
@@ -211,7 +216,7 @@ function About() {
                             <h4>Contact Us</h4>
                             <hr></hr>
                             <p>Fields Marked * are required</p>
-                            {/* Form Tag */}
+                            {/* Form for anyone to contact the company */}
                             <form className = "contactUsForm">
                                 <div className="form-row">
                                     <div className="form-group col-md-4">
@@ -269,6 +274,7 @@ function About() {
                 </div>
                 
             </div>
+            {/* Scroll to top icon */}
             <FaArrowCircleUp className="scrollTop" onClick={scrollTop} style={{height: 40, display: showScroll ? 'flex' : 'none'}}/>
         </div>
     )

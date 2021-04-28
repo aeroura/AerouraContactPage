@@ -1,6 +1,8 @@
 /* ===============================
     Side bar with icons 
 ==================================*/
+
+/* Full side panel */
 #sidePanel {
     z-index: 2;
     -webkit-transform: translateY(-50%);
@@ -17,6 +19,7 @@
     border-radius: 0 5px 0 0;
 }
 
+/* Only icons in side panel */
 .iconBarActive {
     z-index: 2;
     position: fixed;
@@ -105,22 +108,25 @@
     height: 50%;
 }
 
+/* Text heading in vision section */
 .visionHead {
     font-size: 3em;
     font-weight: bold;
 }
 
+/* Text sub heading in vision section */
 .visionSubHead {
     font-size: 1.9em;
 }
 
-/* Image in section with company vision statement */
+/* Image div in section with company vision statement */
 #visionImageDiv {
     padding: 0;
     margin: 0;
     height: 50%;
 }
 
+/* Image in section with company vision statement */
 .visionImage {
     width: 100%;
     height: 20em;
@@ -138,22 +144,25 @@
     color: white;
 }
 
+/* Text heading in mission section */
 .missionHead {
     font-size: 3em;
     font-weight: bold;
 }
 
+/* Text sub heading in mission section */
 .missionSubHead {
     font-size: 1.7em;
     margin-bottom: 2em;
 }
 
-/* Image in section with company mission statement */
+/* Image div in section with company mission statement */
 #missionImageDiv {
     padding: 0;
     margin: 0;
 }
 
+/* Image in section with company mission statement */
 .missionImage {
     width: 100%;
     min-height: 100%;
@@ -315,7 +324,6 @@ Section for mobile devices
     /*====================================
     Social Media Bar Section 
     ===================================== */
-
     #sidePanel {
         position: fixed;
         top: 33.4%;
@@ -331,17 +339,18 @@ Section for mobile devices
         height: 100%;
     }
 
+    /* Text sub heading in vision section */
     .visionSubHead{
         font-size: 1.4em;
         padding-left: 10px;
     }
 
-    /* Mision section */
+    /* Text sub heading in mission section */
     .missionSubHead{
         font-size: 1.4em;
     }
 
-    /* actual image */
+    /* Actual in mission section image */
     .missionImage {
         width: 100%;
         height: 90%;
@@ -352,10 +361,12 @@ Section for mobile devices
         height: 100%;
     }
 
+    /* Scroll to top icon */
     .arrowIcon {
         visibility: hidden;
     }
 
+    /* Info Text in team section */
     #teamText {
         font-size: .3em;
         padding: 4%;

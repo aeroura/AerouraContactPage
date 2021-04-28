@@ -26,7 +26,7 @@ function App() {
       });
      }, []);
 
-    /* Set and change languages */
+    // Set and change languages
     const { i18n, t } = useTranslation();
     const [currentLanguage, setCurrentLanguage] = useState('en');
 
@@ -36,15 +36,15 @@ function App() {
     
   
 
-  /* useState for hamburger menu */
+  //useState for hamburger menu
   const [isNavCollapsed, setIsNavCollapsed] = useState(true);
   const handleNavCollapse = () => setIsNavCollapsed(!isNavCollapsed);
   
-  /* useState for dropdown menu */
+  // useState for dropdown menu
   const [showDropDown, setShowDropDown] = useState(false);
   const handleShowDropDown = () => setShowDropDown(!showDropDown);
 
-  /* Used to hide dropdown on outside click */
+  // Used to hide dropdown on outside click
     const myRef = useRef();
 
     const handleClickOutside = e => {
@@ -62,30 +62,38 @@ function App() {
 <Suspense fallback="loading">
   <BrowserRouter>
     <div className="App">
-{/* Header with links Navbar Bootstrap */}
+
+  {/* Header with links Navbar Bootstrap */}
 <nav className="navbar navbar-expand-lg" id="navHeader">
+
   {/* Hamburger menu button */}
 <button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" 
     aria-controls="navbar" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" 
     onClick={handleNavCollapse}>&#9776;
     <span className="navbar-toggler-icon"></span>
   </button>
+
   {/* Hamburger menu section */}
   <div className={`${isNavCollapsed ? 'collapse' : ''} navbar-collapse`} id="navbarToggle">
     <span className="homeLink"><NavLink to="/" activeClassName="active" style={{textDecoration: 'none'}}
-    >AEROURA TRAVEL</NavLink></span>
+      >AEROURA TRAVEL</NavLink>
+    </span>
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
       <li className="nav-item"><Link to="/about" style={{textDecoration: 'none'}}>About</Link></li>
       <li className="nav-item"><Link to="/contact" style={{textDecoration: 'none'}}>Contact</Link></li>
       {/*<li className="nav-item"><Link to="/community">Community</Link></li>*/}
       
     </ul>
+
      {/* Dropdown section */}
    <div className="dropdown">
+     {/* Icon that handles Dropdown */}
       <button className="btn" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" 
        onClick={handleShowDropDown} aria-expanded="false" ref={myRef}>
         <FontAwesomeIcon icon={faGlobe} size="2x" style={{ color: 'rgb(19, 143, 137)' }} id="icon" />
       </button>
+
+    {/* Dropdown Menu content */}
       {showDropDown ?
       <div className="dropdown" aria-labelledby="dropdownMenuButton" id="dropDownMenu">
           <a className="dropdown-item" onClick={() => changeLanguage('en')}>English</a>
