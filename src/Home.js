@@ -114,8 +114,10 @@ export default function Home({lang}) {
     return (
     <div className="Home">
         <div className="socialMediaPanel">
+            {/* Button to toggle side panel */}
             <button className="btn" id="sidePanel" onClick={toggle} style={sidePanelStyle}>&#9776;
             </button> 
+            {/* Social media icons in side panel */}
             <div className="iconBarActive" style={iconBarStyle}>
                 <a href="facebook.com"><FaFacebookSquare className="facebook"/></a>
                 <a href="twitter.com"><FaTwitter className="twitter"/></a>
@@ -123,6 +125,7 @@ export default function Home({lang}) {
                 <a href="linkedin.com"><FaLinkedin className="linkedin"/></a>  
             </div>
         </div>
+        {/* Landing Page Image and text */}
       <div className="landingPage">
       <img src={BrooklynBridge} alt="BrooklynBridge" className="landingPageBackground"></img>
           <div className="text">
@@ -130,12 +133,15 @@ export default function Home({lang}) {
               <p className="subTitle">{t(`landing.page.title`)}</p>
           </div>
       </div>
+      {/* Carousel, travel info and voyage section */}
       <div className="descriptionBoxes">
                 <div className="row">
                     <div className="col-lg-4 col-md-12 col-sm-6 col-xs-12">
+                        {/* Section with slideshows */}
                         <div className="PlacesToSee">
                             <h4>Places to See - NYC</h4>
                             <div className="carousel" data-ride="carousel">
+                                {/* Image slideshows */}
                                 <div className="carousel-inner">
                                 {slides.map((s, i) => (
                                     <div 
@@ -151,10 +157,12 @@ export default function Home({lang}) {
                                     </div>
                                 ))}
                                 </div>
+                                {/* Next slide button */}
                                     <button className="carousel-control-prev" data-slide="prev" onClick={prevSlide}>
                                         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
                                         <span className="sr-only">Previous</span>
                                     </button>
+                                {/* Previous slide button */}
                                     <button className="carousel-control-next" data-slide="next" onClick={nextSlide}>
                                         <span className="carousel-control-next-icon" aria-hidden="true"></span>
                                         <span className="sr-only">Next</span>
@@ -163,6 +171,7 @@ export default function Home({lang}) {
                         </div>
                     </div>
                     <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                        {/* Travel counselor contact info */}
                         <div id="TravelCounselor">
                             <div className="ContactInfo">
                                 <h1>Travel Advisor</h1>
@@ -174,14 +183,17 @@ export default function Home({lang}) {
                             </div>
                         </div>
                     </div>
-                    
+                    {/* Travel planning section */}
                     <div className="col-lg-4 col-md-6 col-sm-6 col-xs-12">
                         <div id="PlanTrip">
+                            {/* Travel planning form */}
                             <form className="planYourTrip">
+                                {/* Form description */}
                                 <div className="Title">
                                     <h2 className="TitleIcon">Plan Your Trip</h2>
                                     <p className="TitleText">What would your next vacation look like?</p>
                                 </div>
+                                {/* Form checkboxes */}
                                 <div className="form-group">
                                     <div class="form-check-inline">
                                         <label class="form-check-label">
@@ -213,6 +225,7 @@ export default function Home({lang}) {
                                         </label>
                                     </div>
                                 </div>
+                                {/* Form submit button */}
                                 <div className="joinButton">
                                     <button type="submit" className="btn btn-danger" onClick={event => window.location.href='/contact'}>Join Here</button>
                                 </div>
@@ -235,6 +248,7 @@ export default function Home({lang}) {
             <div className="SpecializeBoxes">
                 <h3 className="headingText">We Specialize In...</h3>
                 <div className="row">
+                    {/* Local travel specialization */}
                     <div className="col-md-4">
                        <h4 className="headingText">Local Travel</h4> 
                        <div className="box">
@@ -245,6 +259,7 @@ export default function Home({lang}) {
                             </div>
                         </div>
                     </div>
+                    {/* Planning trips specialization */}
                     <div className="col-md-4">
                     <h4 className="headingText">Planning Trips</h4>
                         <div className="box">
@@ -255,6 +270,7 @@ export default function Home({lang}) {
                             </div>
                         </div>
                     </div>
+                    {/* New York city specialization */}
                     <div className="col-md-4">
                     <h4 className="headingText">New York City</h4>
                         <div className="box">
@@ -267,6 +283,7 @@ export default function Home({lang}) {
                     </div>
                 </div>
             </div> 
+            {/* Scroll to top button */}
             <FaArrowCircleUp className="scrollTop" onClick={scrollTop} style={{height: 40, width: 100, display: showScroll ? 'flex' : 'none'}}/>
     </div>
     )

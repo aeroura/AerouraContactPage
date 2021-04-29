@@ -12,6 +12,7 @@ export default class Footer extends Component {
           {/* Footer List Items Section */}
             <div className="col-lg-8 col-md-12 col-sm-12 col-xs-12">
               <ul className="footerList">
+                {/* Links to legal page */}
                 <li style={{fontFamily: 'Karla'}}>Aeroura Travel</li>
                 <a href="facebook.com"><li style={{fontFamily: 'Karla'}}>Privacy Policy</li></a>
                 <a href="facebook.com"><li style={{fontFamily: 'Karla'}}>Terms & Conditions</li></a>
@@ -21,6 +22,7 @@ export default class Footer extends Component {
             {/* Footer Icons Section */}
             <div className="col-lg-4 col-md-12 col-sm-12 col-xs-12" id="footerIcons">
               <div className="icons">
+              {/* Individual Footer Icons */}
                   <a href="facebook.com"><FaFacebookSquare className="footer-icons"/></a>
                   <a href="twitter.com"><FaTwitter className="footer-icons"/></a>
                   <a href="instagram.com"><FaInstagram className="footer-icons"/></a>
