@@ -1,50 +1,47 @@
 /* ===============================
     Virtual Hours Form section 
 ==================================*/
-#contactFormSection {
-    background-color: white;
-    border: 1px solid teal;
-    border-radius: 10px;
-}
-
+/* Full video hours section */
 .virtualHours {
     padding: 10px;
     font-size: 1.3em;
     background-color: #f2f0e6;
 }
 
+/* Content in contact form */
+#contactFormSection {
+    background-color: white;
+    border: 1px solid teal;
+    border-radius: 10px;
+}
+
+/* Section with arrange appointment info */
 #arrangeAppointmentSection {
     background-color: #f2f0e6;
     margin: 5px;
     border-radius: 10px;
 }
 
+/* Content in contact form */
 #videoIconSection {
     background-color: rgb(0, 95, 105);
     padding: 30px 0 0 0;
     border-radius: 10px 0 0 10px;
 }
 
+/* Video icon */
 #videoIcon {
     font-size: 50px;
 }
 
+/* Video icon div */
 #videoAppointmentInfo {
     padding: 10px 15px 10px 20px;
 }
 
-#firstSection {
-    border: 1px solid black;
-    border-radius: 10px;
-}
-
-#submitButton {
+.submitButton {
     float: right;
-    margin: 10px;
-}
-
-.hours {
-    text-align: center;
+    margin: 0 0 10px 0;
 }
 
 .travelPlansForm {
@@ -56,8 +53,8 @@
 .sub-text {
     color: rgb(94, 92, 92);
     font-size: 2px;
-    padding-top: 0;
-    margin-top: 0;
+    padding: 0 10px 10px 10px;
+    margin-top: 5%;
 }
 
 .horizontalLine {
@@ -166,6 +163,7 @@ Media quieries for large screens
         padding: 30px 0 0 30px;
     }
 
+    /* Size of video icon */
     #videoIcon {
         font-size: 4.1rem;
     }

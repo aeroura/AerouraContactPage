@@ -90,6 +90,7 @@ function Contact() {
                                                 </textarea>
                                             </div>
                                     </div>
+                                    <button type="submit" className="submitButton btn btn-primary">Submit</button>
                                 </form>
                                 {/* Disclaimer Section */}
                                 <p className="sub-text">
