@@ -2,11 +2,94 @@ import React, { Component } from 'react';
 import "./VirtualHours.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faClock, faVideo, faCheckSquare, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 
 export default class VirtualHours extends Component {
+
+state={
+    name:'',
+    lastname:'',
+    email:'',
+    message:'',
+    phonenumber:'',
+    sent:false
+}
+
+//Handle Inputs
+handleName= (e) => {
+    this.setState({
+        name:e.target.value
+    })
+}
+
+handleLastName= (e) => {
+    this.setState({
+        lastname:e.target.value
+    })
+}
+
+handleEmail= (e) => {
+    this.setState({
+        email:e.target.value
+    })
+}
+
+handleMessage= (e) => {
+    this.setState({
+        message:e.target.value
+    })
+}
+handlePhoneNumber= (e) => {
+    this.setState({
+        phonenumber:e.target.value
+    })
+}
+
+
+//End of handle inputs
+
+formSubmit=(e)=>{
+    e.preventDefault();
+
+    let data = {
+        name:this.state.name,
+        lastname:this.state.lastname,
+        email:this.state.email,
+        message:this.state.message,
+        phonenumber:this.state.phonenumber
+    }
+
+    axios.post('./api/forma',data)
+    .then(res=>{
+        this.setState({
+            sent:true,
+        },this.resetForm())
+    })
+    .catch(()=>{
+        console.log('Message not sent');
+    })
+}
+
+// For reseting initial data
+resetForm=()=>{
+    this.setState({
+        name:'',
+        lastname:'',
+        email:'',
+        message:'',
+        phonenumber:''
+    })
+
+    setTimeout(()=>{
+        this.setState({
+            sent:false,
+        })
+    },3000)
+}
     render() {
         return (
             <div className="virtualHours">
+            <form onSubmit={this.formSubmit}>
                 <h1>Virtual Hours</h1>
                 <p>Meet With Our Friendly Representatives via Video Chat to Plan Your Future Trips.</p>
                 <div className="container-fluid">
@@ -46,24 +129,36 @@ export default class VirtualHours extends Component {
                                             </select>
                                         </div>
                                         <div className="form-group col-md-4">
-                                            <label for="firstName">First Name</label>
-                                            <input type="text" className="form-control" id="firstName" placeholder="First Name"/>
+                                            <label HtmlFor="firstname">First Name</label>
+                                            <input type="text" className="form-control" id="firstname" placeholder="First Name"
+                                            value={this.state.name}
+                                            onChange={this.handleName}
+                                            />
                                         </div>
                                         <div className="form-group col-md-5">
-                                            <label for="lastName">Last Name</label>
-                                            <input type="text" className="form-control" id="lastName" placeholder="Last Name"/>
+                                            <label HtmlFor="lastname">Last Name</label>
+                                            <input type="text" className="form-control" id="lastname" placeholder="Last Name"
+                                            value={this.state.lastname}
+                                            onChange={this.handleLastName}
+                                            />
                                         </div>
                                     </div>
                                     <div className="form-row">
                                     <div className="form-group col-md-4">
-                                            <label for="inputEmail4">Email</label>
-                                            <input type="email" className="form-control" id="inputEmail4" placeholder="Email"/>
+                                            <label HtmlFor="email">Email</label>
+                                            <input type="email" className="form-control" id="email" placeholder="Email"
+                                            value={this.state.email}
+                                            onChange={this.handleEmail}
+                                            />
                                         </div>
                                     </div>
                                     <div className="form-row">
                                         <div className="form-group col-md-6">
-                                            <label for="phoneNumber">Phone Number</label>
-                                            <input type="tel" className="form-control" id="phoneNumber" placeholder="1-(555)-555-5555"/>
+                                            <label HtmlFor="phonenumber">Phone Number</label>
+                                            <input type="tel" className="form-control" id="phonenumber" placeholder="1-(555)-555-5555"
+                                            value={this.state.phonenumber}
+                                            onChange={this.handlePhoneNumber}
+                                            />
                                         </div>
                                         <div className="form-group col-md-3">
                                             <label for="callTime">Best Time To Call You</label>
@@ -152,11 +247,13 @@ export default class VirtualHours extends Component {
                             
                         </form>
                     </div>
+                    <div className={this.state.sent ?'msg msgAppear':'msg'}>Message has been sent</div>
                     <button type="submit" className="btn btn-primary">Submit Inquiry</button>
                             </div>
                         </div>
                     </div>
                 </div>
+            </form>
             </div>
         )
     }
