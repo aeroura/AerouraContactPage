@@ -53,6 +53,7 @@
     top: 45%;
 }
 
+/* Full side panel */
 #sidePanel {
     z-index: 2;
     position: fixed;
@@ -71,6 +72,7 @@
     border-radius: 0 5px 0 0;
 }
 
+/* Only icons in side panel */
 .iconBarActive {
     z-index: 2;
     -webkit-transform: translateY(-50%);
@@ -124,11 +126,13 @@
 /* ===============================
     Description boxes section 
 ==================================*/
+/* Section with slideshow and travel counselor */
 .descriptionBoxes {
     padding: 0 50px 0 50px;
     background-color: rgb(0, 95, 105);
 }
 
+/* Div with slide show */
 .PlacesToSee {
     background-color: #f2f0e6;
     margin: 40px 10px;
@@ -137,6 +141,7 @@
     border-radius: 10px;
 }
 
+/* Div with slide show Title */
 .PlacesToSee h4 {
     font-size: 2rem;
     padding-left: 10px;
@@ -148,6 +153,7 @@
     background-color: transparent;
 }
 
+/* Captions in slide show */
 .slideTitle {
     padding-bottom: 10vh;
     overflow: hidden;
@@ -164,18 +170,22 @@
     border-radius: 10px;
 }
 
+/* Travel counselor contact info */
 .ContactInfo {
     margin: 4%;
 }
 
+/* Travel counselor heading */
 .ContactInfo h1{
     margin-bottom: 20px;
 }
 
+/* Travel counselor subtext */
 .ContactInfo p{
     font-size: 1.2rem;
 }
 
+/*Button to schedule a meeting */
 #scheduleBtn {
     padding: 5px;
     float: right;
@@ -185,6 +195,7 @@
 /* ===============================
     Plan Your Trip Info section 
 ==================================*/
+/* Plan Your Trip Div */
 #PlanTrip {
     background-color: #f2f0e6;
     height: 350px;
@@ -199,19 +210,23 @@
     margin: 4%;
 }
 
+/* Plan Your Trip subtitle */
 .planYourTrip p {
     font-size: 1.2rem;
 }
 
+/* Plan Your Trip checkbox labels */
 .planYourTrip label {
     font-size: 1.2rem;
     padding: 5px;
 }
 
+/* Plan Your Trip title */
 .TitleIcon {
     margin-bottom: 20px;
 }
 
+/* Plan Your Trip Join Here button */
 .joinButton {
     padding: 15px;
     float: right;
@@ -221,6 +236,7 @@
 /* ===============================
     Travel Banner section 
 ==================================*/
+/* Travel banner div */
 .travelBanner {
     height: 80%;
     width: 100%;
@@ -228,6 +244,7 @@
     background-color: #f2f0e6;
 }
 
+/* Travel banner background image */
 .travelBannerBackground {
     background-repeat: no-repeat;
     opacity: .6;
@@ -239,6 +256,7 @@
     object-fit: cover;
 }
 
+/* Travel banner text */
 .travelBannerText {
     position: absolute;
     top: 50%;
@@ -265,6 +283,7 @@
     width: 100%;
 }
 
+/* Each individual box section */
 .box {
     background-color: #f2f0e6;
     margin: 10px 5px;
@@ -272,19 +291,20 @@
     height: 90%;
 }
 
+/* Each image inside the boxes */
 .box img {
     width: 100%;
 }
 
+/* Text inside the boxes */
 .descriptionText {
     padding: 10px;
 }
 
+/* Heading text inside the boxes */
 .headingText {
     color: white;
 }
-
-
 
 /* ===============================
     Scroll to Top Button
@@ -345,7 +365,7 @@ Media quieries for small devices
     /*====================================
     Social Media Bar Section 
     ===================================== */
-
+    /* Full side panel */
     #sidePanel {
         position: fixed;
         top: 33.4%;
@@ -358,11 +378,13 @@ Media quieries for small devices
         padding: 0;
     }
 
+    /* Div with slide show */
     .PlacesToSee {
         margin: 10px;
         height: auto;
     }
 
+    /* Slideshow captions */
     .slideTitle {
         z-index: 10;
         padding-bottom: 0;
@@ -373,6 +395,7 @@ Media quieries for small devices
         margin: 10px;
     }
 
+    /* Schedule an appointment button */
     #scheduleBtn {
         padding: 5px;
         position: absolute;
@@ -386,6 +409,7 @@ Media quieries for small devices
         margin: 10px;
     }
 
+    /* Join here button */
     .joinButton {
         padding: 0;
         margin: 0;
@@ -401,6 +425,7 @@ Media quieries for small devices
         padding-bottom: 10px;
     }
 
+    /* Travel banner background image */
     .travelBannerBackground {
         background-repeat: no-repeat;
         opacity: .5;
@@ -409,21 +434,9 @@ Media quieries for small devices
         height: 25vh;
     }
 
+    /* Travel banner text */
     .travelBannerText {
         font-size: 40px;
-    }
-
-    .nameHead {
-        font-size: 1em;
-    }
-
-    .nameSub {
-        font-size: .9em;
-    }
-
-    .ContactInfo {
-        font-size: 70%;
-
     }
 
     /* Specialization Boxes */
@@ -433,7 +446,7 @@ Media quieries for small devices
 
 }
 
-    /* =======================================
+/* =======================================
 Media quieries for tablets/medium devices 
 ========================================== */
 @media only screen and (min-width: 601px) and (max-width: 768px) {
@@ -444,10 +457,12 @@ Media quieries for tablets/medium devices
         top: 33.5%;
     }
 
+    /* Div with slide show */
     .PlacesToSee {
         margin: 10px;
     }
 
+    /* Slideshow captions */
     .slideTitle {
         font-size: 30px;
     }
@@ -457,6 +472,7 @@ Media quieries for tablets/medium devices
         margin: 10px;
     }
 
+    /* Schedule an appointment button */
     #scheduleBtn {
         padding: 5px;
         position: absolute;
@@ -470,15 +486,18 @@ Media quieries for tablets/medium devices
         margin: 10px;
     }
 
+    /* Join here button */
     .joinButton {
         padding: 0;
         margin: 0;
     }
 
+    /* Travel banner text */
     .travelBannerText {
         font-size: 7rem;
     }
 
+    /* Section with specialization */
     .SpecializeBoxes {
         padding: 10px;
     }
@@ -501,11 +520,13 @@ Media quieries for tablets/medium devices
         margin: 0;
     }
 
+    /* Active slide */
     .carousel-item.active {
         width: 460px;
         transform: translate(-10%)
     }
 
+    /* Slideshow captions */
     .slideTitle {
         padding-bottom: 10px;
         transform: translate(-10%)
@@ -522,46 +543,15 @@ Media quieries for tablets/medium devices
         margin: 0;
     }
 
+    /* Travel banner text */
     .travelBannerText {
         font-size: 7rem;
     }
 
+    /* Section with specifications */
     .SpecializeBoxes {
         padding: 10px;
     }
-
-    .nameHead {
-        font-size: 1.15em;
-    }
-
-    .nameSub {
-        font-size: 1.15em;
-    }
-
-    /***** Virtual Hours Form Section ******/
-    #videoIconSection {
-        padding: 0px 12px 15px 15px;
-    }
-
-    #videoIcon {
-        font-size: 80px;
-    }
-
-    .videoAppointmentSpan{
-        font-size: .85em;
-        font-family:'Helvetica Neue', sans-serif;
-        font-weight: normal;
-    }
-
-    #appointmentRequest p{
-        font-size: .65em;
-    }
-
-    /* Table with the dates and time info */
-    table td {
-        font-size: .7em;
-    }
-
 }
 
 /* =======================================
@@ -573,13 +563,11 @@ Media quieries for computers/larger displays
         position: fixed;
         top: 35.3%;
     }
+
+    /* Active slide */
     .carousel-item.active {
         width: 460px;
         transform: translate(-10%)
-    }
-    
-    #VirtualHours {
-        transform:translate(1%, 0%);
     }
 
     /* Description Boxes */
@@ -588,14 +576,17 @@ Media quieries for computers/larger displays
         margin: 0;
     }
 
+    /* Slideshow captions */
     .slideTitle {
         padding: 0;
     }
 
+    /* Button to schedule appointmetnt */
     #scheduleBtn {
         margin-top: 70px;
     }
 
+    /* Button to aeroura voyage */
     .joinButton {
         padding:0;
         margin: 0 0 20px 0;
@@ -611,26 +602,12 @@ Media quieries for computers/larger displays
     .travelBannerText {
         font-size: 4.5em;
     }
-
-    #videoIconSection {
-        padding: 20px 10px 0 45px;
-    }
-
-    /* video icon in vitual hours form section*/
-    #videoIcon {
-        font-size: 90px;
-    }
-
-    /* Vitual Hours Info Section */
-    .virtualHours {
-        margin: 0 80px 0 80px;
-    }
 }
 /* ===============================
 Media quieries for extra large displays  
 ==================================*/
 @media only screen and (min-width: 1441px) {
-
+    /* Icons section */
     .iconBarActive {
         top: 20%;
       }
