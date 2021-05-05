@@ -90,17 +90,24 @@ function Contact() {
                                                 </textarea>
                                             </div>
                                     </div>
-                                    <button type="submit" className="submitButton btn btn-primary">Submit</button>
+                                    {/* Submit Button */}
+                                    <div className="form-row">
+                                        <div className="col">
+                                           <button type="submit" className="submitButton btn btn-primary">Submit</button> 
+                                        </div>
+                                    </div>               
                                 </form>
                                 {/* Disclaimer Section */}
                                 <p className="sub-text">
                                 We ask you for your number so that one of our specialists can call or text you to discuss your travel plans. 
                                 Standard rates may apply. By submitting this form, you agree to us getting in touch with you in this way.
                                 </p>
+                                {/* Disclaimer icon */}
                                 <div className="row" id="Disclaimer">
                                     <div className="col-md-1">
                                         <FontAwesomeIcon icon={faInfoCircle} size="2x"/>
                                     </div>
+                                    {/* Privacy Policy */}
                                     <div className="co-md-11">
                                         <p>Your privacy is paramount to Aeroura Travel and we will never share your personal data with anyone.
                                             For further info, please see our <a href="www.facebook.com">privacy policy.</a>

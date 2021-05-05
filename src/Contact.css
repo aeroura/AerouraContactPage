@@ -43,6 +43,8 @@
 .submitButton {
     float: right;
     margin: 0 0 10px 0;
+    width: 7rem;
+    height: 3rem;
 }
 
 /* Disclaimer info text */
@@ -50,7 +52,6 @@
     color: rgb(94, 92, 92);
     font-size: 2px;
     padding: 0 10px 10px 10px;
-    margin-top: 5%;
 }
 
 /* Contact form horizontal line */
@@ -135,12 +136,12 @@ Media quieries for large screens
 @media screen and ( min-width: 769px) and ( max-width: 1024px){
     /* Adjust height of form when on larger screens */
     .virtualHours {
-        height: 83vh;
+        height: auto;
     }    
 
     /* Adjust the position of video icon */
     #videoIconSection {
-        padding: 30px 0 0 15px;
+        padding: 50px 0 0 15px;
     }
 }
 
@@ -156,12 +157,12 @@ Media quieries for large screens
     
     /* Adjust the position of video icon */
     #videoIconSection {
-        padding: 30px 0 0 30px;
+        padding: 45px 0 0 10px;
     }
 
     /* Adjust the size of video icon */
     #videoIcon {
-        font-size: 4.1rem;
+        font-size: 4rem;
     }
 }
 
@@ -171,7 +172,7 @@ Media quieries for extra large screens
 @media screen and ( min-width: 2560px){
 /* Adjust height of form when on extra large screens */
     .virtualHours {
-        margin: 100px 100px 24.5% 100px;
+        margin: 100px 100px 21.5% 100px;
         padding: 30px;
     } 
 
