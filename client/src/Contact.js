@@ -1,11 +1,99 @@
-import React from 'react';
+import React, { Component } from 'react';
 import './Contact.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {faVideo, faCheckSquare, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+import axios from 'axios';
 
-function Contact() {
+export default class Contact extends Component {
+
+    state={
+        name:'',
+        lastname:'',
+        email:'',
+        message:'',
+        phonenumber:'',
+        emailError:'',
+        sent:false
+    }
+    
+    //Handle Inputs
+    handleName= (e) => {
+        this.setState({
+            name:e.target.value
+        })
+    }
+    
+    handleLastName= (e) => {
+        this.setState({
+            lastname:e.target.value
+        })
+    }
+    
+    handleEmail= (e) => {
+        this.setState({
+            email:e.target.value
+        })
+    }
+    
+    handleMessage= (e) => {
+        this.setState({
+            message:e.target.value
+        })
+    }
+    handlePhoneNumber= (e) => {
+        this.setState({
+            phonenumber:e.target.value
+        })
+    }
+    
+    //End of handle inputs
+    
+    formSubmit=(e)=>{
+        e.preventDefault();
+        
+    
+        let data = {
+            name:this.state.name,
+            lastname:this.state.lastname,
+            email:this.state.email,
+            message:this.state.message,
+            phonenumber:this.state.phonenumber,
+        }
+    
+        axios.post('./api/forma',data)
+        .then(res=>{
+            this.setState({
+                sent:true,
+            },this.resetForm())
+        })
+        .catch(()=>{
+            console.log('Message not sent');
+        })
+
+        
+    }
+    
+    // For reseting initial data
+    resetForm=()=>{
+        this.setState({
+            name:'',
+            lastname:'',
+            email:'',
+            message:'',
+            phonenumber:''
+        })
+    
+        setTimeout(()=>{
+            this.setState({
+                sent:false,
+            })
+        },3000)
+    }
+
+    render() {
     return (
         <div className="app-contact">
+        <form onSubmit={this.formSubmit}>
             {/* Full Form Section */}
             <div className="virtualHours">
                 <h1>Virtual Hours</h1>
@@ -24,18 +112,18 @@ function Contact() {
                                             <p>Arrange a video appointment</p>
                                         </span>
                                         <div className="row" id="appointmentRequest">
-                                           <p>  <FontAwesomeIcon icon={faCheckSquare} size="2x" style={{ color: 'rgb(19, 143, 137)' }}/> <tab></tab>
+                                           <p>  <FontAwesomeIcon icon={faCheckSquare} size="2x" style={{ color: 'rgb(19, 143, 137)' }}/> 
                                            Request your appointment and a specialist will be in touch to confirm a date and time to suit you</p>
                                         </div>
                                     </div>
                                 </div>
                                 {/* Prefix */}
-                                <form className ="scheduleTripForm">
+                                
                                     <div className="form-row">
                                         <div className="form-group col-md-2">
-                                            <label for="title">Title</label>
+                                            <label htmlFor="title">Title</label>
                                             <select id="title" className="form-control">
-                                             <option selected>Choose...</option>
+                                             <option value>Choose...</option>
                                              <option>Mr.</option>
                                              <option>Mrs.</option>
                                              <option>Ms.</option>
@@ -44,31 +132,43 @@ function Contact() {
                                         </div>
                                         {/* First Name */}
                                         <div className="form-group col-md-3">
-                                            <label for="firstName">First Name</label>
-                                            <input type="text" className="form-control" id="firstName" placeholder="First Name"/>
+                                            <label htmlFor="firstName">First Name</label>
+                                            <input type="text" className="form-control" id="firstname" placeholder="First Name"
+                                            value={this.state.name}
+                                            onChange={this.handleName}
+                                            />
                                         </div>
                                         {/* Last Name */}
                                         <div className="form-group col-md-3">
-                                            <label for="lastName">Last Name</label>
-                                            <input type="text" className="form-control" id="lastName" placeholder="Last Name"/>
+                                            <label htmlFor="lastName">Last Name</label>
+                                            <input type="text" className="form-control" id="lastname" placeholder="Last Name"
+                                            value={this.state.lastname}
+                                            onChange={this.handleLastName}
+                                            />
                                         </div>
                                         {/* Email */}
                                         <div className="form-group col-md-4">
-                                            <label for="email">Email</label>
-                                            <input type="email" className="form-control" id="email" placeholder="Email"/>
+                                            <label htmlFor="email">Email</label>
+                                            <input type="email" className="form-control" id="email" placeholder="Email"
+                                            value={this.state.email}
+                                            onChange={this.handleEmail}
+                                            />
                                         </div>
                                     </div>
                                     {/* Phone Number */}
                                     <div className="form-row">
                                         <div className="form-group col-md-4">
-                                            <label for="phoneNumber">Phone Number</label>
-                                            <input type="tel" className="form-control" id="phoneNumber" placeholder="1-(555)-555-5555"/>
+                                            <label htmlFor="phoneNumber">Phone Number</label>
+                                            <input type="tel" className="form-control" id="phoneNumber" placeholder="1-(555)-555-5555"
+                                            value={this.state.phonenumber}
+                                            onChange={this.handlePhoneNumber}
+                                            />
                                         </div>
                                         {/* Best time to call */}
                                         <div className="form-group col-md-4">
-                                            <label for="callTime">Best Time To Call You</label>
+                                            <label htmlFor="callTime">Best Time To Call You</label>
                                             <select id="callTime" className="form-control">
-                                             <option selected>No Preference</option>
+                                             <option value>No Preference</option>
                                              <option>8am</option>
                                              <option>9am</option>
                                              <option>10am</option>
@@ -83,15 +183,19 @@ function Contact() {
                                             </select>
                                         </div>
                                         {/* More info text field */}
-                                            <div class="form-group col-md-4">
-                                                <label for="QuestionsOrConcerns">TravelPlans</label>
-                                                <textarea class="form-control" id="QuestionsOrConcerns" rows="3" 
-                                                    placeholder= "E.g. Number of travelers, duration, travel dates, level of accommodations">
+                                            <div className="form-group col-md-4">
+                                                <label htmlFor="QuestionsOrConcerns">TravelPlans</label>
+                                                <textarea className="form-control" id="QuestionsOrConcerns" rows="3" 
+                                                    placeholder= "E.g. Number of travelers, duration, travel dates, level of accommodations"
+                                                    value={this.state.message}
+                                                    onChange={this.handleMessage}
+                                                    >
                                                 </textarea>
                                             </div>
                                     </div>
+                                    <div className={this.state.sent ?'msg msgAppear':'msg'}>Message has been sent</div>
                                     <button type="submit" className="submitButton btn btn-primary">Submit</button>
-                                </form>
+                                
                                 {/* Disclaimer Section */}
                                 <p className="sub-text">
                                 We ask you for your number so that one of our specialists can call or text you to discuss your travel plans. 
@@ -108,10 +212,13 @@ function Contact() {
                                     </div>
                                 </div>
                             </div>                       
-                </div>
-            </div>
+                </div> 
+            </div>   
+        </form> 
         </div>
+        
     )
 }
+}
 
-export default Contact;
+
