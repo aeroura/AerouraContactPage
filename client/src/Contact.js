@@ -93,7 +93,7 @@ export default class Contact extends Component {
     render() {
     return (
         <div className="app-contact">
-        <form onSubmit={this.formSubmit}>
+        <form onSubmit={this.formSubmit} className ="scheduleTripForm">
             {/* Full Form Section */}
             <div className="virtualHours">
                 <h1>Virtual Hours</h1>
