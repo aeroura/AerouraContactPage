@@ -67,7 +67,7 @@ function App() {
 <nav className="navbar navbar-expand-lg" id="navHeader">
 
   {/* Hamburger menu button */}
-<button class="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" 
+<button className="custom-toggler navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar" 
     aria-controls="navbar" aria-expanded={!isNavCollapsed ? true : false} aria-label="Toggle navigation" 
     onClick={handleNavCollapse}>&#9776;
     <span className="navbar-toggler-icon"></span>
