@@ -43,6 +43,7 @@ nav a:hover {
     font-size: 20px;
     font-weight: bold;
     color: white;
+    margin: 0 55% 0 0;
 }
 
 /* Main Dropdown Section*/
@@ -67,4 +68,22 @@ nav a:hover {
 .btn:focus {
     box-shadow: none !important;
 }
+/* ===============================================
+    Media queries for large screens
+================================================ */
+@media screen and (min-width: 1440px) and (max-width: 2559px){
+    /* Properly space the nav bar */
+    .homeLink {
+        margin: 0 70% 0 0;
+    }
+}
 
+/* ===============================================
+    Media queries for extra large screens
+================================================ */
+@media screen and (min-width: 2560px){
+    /* Properly space the nav bar */
+    .homeLink {
+        margin: 0 80% 0 0;
+    }
+}
